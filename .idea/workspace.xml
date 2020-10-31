@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador">
-      <change afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aspectos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,8 +214,16 @@
       <workItem from="1603734933661" duration="1824000" />
       <workItem from="1603738923884" duration="11775000" />
       <workItem from="1603847065448" duration="12193000" />
-      <workItem from="1604171560578" duration="1816000" />
+      <workItem from="1604171560578" duration="2033000" />
     </task>
+    <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
+      <created>1604173894031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604173894031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,26 +231,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
+    <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador." />
   </component>
   <component name="WindowStateProjectService">
     <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603739772422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739772422" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1604173727790">
+    <state x="-14" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1604173888690">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604173727790" />
+    <state x="-14" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604173888690" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1603853563721">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603853563721" />
     <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747111900" />
-    <state width="223" height="358" key="Git.Branch.Popup" timestamp="1604172161527">
+    <state width="225" height="360" key="Git.Branch.Popup" timestamp="1604174024984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="223" height="358" key="Git.Branch.Popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604172161527" />
+    <state width="225" height="360" key="Git.Branch.Popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174024984" />
     <state width="217" height="352" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1603847862746" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1600747190592">
       <screen x="1366" y="0" width="1366" height="728" />
@@ -281,5 +282,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739470610" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1604173934934">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604173934934" />
   </component>
 </project>
