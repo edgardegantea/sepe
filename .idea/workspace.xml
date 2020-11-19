@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="" />
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aspecto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aspecto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +189,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/aspectos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,6 +202,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sepe\resources\views\aspectos" />
       <recent name="C:\laragon\www\sepe" />
     </key>
   </component>
@@ -214,7 +225,15 @@
       <workItem from="1603734933661" duration="1824000" />
       <workItem from="1603738923884" duration="11775000" />
       <workItem from="1603847065448" duration="12193000" />
-      <workItem from="1604171560578" duration="2033000" />
+      <workItem from="1604171560578" duration="3573000" />
+      <workItem from="1604256617895" duration="96000" />
+      <workItem from="1604364814068" duration="3793000" />
+      <workItem from="1604461262965" duration="1905000" />
+      <workItem from="1604980922109" duration="1905000" />
+      <workItem from="1605072015229" duration="210000" />
+      <workItem from="1605169918033" duration="32414000" />
+      <workItem from="1605311383410" duration="16746000" />
+      <workItem from="1605570266221" duration="53098000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -223,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604173894031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
+      <created>1604174378823</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604174378823</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,14 +265,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739772422" />
-    <state x="-14" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1604173888690">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1604174374000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-14" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604173888690" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1603853563721">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174374000" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605072237128">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603853563721" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072237128" />
     <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747111900" />
     <state width="225" height="360" key="Git.Branch.Popup" timestamp="1604174024984">
       <screen x="0" y="0" width="1366" height="728" />
@@ -273,18 +299,18 @@
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1603857315568">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1605321485016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603857315568" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605321485016" />
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603848692876" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1603739470610">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1605072222262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739470610" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1604173934934">
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1604174472394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604173934934" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174472394" />
   </component>
 </project>

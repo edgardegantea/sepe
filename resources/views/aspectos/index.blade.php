@@ -19,11 +19,6 @@
                     <th scope="col">Valor</th>
                     <th scope="col">Relevancia</th>
                     <th scope="col">Comentarios</th>
-                    <th scope="col">Valor interno(vc)</th>
-                    <th scope="col">Valor interno de relevancia(rc)</th>
-                    <th scope="col">Factor de corrección(fc)</th>
-                    <th scope="col">Valor parcial</th>
-                    <th scope="col">Valor parcial 2</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,11 +28,6 @@
                         <td>{{ $aspecto -> valor }}</td>
                         <td>{{ $aspecto -> relevancia }}</td>
                         <td>{{ $aspecto -> comentario }}</td>
-                        <td>{{ $aspecto -> valor_interno }}</td>
-                        <td>{{ $aspecto -> valor_interno_relevancia }}</td>
-                        <td>{{ $aspecto -> factor_correcion }}</td>
-                        <td>{{ $aspecto -> valor_parcial }}</td>
-                        <td>{{ $aspecto -> valor_parcial2 }}</td>
                     </tr>
                 @endforeach
                 </tbody>

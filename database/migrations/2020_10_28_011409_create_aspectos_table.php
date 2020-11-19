@@ -15,14 +15,13 @@ class CreateAspectosTable extends Migration
     {
         Schema::create('aspectos', function (Blueprint $table) {
             $table->id();
+            $table->string('codigo',10);
+            $table->string('criterio',200);
             $table->string('valor',100);
             $table->string('relevancia',200);
             $table->text('comentario')->nullable();
-            $table->string('valor_interno',200);
-            $table->string('valor_interno_relevancia',200);
-            $table->string('factor_correcion',200);
-            $table->string('valor_parcial',200);
-            $table->string('valor_parcial2',200);
+            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que inicio sesion');
+            //$table->foreignId('project_id')->references('id')->on('projects')->comment('Relacion con el proyecto seleccionado');
             $table->timestamps();
         });
     }

@@ -13,4 +13,12 @@ class Project extends Model
         'name',
         'description'
     ];
+
+
+    /** Relacion 1:1 de Project a Aspecto
+
+    public function relacionAspectoProyecto(){
+        return $this->hasOne(Aspecto::class);
+    }*/
+
 }

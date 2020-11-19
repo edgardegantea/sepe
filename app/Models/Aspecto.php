@@ -9,14 +9,16 @@ class Aspecto extends Model
 {
     use HasFactory;
 
+    //protected $table='aspectos';
     protected $fillable = [
+        'codigo',
+        'criterio',
         'valor',
         'relevancia',
-        'comentario',
-        'valor_interno',
-        'valor_interno_relevancia',
-        'factor_correcion',
-        'valor_parcial',
-        'valor_parcial2'
+        'comentario'
     ];
+
+    /**public function RelacionAspectoProyecto(){
+        return $this->belongsTo(Project::class);
+    }*/
 }

@@ -37,4 +37,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**Relacion de 1:n de usuario-*/
+    public function relacionUserAspecto(){
+        return $this->hasMany(Aspecto::class);
+    }
+
+    public function relacionUserStructure(){
+        return $this->hasMany(Structure::class);
+    }
+    public function relacionUserLayoutPage(){
+        return $this->hasMany(Layoutpage::class);
+    }
+    public function relacionUserControl(){
+        return $this->hasMany(Control::class);
+    }
+    public function relacionUserSearch(){
+        return $this->hasMany(Search::class);
+    }
+
 }

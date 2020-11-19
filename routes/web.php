@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ProjectController;
 use \App\Http\Controllers\AspectoController;
+use \App\Http\Controllers\StructureController;
+use \App\Http\Controllers\LayoutpageController;
+use \App\Http\Controllers\ControlController;
+use \App\Http\Controllers\SearchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('proyectos', ProjectController::class);
 Route::resource('aspectos', AspectoController::class);
+Route::resource('structures',StructureController::class);
+Route::resource('layoutpages',LayoutpageController::class);
+Route::resource('controls',ControlController::class);
+Route::resource('searchs',SearchController::class);

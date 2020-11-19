@@ -36,9 +36,41 @@ class AspectoController extends Controller
      */
     public function store(Request $request)
     {
-        Aspecto::create($request->all());
-        return redirect()->route('aspectos.index');
+        //validación
+
+        $data = $request -> validate([
+            'codigo' => 'required',
+            'criterio' => 'required',
+            'valor' => 'required',
+            'relevancia' => 'required',
+            'comentario' => 'required'
+        ]);
+        auth()->user()->relacionUserAspecto()->create([
+            'codigo' => $data['codigo'],
+            'criterio' => $data['criterio'],
+            'valor' => $data['valor'],
+            'relevancia' => $data['relevancia'],
+            'comentario' => $data['comentario']
+        ]);
+
+        //Aspecto::create($request->all());
+        return redirect()->route('aspectos.create');
+        //return request();
+
+
     }
+/**
+
+    public function createUpdateAspecto(Request $request, $aspecto)
+    {
+        $aspecto -> id = $request -> id;
+        $aspecto -> valor = $request -> valor;
+        $aspecto -> relevancia = $request -> relevancia;
+        $aspecto -> comentario = $request -> comentario;
+
+        $aspecto ->save();
+        return $aspecto;
+    }*/
 
     /**
      * Display the specified resource.
