@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\Aspecto;
+use App\Models\Layoutpage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class AspectoFactory extends Factory
+class LayoutpageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Aspecto::class;
+    protected $model = Layoutpage::class;
 
     /**
      * Define the model's default state.
@@ -24,7 +24,6 @@ class AspectoFactory extends Factory
     {
         return [
             //
-
         ];
     }
 }

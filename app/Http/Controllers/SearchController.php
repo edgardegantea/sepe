@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Aspecto;
+use App\Models\Search;
 use Illuminate\Http\Request;
 
-class AspectoController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class AspectoController extends Controller
      */
     public function index()
     {
-        $aspectos = Aspecto::all();
-        return view('aspectos.index', compact('aspectos'));
+        //
     }
 
     /**
@@ -25,7 +24,8 @@ class AspectoController extends Controller
      */
     public function create()
     {
-        return view('aspectos.create');
+        //
+        return view('searchs.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class AspectoController extends Controller
      */
     public function store(Request $request)
     {
-        //validación
+        //
         $data = $request -> validate([
             'codigo' => 'required',
             'criterio' => 'required',
@@ -45,40 +45,23 @@ class AspectoController extends Controller
             'comentario' => 'required'
         ]);
 
-        auth()->user()->relacionUserAspecto()->create([
+        auth()->user()->relacionUserSearch()->create([
             'codigo' => $data['codigo'],
             'criterio' => $data['criterio'],
             'valor' => $data['valor'],
             'relevancia' => $data['relevancia'],
             'comentario' => $data['comentario']
         ]);
-
-        //Aspecto::create($request->all());
-        return redirect()->route('aspectos.create');
-        //return request();
-
-
+        return redirect()->route('searchs.create');
     }
-/**
-
-    public function createUpdateAspecto(Request $request, $aspecto)
-    {
-        $aspecto -> id = $request -> id;
-        $aspecto -> valor = $request -> valor;
-        $aspecto -> relevancia = $request -> relevancia;
-        $aspecto -> comentario = $request -> comentario;
-
-        $aspecto ->save();
-        return $aspecto;
-    }*/
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function show(Aspecto $aspecto)
+    public function show(Search $search)
     {
         //
     }
@@ -86,22 +69,22 @@ class AspectoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aspecto $aspecto)
+    public function edit(Search $search)
     {
-        return view('aspectos.edit', compact('aspecto'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aspecto $aspecto)
+    public function update(Request $request, Search $search)
     {
         //
     }
@@ -109,10 +92,10 @@ class AspectoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aspecto $aspecto)
+    public function destroy(Search $search)
     {
         //
     }

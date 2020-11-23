@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EvaluationController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ProjectController;
 use \App\Http\Controllers\AspectoController;
@@ -32,3 +33,4 @@ Route::resource('structures',StructureController::class);
 Route::resource('layoutpages',LayoutpageController::class);
 Route::resource('controls',ControlController::class);
 Route::resource('searchs',SearchController::class);
+Route::resource('evaluations',EvaluationController::class);

@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluations/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Aspecto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aspecto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AspectoFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AspectoFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AspectoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AspectoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/aspectos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -233,7 +235,9 @@
       <workItem from="1605072015229" duration="210000" />
       <workItem from="1605169918033" duration="32414000" />
       <workItem from="1605311383410" duration="16746000" />
-      <workItem from="1605570266221" duration="53098000" />
+      <workItem from="1605570266221" duration="53315000" />
+      <workItem from="1605858583972" duration="23507000" />
+      <workItem from="1605931281779" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -249,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604174378823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users.">
+      <created>1605827157285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605827157300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,21 +269,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
     <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador." />
+    <MESSAGE value="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users." />
   </component>
   <component name="WindowStateProjectService">
     <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603739772422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739772422" />
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1604174374000">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1605827145153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174374000" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605072237128">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605827145153" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605827266035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072237128" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605827266035" />
     <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747111900" />
     <state width="225" height="360" key="Git.Branch.Popup" timestamp="1604174024984">
       <screen x="0" y="0" width="1366" height="728" />
@@ -299,18 +311,22 @@
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1605321485016">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1605871224027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605321485016" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605871224027" />
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603848692876" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1605072222262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1604174472394">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1605827203181">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174472394" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605827203181" />
+    <state x="346" y="49" key="search.everywhere.popup" timestamp="1605881751279">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605881751279" />
   </component>
 </project>

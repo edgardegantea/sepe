@@ -53,9 +53,8 @@
 <!-- Tabla -->
 <div class="container">
     <!--CABECERA DE LA TABLA-->
-    <form method="POST" name="formCriterio1" action="{{ route('aspectos.store') }}">
+    <form method="POST" name="" action="{{ route('evaluations.store') }}">
         @csrf
-        <div class="table">Hola</div>
         <table class="table">
             <thead>
             <tr>
@@ -116,12 +115,15 @@
                         @endswitch
                     </td>
                     @yield('contentCampos')
+                    <input type="hidden" name="evaluacion_heuristica" value="aspectos">
                 </tr>
             @endforeach
             </tbody>
         </table>
+        <input type="submit">
     </form>
 </div>
 
 
 @endsection
+

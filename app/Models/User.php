@@ -38,9 +38,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**Relacion de 1:n de usuario-*/
+    /**Relacion de 1:n de usuario-
     public function relacionUserAspecto(){
         return $this->hasMany(Aspecto::class);
+    }*/
+    public function relacionUserEvaluation(){
+        return $this->hasMany(Evaluation::class);
     }
 
     public function relacionUserStructure(){
