@@ -9,10 +9,12 @@ class Aspecto extends Model
 {
     use HasFactory;
 
-    //protected $table='aspectos';
     protected $fillable = [
         'codigo',
-        'criterio'
+        'criterio',
+        'valor',
+        'relevancia',
+        'comentario',
     ];
 
     /**public function RelacionAspectoProyecto(){

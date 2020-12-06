@@ -15,12 +15,11 @@ class CreateLayoutpagesTable extends Migration
     {
         Schema::create('layoutpages', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo',10);
-            $table->string('criterio',200);
-            $table->string('valor',100);
-            $table->string('relevancia',200);
+            $table->string('codigo', 10);
+            $table->text('criterio');
+            $table->string('valor', 50);
+            $table->string('relevancia', 200);
             $table->text('comentario')->nullable();
-            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que inicio sesion');
             //$table->foreignId('project_id')->references('id')->on('projects')->comment('Relacion con el proyecto seleccionado');
             $table->timestamps();
         });

@@ -15,11 +15,12 @@ class CreateEvaluationsTable extends Migration
     {
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
-            $table->string('valor',50);
-            $table->string('relevancia',200);
+            $table->string('codigo', 10);
+            $table->text('criterio');
+            $table->string('valor', 50);
+            $table->string('relevancia', 200);
             $table->text('comentario')->nullable();
-            $table->string('evaluacion_heuristica',20);
-            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario loogeado actualmente');
+            //$table->foreignId('user_id')->references('id')->on('users')->comment('El usuario loogeado actualmente');
             //$table->foreignId('project_id')->references('id')->on('projects')->comment('Relacion con el proyecto seleccionado');
             $table->timestamps();
         });

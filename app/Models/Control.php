@@ -14,6 +14,6 @@ class Control extends Model
         'criterio',
         'valor',
         'relevancia',
-        'comentario'
+        'comentario',
     ];
 }

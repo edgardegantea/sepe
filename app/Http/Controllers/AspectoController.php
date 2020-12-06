@@ -37,7 +37,7 @@ class AspectoController extends Controller
     public function store(Request $request)
     {
         //validación
-        $data = $request -> validate([
+        $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
@@ -45,32 +45,22 @@ class AspectoController extends Controller
             'comentario' => 'required'
         ]);
 
-        auth()->user()->relacionUserAspecto()->create([
-            'codigo' => $data['codigo'],
-            'criterio' => $data['criterio'],
-            'valor' => $data['valor'],
-            'relevancia' => $data['relevancia'],
-            'comentario' => $data['comentario']
-        ]);
+        //Se insertan los valores a nuestra base de datos.
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+            $registro = new Aspecto();
+            $registro->codigo = $data['codigo'][$i];
+            $registro->criterio = $data['criterio'][$i];
+            $registro->valor = $data['valor'][$i];
+            $registro->relevancia = $data['relevancia'][$i];
+            $registro->comentario = $data['comentario'][$i];
 
-        //Aspecto::create($request->all());
+            $registro->save();
+        }
+
         return redirect()->route('aspectos.create');
-        //return request();
 
 
     }
-/**
-
-    public function createUpdateAspecto(Request $request, $aspecto)
-    {
-        $aspecto -> id = $request -> id;
-        $aspecto -> valor = $request -> valor;
-        $aspecto -> relevancia = $request -> relevancia;
-        $aspecto -> comentario = $request -> comentario;
-
-        $aspecto ->save();
-        return $aspecto;
-    }*/
 
     /**
      * Display the specified resource.

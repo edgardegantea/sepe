@@ -14,6 +14,6 @@ class Structure extends Model
         'criterio',
         'valor',
         'relevancia',
-        'comentario'
+        'comentario',
     ];
 }

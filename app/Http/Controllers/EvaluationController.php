@@ -7,6 +7,7 @@ use App\Models\Evaluation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
 class EvaluationController extends Controller
 {
@@ -28,9 +29,9 @@ class EvaluationController extends Controller
     public function create()
     {
         //
-        $aspectos = Aspecto::all(['id', 'codigo', 'criterio']);
+        //$aspectos = Aspecto::all(['id', 'codigo', 'criterio']);
 
-        return view('evaluations.create')->with('aspectos', $aspectos);
+        return view('evaluations.create');
     }
 
     /**
@@ -41,7 +42,8 @@ class EvaluationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*
+
         $data = $request->validate([
             'valor' => 'required',
             'relevancia' => 'required',
@@ -54,8 +56,21 @@ class EvaluationController extends Controller
             'relevancia' => $data['relevancia'],
             'comentario' => $data['comentario'],
             'evaluacion_heuristica' => 'evaluacion_heuristica'
-        ]);
+        */
 
+
+        $data = $request;
+
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+            $c = new Evaluation();
+            $c->codigo = $data['codigo'][$i];
+            $c->criterio = $data['criterio'][$i];
+            $c->valor = $data['valor'][$i];
+            $c->relevancia = $data['relevancia'][$i];
+            $c->comentario = $data['comentario'][$i];
+
+            $c->save();
+        }
         return redirect()->route('evaluations.create');
     }
 

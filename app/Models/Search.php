@@ -14,6 +14,6 @@ class Search extends Model
         'criterio',
         'valor',
         'relevancia',
-        'comentario'
+        'comentario',
     ];
 }

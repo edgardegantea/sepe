@@ -10,9 +10,10 @@ class Evaluation extends Model
     use HasFactory;
 
     protected $fillable = [
+        'codigo',
+        'criterio',
         'valor',
         'relevancia',
         'comentario',
-        'evaluacion_heuristica',
     ];
 }

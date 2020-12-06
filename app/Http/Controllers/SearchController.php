@@ -36,8 +36,8 @@ class SearchController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $data = $request -> validate([
+        //Validamos que los campos tengan algun dato
+        $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
@@ -45,13 +45,18 @@ class SearchController extends Controller
             'comentario' => 'required'
         ]);
 
-        auth()->user()->relacionUserSearch()->create([
-            'codigo' => $data['codigo'],
-            'criterio' => $data['criterio'],
-            'valor' => $data['valor'],
-            'relevancia' => $data['relevancia'],
-            'comentario' => $data['comentario']
-        ]);
+        //Se insertan los valores a nuestra base de datos.
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+            $registro = new Search();
+            $registro->codigo = $data['codigo'][$i];
+            $registro->criterio = $data['criterio'][$i];
+            $registro->valor = $data['valor'][$i];
+            $registro->relevancia = $data['relevancia'][$i];
+            $registro->comentario = $data['comentario'][$i];
+
+            $registro->save();
+        }
+
         return redirect()->route('searchs.create');
     }
 

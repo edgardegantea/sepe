@@ -37,7 +37,7 @@ class StructureController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request -> validate([
+        $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
@@ -45,13 +45,17 @@ class StructureController extends Controller
             'comentario' => 'required'
         ]);
 
-        auth()->user()->relacionUserStructure()->create([
-            'codigo' => $data['codigo'],
-            'criterio' => $data['criterio'],
-            'valor' => $data['valor'],
-            'relevancia' => $data['relevancia'],
-            'comentario' => $data['comentario']
-        ]);
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+
+            $registro = new Structure();
+            $registro->codigo = $data['codigo'][$i];
+            $registro->criterio = $data['criterio'][$i];
+            $registro->valor = $data['valor'][$i];
+            $registro->relevancia = $data['relevancia'][$i];
+            $registro->comentario = $data['comentario'][$i];
+
+            $registro->save();
+        }
 
         return redirect()->route('structures.create');
     }

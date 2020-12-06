@@ -42,21 +42,4 @@ class User extends Authenticatable
     public function relacionUserAspecto(){
         return $this->hasMany(Aspecto::class);
     }*/
-    public function relacionUserEvaluation(){
-        return $this->hasMany(Evaluation::class);
-    }
-
-    public function relacionUserStructure(){
-        return $this->hasMany(Structure::class);
-    }
-    public function relacionUserLayoutPage(){
-        return $this->hasMany(Layoutpage::class);
-    }
-    public function relacionUserControl(){
-        return $this->hasMany(Control::class);
-    }
-    public function relacionUserSearch(){
-        return $this->hasMany(Search::class);
-    }
-
 }

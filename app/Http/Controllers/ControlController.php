@@ -47,14 +47,17 @@ class ControlController extends Controller
             'comentario' => 'required'
         ]);
 
+        //Se insertan los valores a nuestra base de datos.
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+            $registro = new Control();
+            $registro->codigo = $data['codigo'][$i];
+            $registro->criterio = $data['criterio'][$i];
+            $registro->valor = $data['valor'][$i];
+            $registro->relevancia = $data['relevancia'][$i];
+            $registro->comentario = $data['comentario'][$i];
 
-        auth()->user()->relacionUserControl()->create([
-            'codigo' => $data['codigo'],
-            'criterio' => $data['criterio'],
-            'valor' => $data['valor'],
-            'relevancia' => $data['relevancia'],
-            'comentario' => $data['comentario']
-        ]);
+            $registro->save();
+        }
 
 
         return redirect()->route('controls.create');

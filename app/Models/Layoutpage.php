@@ -14,6 +14,6 @@ class Layoutpage extends Model
         'criterio',
         'valor',
         'relevancia',
-        'comentario'
+        'comentario',
     ];
 }
