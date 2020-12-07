@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/elements/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/elements/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elements/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +239,8 @@
       <workItem from="1606880332338" duration="1969000" />
       <workItem from="1606946571412" duration="17256000" />
       <workItem from="1607119595586" duration="12065000" />
-      <workItem from="1607229536922" duration="15035000" />
+      <workItem from="1607229536922" duration="15215000" />
+      <workItem from="1607324063150" duration="12450000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607242857819</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Agregando modulos faltantes">
+      <created>1607245918853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607245918853</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +296,8 @@
     <MESSAGE value="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users." />
     <MESSAGE value="Añadiendo seeders" />
     <MESSAGE value="Correccion de formulario y migraciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion de formulario y migraciones" />
+    <MESSAGE value="Agregando modulos faltantes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando modulos faltantes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -301,10 +309,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607244638389" />
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607242835623">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607245907509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607242835623" />
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607245907509" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606114927815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -344,10 +352,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607242882686">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607245957305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607242882686" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607245957305" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1605881751279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
