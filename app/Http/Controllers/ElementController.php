@@ -57,7 +57,7 @@ class ElementController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('elements.create');
+        return redirect()->route('searchs.create');
 
     }
 

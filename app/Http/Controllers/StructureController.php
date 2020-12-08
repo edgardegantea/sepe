@@ -57,7 +57,7 @@ class StructureController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('structures.create');
+        return redirect()->route('rotulados.create');
     }
 
     /**

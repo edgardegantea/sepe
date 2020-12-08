@@ -57,7 +57,7 @@ class RotuladoController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('rotulados.create');
+        return redirect()->route('layoutpages.create');
 
     }
 

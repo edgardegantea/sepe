@@ -57,7 +57,7 @@ class InteractionController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('interactions.create');
+        return redirect()->route('controls.create');
 
     }
 

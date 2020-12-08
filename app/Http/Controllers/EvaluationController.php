@@ -19,6 +19,7 @@ class EvaluationController extends Controller
     public function index()
     {
         //
+        return view('evaluations.index');
     }
 
     /**

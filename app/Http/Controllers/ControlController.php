@@ -59,8 +59,7 @@ class ControlController extends Controller
             $registro->save();
         }
 
-
-        return redirect()->route('controls.create');
+        return redirect()->route('elements.create');
     }
 
     /**

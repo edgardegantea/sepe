@@ -57,7 +57,7 @@ class AspectoController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('aspectos.create');
+        return redirect()->route('identitys.create');
 
 
     }
@@ -94,6 +94,7 @@ class AspectoController extends Controller
     public function update(Request $request, Aspecto $aspecto)
     {
         //
+
     }
 
     /**

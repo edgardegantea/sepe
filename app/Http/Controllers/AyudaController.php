@@ -57,7 +57,7 @@ class AyudaController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('ayudas.create');
+        return redirect()->route('evaluations.index');
     }
 
     /**

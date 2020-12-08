@@ -57,7 +57,7 @@ class LayoutpageController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('layoutpages.create');
+        return redirect()->route('interactions.create');
     }
 
     /**

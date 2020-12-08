@@ -57,7 +57,7 @@ class SearchController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('searchs.create');
+        return redirect()->route('ayudas.create');
     }
 
     /**

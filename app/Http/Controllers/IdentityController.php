@@ -57,7 +57,7 @@ class IdentityController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('identitys.create');
+        return redirect()->route('structures.create');
 
     }
 
