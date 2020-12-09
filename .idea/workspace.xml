@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluations/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvaluationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/instructions.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recetaslaravel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -253,7 +237,8 @@
       <workItem from="1607229536922" duration="15215000" />
       <workItem from="1607324063150" duration="12673000" />
       <workItem from="1607371314144" duration="6284000" />
-      <workItem from="1607398363954" duration="3310000" />
+      <workItem from="1607398363954" duration="4306000" />
+      <workItem from="1607474447123" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -304,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607317948591</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Clompletando la parte de instrucciones de los modulos.">
+      <created>1607404974071</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607404974071</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +310,8 @@
     <MESSAGE value="Correccion de formulario y migraciones" />
     <MESSAGE value="Agregando modulos faltantes" />
     <MESSAGE value="Completos los modulos con la parte de create." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completos los modulos con la parte de create." />
+    <MESSAGE value="Clompletando la parte de instrucciones de los modulos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clompletando la parte de instrucciones de los modulos." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -330,14 +323,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607244638389" />
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607317942935">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607404963705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607317942935" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606114927815">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607404963705" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607474709475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606114927815" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607474709475" />
     <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747111900" />
     <state width="225" height="360" key="Git.Branch.Popup" timestamp="1604174024984">
       <screen x="0" y="0" width="1366" height="728" />
@@ -373,10 +366,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607317973465">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607405174161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607317973465" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607405174161" />
     <state x="346" y="49" key="search.everywhere.popup" timestamp="1605881751279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
