@@ -42,7 +42,7 @@ class StructureController extends Controller
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => 'required'
+            'comentario' => ''
         ]);
 
         for ($i = 0; $i < count($data['codigo']); $i++) {

@@ -3,6 +3,37 @@
   <component name="ChangeListManager">
     <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_023637_create_structures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_023637_create_structures_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_013338_create_layoutpages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_013338_create_layoutpages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_020834_create_controls_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_020834_create_controls_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_023314_create_searches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_023314_create_searches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_082338_create_identities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_082338_create_identities_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083050_create_rotulados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083050_create_rotulados_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083627_create_interactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083627_create_interactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083829_create_elements_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083829_create_elements_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_084141_create_ayudas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_084141_create_ayudas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/controls/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/controls/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/elements/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elements/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/selectTwo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/selectTwo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +87,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Eliseo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

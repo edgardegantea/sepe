@@ -42,7 +42,7 @@ class InteractionController extends Controller
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => 'required'
+            'comentario' => ''
         ]);
 
         //Se insertan los valores a nuestra base de datos.

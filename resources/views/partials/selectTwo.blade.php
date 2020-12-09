@@ -1,9 +1,9 @@
 <select name="valor[]" id="" required>
     <option value="">--Seleccione un valor--</option>
-    <option value="Criterio no aplicable en el sitio.">NA</option>
-    <option value="No se cumple en todo el sitio.">NTS</option>
-    <option value="No se cumple en los enlaces principales.">NEP</option>
-    <option value="No se cumple en la pagina principal.">NPP</option>
-    <option value="No se cumple en alguna pagina interior.">NPI</option>
-    <option value="Se cumple el criterio.">S</option>
+    <option value="0">NA</option>
+    <option value="0">NTS</option>
+    <option value="2.5">NEP</option>
+    <option value="5">NPP</option>
+    <option value="7.5">NPI</option>
+    <option value="10">S</option>
 </select>

@@ -115,8 +115,7 @@
                 </tbody>
             </table>
             <input type="submit" class="btn btn-success">
-            <a href="{{ route('structures.create') }}" class="btn btn-primary">Siguiente evaluación</a>
-            <a href="" class="btn btn-dark">Editar</a>
+            <a href="" class="btn btn-primary">Regresar</a>
         </form>
     </div>
 

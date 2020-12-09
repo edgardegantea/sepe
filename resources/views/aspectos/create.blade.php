@@ -199,11 +199,10 @@
                     </td>
                     @include('partials.camposForm')
                 </tr>
-
                 </tbody>
             </table>
             <input type="submit" class="btn btn-success">
-            <a href="" class="btn btn-primary-">Editar</a>
+            <a href="" class="btn btn-primary">Regresar a proyecto</a>
         </form>
     </div>
 
