@@ -3,19 +3,18 @@
 @section('content')
 
     <div class="card mt-3">
-
         <nav class="nav nav-pills nav-fill">
             <a class="nav-link" href="{{ route('subjects.index')}}">Asignaturas</a>
             <a class="nav-link" href="{{ route('students.index')}}">Estudiantes</a>
             <a class="nav-link" href="{{ route('teams.index')}}">Equipos</a>
-            <a class="nav-link" href="{{ route('teachers.index')}}">Docentes</a>
             <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
+            <a class="nav-link" href="{{ route('projects.index')}}">Proyectos</a>
         </nav>
 
         <!-- DIV PARA BOTÓN CREAR -->
         <div class="card-header d-inline-flex">
-            <b><h1>Proyectos</h1></b>
-            <a href="{{ route('projects.create')}}" class="btn btn-primary ml-auto">
+            <b><h1>Docentes</h1></b>
+            <a href="{{ route('teachers.create')}}" class="btn btn-primary ml-auto">
                 <i class="fa fa-plus"></i>
                 Agregar
             </a>
@@ -49,39 +48,48 @@
                 </div>
             </div>
 
-            @if($projects->total() > 10)
-                {{$projects->links()}}
+            @if($teachers->total() > 10)
+                {{$teachers->links()}}
             @endif
         </div>
+
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>ID docente</th>
                     <th>Nombre</th>
-                    <th>Fecha de registro</th>
-                    <th>Semestre</th>
+                    <th>Apellidos</th>
+                    <th>Número de control</th>
+                    <th>Correo electrónico institucional</th>
+                    <th>ID proyecto</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($projects as $project)
+                @foreach($teachers as $teacher)
                     <tr>
                         <td>
-                            {{ $project->idProject }}
+                            {{ $teacher->idTeacher }}
                         </td>
                         <td>
-                            {{ $project->name}}
+                            {{ $teacher->firstname }}
                         </td>
                         <td>
-                            {{ $project->dateRegistration}}
+                            {{ $teacher->lastname }}
                         </td>
                         <td>
-                            {{ $project->semester}}
+                            {{ $teacher->controlNumber }}
+                        </td>
+                        <td>
+                            {{ $teacher->email }}
+                        </td>
+                        <td>
+                            {{ $teacher->idProject}}.{{ $teacher->name}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">
-                                <a href="{{route('projects.show', $project->idProject)}}" class="btn btn-info btn-sm">
+                                <a href="{{route('teachers.show', $teacher->idTeacher)}}" class="btn btn-info btn-sm">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -89,7 +97,7 @@
                                               d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                     </svg>
                                 </a>
-                                <a href="{{route('projects.edit', $project->idProject)}}"
+                                <a href="{{route('teachers.edit', $teacher->idTeacher)}}"
                                    class="btn btn-primary btn-sm">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +108,7 @@
                                     </svg>
                                 </a>
                                 <button type="submit" class="btn btn-danger btn-sm"
-                                        form="delete_{{$project->idProject}}"
+                                        form="delete_{{$teacher->idTeacher}}"
                                         onclick="return confirm('¿Estas seguro que deseas eliminar el item?')">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -108,13 +116,14 @@
                                               d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
                                     </svg>
                                 </button>
-                                <form action="{{route('projects.destroy', $project->idProject)}}"
-                                      id="delete_{{$project->idProject}}"
+                                <form action="{{route('teachers.destroy', $teacher->idTeacher)}}"
+                                      id="delete_{{$teacher->idTeacher}}"
                                       method="post" enctype="multipart/form-data" hidden>
                                     @csrf
                                     @method('DELETE')
                                 </form>
                             </div>
+
                         </td>
                     </tr>
                 @endforeach
@@ -122,8 +131,8 @@
             </table>
         </div>
         <div class="card-footer">
-            @if($projects->total() > 10)
-                {{$projects->links()}}
+            @if($teachers->total() > 10)
+                {{$teachers->links()}}
             @endif
         </div>
     </div>
@@ -132,12 +141,12 @@
 @section('scripts')
     <script type="text/javascript">
         $('#limit').on('change', function () {
-            window.location.href = '{{ route( "projects.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
+            window.location.href = '{{ route( "teachers.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
         })
 
         $('#search').on('keyup', function (e) {
             if (e.keyCode == 13) {
-                window.location.href = '{{ route("projects.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
+                window.location.href = '{{ route("teachers.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
             }
         })
     </script>

@@ -6,20 +6,25 @@
 
         <nav class="nav nav-pills nav-fill">
             <a class="nav-link" href="{{ route('subjects.index')}}">Asignaturas</a>
-            <a class="nav-link" href="{{ route('students.index')}}">Estudiantes</a>
+            <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
             <a class="nav-link" href="{{ route('teams.index')}}">Equipos</a>
             <a class="nav-link" href="{{ route('teachers.index')}}">Docentes</a>
-            <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
+            <a class="nav-link" href="{{ route('projects.index')}}">Proyectos</a>
         </nav>
 
         <!-- DIV PARA BOTÓN CREAR -->
         <div class="card-header d-inline-flex">
-            <b><h1>Proyectos</h1></b>
-            <a href="{{ route('projects.create')}}" class="btn btn-primary ml-auto">
+            <b><h1>Estudiantes</h1></b>
+            <a href="{{ route('students.create')}}" class="btn btn-primary ml-auto">
                 <i class="fa fa-plus"></i>
                 Agregar
             </a>
         </div>
+
+    <!-- GENERAR EL PDF
+    <a href="{{ route('students.pdf') }}" class='btn btn-secondary ml-auto'>
+    PDF
+    </a></div> -->
 
         <div class="card-body">
             <div class=row>
@@ -49,39 +54,52 @@
                 </div>
             </div>
 
-            @if($projects->total() > 10)
-                {{$projects->links()}}
+            @if($students->total() > 10)
+                {{$students->links()}}
             @endif
         </div>
+
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Fecha de registro</th>
+                    <th>Apellidos</th>
                     <th>Semestre</th>
+                    <th>Ingeniería</th>
+                    <th>Número de control</th>
+                    <th>Correo electrónico institucional</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($projects as $project)
+                @foreach($students as $student)
                     <tr>
                         <td>
-                            {{ $project->idProject }}
+                            {{ $student->idStudent }}
                         </td>
                         <td>
-                            {{ $project->name}}
+                            {{ $student->firstname}}
                         </td>
                         <td>
-                            {{ $project->dateRegistration}}
+                            {{ $student->lastname}}
                         </td>
                         <td>
-                            {{ $project->semester}}
+                            {{ $student->semester}}
+                        </td>
+                        <td>
+                            {{ $student->engineering}}
+                        </td>
+                        <td>
+                            {{ $student->controlNumber}}
+                        </td>
+                        <td>
+                            {{ $student->email}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">
-                                <a href="{{route('projects.show', $project->idProject)}}" class="btn btn-info btn-sm">
+                                <a href="{{route('students.show', $student->idStudent)}}" class="btn btn-info btn-sm">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -89,7 +107,7 @@
                                               d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                     </svg>
                                 </a>
-                                <a href="{{route('projects.edit', $project->idProject)}}"
+                                <a href="{{route('students.edit', $student->idStudent)}}"
                                    class="btn btn-primary btn-sm">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +118,7 @@
                                     </svg>
                                 </a>
                                 <button type="submit" class="btn btn-danger btn-sm"
-                                        form="delete_{{$project->idProject}}"
+                                        form="delete_{{$student->idStudent}}"
                                         onclick="return confirm('¿Estas seguro que deseas eliminar el item?')">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill"
                                          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -108,22 +126,24 @@
                                               d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
                                     </svg>
                                 </button>
-                                <form action="{{route('projects.destroy', $project->idProject)}}"
-                                      id="delete_{{$project->idProject}}"
+                                <form action="{{route('students.destroy', $student->idStudent)}}"
+                                      id="delete_{{$student->idStudent}}"
                                       method="post" enctype="multipart/form-data" hidden>
                                     @csrf
                                     @method('DELETE')
                                 </form>
                             </div>
+
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+
         </div>
         <div class="card-footer">
-            @if($projects->total() > 10)
-                {{$projects->links()}}
+            @if($students->total() > 10)
+                {{$students->links()}}
             @endif
         </div>
     </div>
@@ -132,12 +152,12 @@
 @section('scripts')
     <script type="text/javascript">
         $('#limit').on('change', function () {
-            window.location.href = '{{ route( "projects.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
+            window.location.href = '{{ route( "students.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
         })
 
         $('#search').on('keyup', function (e) {
             if (e.keyCode == 13) {
-                window.location.href = '{{ route("projects.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
+                window.location.href = '{{ route("students.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
             }
         })
     </script>

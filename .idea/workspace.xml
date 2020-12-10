@@ -2,38 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/help/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profiles/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/projects/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/subjects/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teams/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teams/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/teams/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/partials/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_023637_create_structures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_023637_create_structures_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_013338_create_layoutpages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_013338_create_layoutpages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_020834_create_controls_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_020834_create_controls_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_023314_create_searches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_14_023314_create_searches_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_082338_create_identities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_082338_create_identities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083050_create_rotulados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083050_create_rotulados_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083627_create_interactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083627_create_interactions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083829_create_elements_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_083829_create_elements_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_084141_create_ayudas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_06_084141_create_ayudas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/controls/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/controls/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/elements/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elements/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/selectTwo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/selectTwo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +282,7 @@
       <workItem from="1607371314144" duration="6284000" />
       <workItem from="1607398363954" duration="4306000" />
       <workItem from="1607474447123" duration="224000" />
+      <workItem from="1607532817895" duration="20295000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -327,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607404974071</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se cambio el tipo de dato en el campo &quot;valor&quot;.">
+      <created>1607484892351</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607484892351</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +362,8 @@
     <MESSAGE value="Agregando modulos faltantes" />
     <MESSAGE value="Completos los modulos con la parte de create." />
     <MESSAGE value="Clompletando la parte de instrucciones de los modulos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clompletando la parte de instrucciones de los modulos." />
+    <MESSAGE value="Se cambio el tipo de dato en el campo &quot;valor&quot;." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se cambio el tipo de dato en el campo &quot;valor&quot;." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -354,10 +375,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607244638389" />
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607404963705">
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607484868523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607404963705" />
+    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607484868523" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607474709475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -388,22 +409,26 @@
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1607372508635">
+    <state x="498" y="86" key="NewPhpClassDialog" timestamp="1607561928809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607372508635" />
+    <state x="498" y="86" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607561928809" />
+    <state x="657" y="244" key="NewPhpFileDialog" timestamp="1607562253760">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="657" y="244" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607562253760" />
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603848692876" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1605072222262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607405174161">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607484910276">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607405174161" />
-    <state x="346" y="49" key="search.everywhere.popup" timestamp="1605881751279">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607484910276" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607549319538">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605881751279" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607549319538" />
   </component>
 </project>
