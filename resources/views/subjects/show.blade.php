@@ -7,12 +7,12 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $subject->idSubject}}</p>
+            <p><b>ID:</b> {{ $subject->id}}</p>
             <p><b>Nombre:</b> {{ $subject->name}}</p>
             <p><b>Docente asignado:</b> {{ $subject->teacher}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('subjects.edit', $subject->idSubject) }}">
+            <a class="btn btn-primary" href="{{route('subjects.edit', $subject->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>

@@ -80,10 +80,10 @@
                             {{ $student->id }}
                         </td>
                         <td>
-                            {{ $student->firstname}}
+                            {{ $student->firstName}}
                         </td>
                         <td>
-                            {{ $student->lastname}}
+                            {{ $student->lastName}}
                         </td>
                         <td>
                             {{ $student->semester}}

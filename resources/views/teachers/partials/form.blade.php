@@ -3,15 +3,15 @@
     <div class="col-12">
         <div class="form-group">
             <label for="">Nombre</label>
-            <input type="text" class="form-control" name="firstname"
-                   value="{{(isset($teacher))?$teacher->firstname:old('firstname')}}" required>
+            <input type="text" class="form-control" name="firstName"
+                   value="{{(isset($teacher))?$teacher->firstName:old('firstName')}}" required>
         </div>
     </div>
     <div class="col-12">
         <div class="form-group">
             <label for="">Apellidos</label>
-            <input type="text" class="form-control" name="lastname"
-                   value="{{(isset($teacher))?$teacher->lastname:old('lastname')}}" required>
+            <input type="text" class="form-control" name="lastName"
+                   value="{{(isset($teacher))?$teacher->lastName:old('lastName')}}" required>
         </div>
     </div>
     <div class="col-12">

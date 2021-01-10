@@ -10,7 +10,7 @@ class ProjectsModel extends Model
     protected $table = 'projects';
     protected $fillable = [
         'name' => 'required|name|unique:Projects',
-        'dateRegistration' => 'required|dateRegistration|unique:Projects',
+        //'dateRegistration'  => 'required|dateRegistration|unique:Projects',
         'semester' => 'required|semester|unique:Projects',
     ];
 

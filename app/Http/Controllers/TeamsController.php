@@ -118,7 +118,7 @@ class TeamsController extends Controller
     public function update(Request $request, $team)
     {
         //
-        $team = TeamsModel::where('idTeam', $team)->firstOrFail();
+        $team = TeamsModel::where('id', $team)->firstOrFail();
         $team = $this->createUpdateteam($request, $team);
         return redirect()
             ->route('teams.show', $team)

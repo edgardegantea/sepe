@@ -10,8 +10,8 @@ class TeachersModel extends Model
     protected $foreingKey = 'idProject';
     protected $table = 'teachers';
     protected $fillable = [
-        'firstname' => 'required|firstname|unique:teachers',
-        'lastname' => 'required|lastname|unique:teachers',
+        'firstName' => 'required|firstName|unique:teachers',
+        'lastName' => 'required|lastName|unique:teachers',
         'controlNumber' => 'required|controlNumber|unique:teachers',
         'email' => 'required|email|unique:teachers',
     ];
@@ -20,7 +20,7 @@ class TeachersModel extends Model
 
     public function Projects()
     {
-        return $this->belongsTo('App\Models\ProjectsModel', 'idProject', 'idProject');
+        return $this->belongsTo('ProjectsModel', 'idProject', 'idProject');
     }
 
     function projects1()

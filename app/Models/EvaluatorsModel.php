@@ -10,8 +10,8 @@ class EvaluatorsModel extends Model
     protected $foreingKey = 'idProject';
     protected $table = 'evaluators';
     protected $fillable = [
-        'firstname' => 'required|firstname|unique:evaluators',
-        'lastname' => 'required|lastname|unique:evaluators',
+        'firstName' => 'required|firstName|unique:evaluators',
+        'lastName' => 'required|lastName|unique:evaluators',
         'email' => 'required|email|unique:evaluators',
     ];
 

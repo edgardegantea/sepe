@@ -7,7 +7,7 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $team->idTeam}}</p>
+            <p><b>ID:</b> {{ $team->id}}</p>
             <p><b>Ingeniería:</b> {{ $team->engineering}} </p>
             <p><b>Semestre:</b> {{ $team->semester}} </p>
             <p><b>ID proyecto:</b> {{ $team->idProject}}</p>
@@ -15,7 +15,7 @@
             <p><b>ID evaludor:</b> {{ $team->idEvaluator}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('teams.edit', $team->idTeam) }}">
+            <a class="btn btn-primary" href="{{route('teams.edit', $team->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>

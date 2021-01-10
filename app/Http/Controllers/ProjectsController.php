@@ -64,7 +64,7 @@ class ProjectsController extends Controller
     {
         //$project->idProject = $request->idProject;
         $project->name = $request->name;
-        $project->dateRegistration = $request->dateRegistration;
+        //$project->dateRegistration = $request->dateRegistration;
         $project->semester = $request->semester;
         $project->save();
         return $project;
@@ -79,7 +79,7 @@ class ProjectsController extends Controller
     public function show($project)
     {
         //
-        $project = ProjectsModel::where('idProject', $project)->firstOrFail();
+        $project = ProjectsModel::where('id', $project)->firstOrFail();
         return view('projects.show', compact('project'));
     }
 
@@ -93,7 +93,7 @@ class ProjectsController extends Controller
     {
         //
         $projects = ProjectsModel::select('*')->get();
-        $project = ProjectsModel::where('idProject', $project)->firstOrFail();
+        $project = ProjectsModel::where('id', $project)->firstOrFail();
         return view('projects.edit', compact('project', 'projects'));
     }
 
@@ -107,7 +107,7 @@ class ProjectsController extends Controller
     public function update(Request $request, $project)
     {
         //
-        $project = ProjectsModel::where('idProject', $project)->firstOrFail();
+        $project = ProjectsModel::where('id', $project)->firstOrFail();
         $project = $this->createUpdateProject($request, $project);
         return redirect()
             ->route('projects.show', $project)

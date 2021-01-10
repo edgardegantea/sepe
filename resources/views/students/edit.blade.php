@@ -7,7 +7,7 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <form action="{{ route('students.update', $students->id)}}" method="POST"
+            <form action="{{ route('students.update', $student->id)}}" method="POST"
                   enctype="multipart/form-data" id="create">
                 @method('PUT')
                 @include('students.partials.form')
@@ -18,12 +18,12 @@
                 <i class="fa fa-save"></i>
                 Guardar cambios
             </button>
-            <button class="btn btn-danger" form="delete_{{ $students->id}}"
+            <button class="btn btn-danger" form="delete_{{ $student->id}}"
                     onclick="return confirm('¿Esta seguro de eliminar registro?')">
                 <i class="fa fa-trash"></i>
                 Eliminar
             </button>
-            <form action="{{ route('students.destroy', $students->id) }}" id="delete_{{$students->id}}"
+            <form action="{{ route('students.destroy', $student->id) }}" id="delete_{{$student->id}}"
                   method="post" enctype="multipart/form-data" hidden>
                 @csrf
                 @method('DELETE')

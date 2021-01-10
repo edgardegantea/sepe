@@ -25,8 +25,8 @@ class TeachersController extends Controller
         $limit = (isset($request->limit)) ? $request->limit : 10;
 
         if (isset($request->serarch)) {
-            $teachers = $teachers->where('firstname', 'like', '%' . $request->search . '%')
-                ->orWhere('lastname', 'like', '%' . $request->search . '%')
+            $teachers = $teachers->where('firstName', 'like', '%' . $request->search . '%')
+                ->orWhere('lastName', 'like', '%' . $request->search . '%')
                 ->orWhere('controlNumber', 'like', '%' . $request->search . '%')
                 ->orWhere('email', 'like', '%' . $request->search . '%')
                 ->orWhere('idProject', 'like', '%' . $request->search . '%');
@@ -70,8 +70,8 @@ class TeachersController extends Controller
     public function createUpdateteacher(Request $request, $teacher)
     {
         //$teacher->idTeacher = $request->idTeacher;
-        $teacher->firstname = $request->firstname;
-        $teacher->lastname = $request->lastname;
+        $teacher->firstName = $request->firstName;
+        $teacher->lastName = $request->lastName;
         $teacher->controlNumber = $request->controlNumber;
         $teacher->email = $request->email;
         $teacher->idProject = $request->idProject;

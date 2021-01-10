@@ -23,16 +23,16 @@ class TeamsModel extends Model
 
     public function Projects()
     {
-        return $this->belongsTo('App\Models\ProjectsModel', 'idProject', 'idProject');
+        return $this->belongsTo('App\Models\ProjectsModel', 'id', 'idProject');
     }
 
     public function Students()
     {
-        return $this->belongsTo('App\Models\StudentsModel', 'idStudent', 'idStudent');
+        return $this->belongsTo('App\Models\StudentsModel', 'id', 'idStudent');
     }
 
     public function Evaluators()
     {
-        return $this->belongsTo('App\Models\EvaluatorsModel', 'idEvaluator', 'idEvaluator');
+        return $this->belongsTo('App\Models\EvaluatorsModel', 'id', 'idEvaluator');
     }
 }

@@ -7,15 +7,15 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $teacher->idTeacher}}</p>
-            <p><b>Nombre:</b> {{ $teacher->firstname}} </p>
-            <p><b>Apellidos:</b> {{ $teacher->lastname}} </p>
+            <p><b>ID:</b> {{ $teacher->id}}</p>
+            <p><b>Nombre:</b> {{ $teacher->firstName}} </p>
+            <p><b>Apellidos:</b> {{ $teacher->lastName}} </p>
             <p><b>Número de control:</b> {{ $teacher->controlNumber}}</p>
             <p><b>Correo electrónico institucional:</b> {{ $teacher->email}} </p>
             <p><b>ID proyecto:</b> {{ $teacher->idProject}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('teachers.edit', $teacher->idTeacher) }}">
+            <a class="btn btn-primary" href="{{route('teachers.edit', $teacher->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>

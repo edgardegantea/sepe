@@ -7,14 +7,14 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $evaluator->idEvaluator}}</p>
-            <p><b>Nombre:</b> {{ $evaluator->firstname}} </p>
-            <p><b>Apellidos:</b> {{ $evaluator->lastname}} </p>
+            <p><b>ID:</b> {{ $evaluator->id}}</p>
+            <p><b>Nombre:</b> {{ $evaluator->firstName}} </p>
+            <p><b>Apellidos:</b> {{ $evaluator->lastName}} </p>
             <p><b>Correo electrónico institucional:</b> {{ $evaluator->email}}</p>
             <p><b>ID proyecto:</b> {{ $evaluator->idProject}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('evaluators.edit', $evaluator->idEvaluator) }}">
+            <a class="btn btn-primary" href="{{route('evaluators.edit', $evaluator->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>

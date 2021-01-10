@@ -100,8 +100,9 @@ class StudentsController extends Controller
     public function edit($student)
     {
         //
-        $students = StudentsModel::where('id', $student)->firstOrFail();
-        return view('students.edit', compact('student', 'students'));
+        //$students = StudentsModel::where('id', $student)->firstOrFail();
+        $student = StudentsModel::where('id', $student)->firstOrFail();
+        return view('students.edit', compact('student'));
     }
 
     /**

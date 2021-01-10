@@ -7,13 +7,13 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $project->idProject}}</p>
+            <p><b>ID:</b> {{ $project->id}}</p>
             <p><b>Nombre:</b> {{ $project->name}}</p>
             <p><b>Fecha de registro:</b> {{ $project->dateRegistration}} </p>
             <p><b>Semestre:</b> {{ $project->semester}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('projects.edit', $project->idProject) }}">
+            <a class="btn btn-primary" href="{{route('projects.edit', $project->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>

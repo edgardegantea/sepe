@@ -24,10 +24,10 @@ class EvaluatorsController extends Controller
         $limit = (isset($request->limit)) ? $request->limit : 10;
 
         if (isset($request->serarch)) {
-            $evaluators = $evaluators->where('firstname', 'like', '%' . $request->search . '%')
-                ->orWhere('lastname', 'like', '%' . $request->search . '%')
+            $evaluators = $evaluators->where('firstName', 'like', '%' . $request->search . '%')
+                ->orWhere('lastName', 'like', '%' . $request->search . '%')
                 ->orWhere('email', 'like', '%' . $request->search . '%')
-                ->orWhere('idEvaluator', 'like', '%' . $request->search . '%');
+                ->orWhere('id', 'like', '%' . $request->search . '%');
         }
         $evaluators = $evaluators->paginate($limit)->appends($request->all());
         return view('evaluators.index', compact('evaluators', 'limit'));
@@ -66,8 +66,8 @@ class EvaluatorsController extends Controller
     public function createUpdateevaluator(Request $request, $evaluator)
     {
         //$evaluator->idEvaluator = $request->idEvaluator;
-        $evaluator->firstname = $request->firstname;
-        $evaluator->lastname = $request->lastname;
+        $evaluator->firstName = $request->firstName;
+        $evaluator->lastName = $request->lastName;
         $evaluator->email = $request->email;
         $evaluator->idProject = $request->idProject;
         $evaluator->save();
@@ -83,7 +83,7 @@ class EvaluatorsController extends Controller
     public function show($evaluator)
     {
         //
-        $evaluator = EvaluatorsModel::where('idEvaluator', $evaluator)->firstOrFail();
+        $evaluator = EvaluatorsModel::where('id', $evaluator)->firstOrFail();
         return view('evaluators.show', compact('evaluator'));
     }
 
@@ -97,7 +97,7 @@ class EvaluatorsController extends Controller
     {
         //
         $evaluators = EvaluatorsModel::select('*')->get();
-        $evaluator = EvaluatorsModel::where('idEvaluator', $evaluator)->firstOrFail();
+        $evaluator = EvaluatorsModel::where('id', $evaluator)->firstOrFail();
         return view('evaluators.edit', compact('evaluator', 'evaluators'));
     }
 
@@ -111,7 +111,7 @@ class EvaluatorsController extends Controller
     public function update(Request $request, $evaluator)
     {
         //
-        $evaluator = EvaluatorsModel::where('idEvaluator', $evaluator)->firstOrFail();
+        $evaluator = EvaluatorsModel::where('id', $evaluator)->firstOrFail();
         $evaluator = $this->createUpdateevaluator($request, $evaluator);
         return redirect()
             ->route('evaluators.show', $evaluator)
