@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class TeamsModel extends Model
 {
-    protected $primaryKey = 'idTeam';
+    protected $primaryKey = 'id';
     protected $foreingKey = 'idProject';
     protected $foreingKey2 = 'idStudent';
     protected $foreingKey3 = 'idEvaluator';
@@ -23,16 +23,16 @@ class TeamsModel extends Model
 
     public function Projects()
     {
-        return $this->belongsTo('App\Entities\ProjectsModel', 'idProject', 'idProject');
+        return $this->belongsTo('App\Models\ProjectsModel', 'idProject', 'idProject');
     }
 
     public function Students()
     {
-        return $this->belongsTo('App\Entities\StudentsModel', 'idStudent', 'idStudent');
+        return $this->belongsTo('App\Models\StudentsModel', 'idStudent', 'idStudent');
     }
 
     public function Evaluators()
     {
-        return $this->belongsTo('App\Entities\EvaluatorsModel', 'idEvaluator', 'idEvaluator');
+        return $this->belongsTo('App\Models\EvaluatorsModel', 'idEvaluator', 'idEvaluator');
     }
 }

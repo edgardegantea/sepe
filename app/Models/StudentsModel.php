@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class StudentsModel extends Model
 {
-    protected $primaryKey = 'idStudent';
+    protected $primaryKey = 'id';
     protected $table = 'students';
     protected $fillable = [
-        'firstname' => 'required|firstname|unique:students',
-        'lastname' => 'required|lastname|unique:students',
+        'firstName' => 'required|firstName|unique:students',
+        'lastName' => 'required|lastName|unique:students',
         'semester' => 'required|semester|unique:students',
         'engineering' => 'required|engineering|unique:students',
         'controlNumber' => 'required|controlNumber|unique:students',

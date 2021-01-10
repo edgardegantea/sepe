@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\TeamsModel;
-use App\Entities\StudentsModel;
-use App\Entities\ProjectsModel;
-use App\Entities\EvaluatorsModel;
+use App\Models\TeamsModel;
+use App\Models\StudentsModel;
+use App\Models\ProjectsModel;
+use App\Models\EvaluatorsModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 use Illuminate\Support\Facades\DB;
@@ -90,7 +90,7 @@ class TeamsController extends Controller
     public function show($team)
     {
         //
-        $team = TeamsModel::where('idTeam', $team)->firstOrFail();
+        $team = TeamsModel::where('id', $team)->firstOrFail();
         return view('teams.show', compact('team'));
     }
 
@@ -104,7 +104,7 @@ class TeamsController extends Controller
     {
         //
         $teams = TeamsModel::select('*')->get();
-        $team = TeamsModel::where('idTeam', $team)->firstOrFail();
+        $team = TeamsModel::where('id', $team)->firstOrFail();
         return view('teams.edit', compact('team', 'teams'));
     }
 

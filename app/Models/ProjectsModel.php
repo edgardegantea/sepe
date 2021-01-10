@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class ProjectsModel extends Model
 {
-    protected $primaryKey = 'idProject';
-    protected $table = 'Projects';
+    protected $primaryKey = 'id';
+    protected $table = 'projects';
     protected $fillable = [
         'name' => 'required|name|unique:Projects',
         'dateRegistration' => 'required|dateRegistration|unique:Projects',

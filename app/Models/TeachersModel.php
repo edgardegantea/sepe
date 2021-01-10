@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class TeachersModel extends Model
 {
-    protected $primaryKey = 'idTeacher';
+    protected $primaryKey = 'id';
     protected $foreingKey = 'idProject';
     protected $table = 'teachers';
     protected $fillable = [
@@ -20,7 +20,7 @@ class TeachersModel extends Model
 
     public function Projects()
     {
-        return $this->belongsTo('App\Entities\ProjectsModel', 'idProject', 'idProject');
+        return $this->belongsTo('App\Models\ProjectsModel', 'idProject', 'idProject');
     }
 
     function projects1()

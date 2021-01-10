@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Entities\SubjectsModel;
+use App\Models\SubjectsModel;
 use Barryvdh\DomPDF\Facade;
 
 class SubjectsController extends Controller
@@ -77,7 +77,7 @@ class SubjectsController extends Controller
     public function show($subject)
     {
         //
-        $subject = SubjectsModel::where('idSubject', $subject)->firstOrFail();
+        $subject = SubjectsModel::where('id', $subject)->firstOrFail();
         return view('subjects.show', compact('subject'));
     }
 
@@ -91,7 +91,7 @@ class SubjectsController extends Controller
     {
         //
         $subjects = SubjectsModel::select('*')->get();
-        $subject = SubjectsModel::where('idSubject', $subject)->firstOrFail();
+        $subject = SubjectsModel::where('id', $subject)->firstOrFail();
         return view('subjects.edit', compact('subject', 'subjects'));
     }
 
@@ -105,7 +105,7 @@ class SubjectsController extends Controller
     public function update(Request $request, $subject)
     {
         //
-        $subject = SubjectsModel::where('idSubject', $subject)->firstOrFail();
+        $subject = SubjectsModel::where('id', $subject)->firstOrFail();
         $subject = $this->createUpdatesubject($request, $subject);
         return redirect()
             ->route('subjects.show', $subject)

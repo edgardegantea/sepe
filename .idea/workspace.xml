@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/help/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profiles/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/subjects/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/teams/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Agregando migraciones Parte1">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sepe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sepe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/EvaluatorsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EvaluatorsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/ProfilesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProfilesModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/ProjectsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProjectsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/StudentsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/StudentsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/SubjectsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SubjectsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/TeachersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TeachersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/TeamsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TeamsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entities/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UsersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeachersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeachersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_211511_create_projects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +111,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
@@ -178,7 +159,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
@@ -204,7 +184,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
@@ -214,6 +193,7 @@
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hiFOX9piWmT8bwI52GrwjPeCE8" />
@@ -223,8 +203,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recetaslaravel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Proyecto Sepe/sepe1.sql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -232,13 +213,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\sepe\resources\views\aspectos" />
       <recent name="C:\laragon\www\sepe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sepe\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -283,6 +267,13 @@
       <workItem from="1607398363954" duration="4306000" />
       <workItem from="1607474447123" duration="224000" />
       <workItem from="1607532817895" duration="20295000" />
+      <workItem from="1607576784018" duration="1716000" />
+      <workItem from="1607650888463" duration="3758000" />
+      <workItem from="1609972914975" duration="121000" />
+      <workItem from="1609973053412" duration="529000" />
+      <workItem from="1610034065073" duration="106000" />
+      <workItem from="1610034242075" duration="121000" />
+      <workItem from="1610226371890" duration="14081000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -347,11 +338,29 @@
       <option name="project" value="LOCAL" />
       <updated>1607484892351</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Union de las partes del proyecto.">
+      <created>1607577640688</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607577640688</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
@@ -363,72 +372,9 @@
     <MESSAGE value="Completos los modulos con la parte de create." />
     <MESSAGE value="Clompletando la parte de instrucciones de los modulos." />
     <MESSAGE value="Se cambio el tipo de dato en el campo &quot;valor&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se cambio el tipo de dato en el campo &quot;valor&quot;." />
+    <MESSAGE value="Union de las partes del proyecto." />
+    <MESSAGE value="Agregando migraciones Parte1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando migraciones Parte1" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603739772422">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="457" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603739772422" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607244638389">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607244638389" />
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2" timestamp="1607484868523">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="34" y="0" width="978" height="728" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607484868523" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607474709475">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607474709475" />
-    <state x="1829" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747111900" />
-    <state width="225" height="360" key="Git.Branch.Popup" timestamp="1604174024984">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="225" height="360" key="Git.Branch.Popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604174024984" />
-    <state width="217" height="352" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1603847862746" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1600747190592">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1600747190592">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1600747190563">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190563" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1600747190592">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1600747190592" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600738619246" />
-    <state x="498" y="86" key="NewPhpClassDialog" timestamp="1607561928809">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="498" y="86" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607561928809" />
-    <state x="657" y="244" key="NewPhpFileDialog" timestamp="1607562253760">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="657" y="244" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607562253760" />
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603848692876" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1605072222262">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605072222262" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1607484910276">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607484910276" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607549319538">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1607549319538" />
   </component>
 </project>

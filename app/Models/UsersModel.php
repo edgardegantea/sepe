@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class UsersModel extends Model
 {
-    protected $primaryKey = 'id_Users';
+    protected $primaryKey = 'id';
     protected $foreingKey = 'id_Profiles';
     protected $table = 'Users';
     protected $fillable = [
@@ -19,7 +19,7 @@ class UsersModel extends Model
 
     public function Profiles()
     {
-        return $this->belongsTo('App\Entities\ProfilesModel', 'id_Profiles', 'id_Profiles');
+        return $this->belongsTo('App\Models\ProfilesModel', 'id_Profiles', 'id_Profiles');
     }
 
 }

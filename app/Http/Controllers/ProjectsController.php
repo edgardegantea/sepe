@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
-use App\Entities\ProjectsModel;
+use App\Models\ProjectsModel;
 
 class ProjectsController extends Controller
 {
@@ -23,7 +23,7 @@ class ProjectsController extends Controller
 
         if (isset($request->serarch)) {
             $projects = $projects->where('name', 'like', '%' . $request->search . '%')
-                ->orWhere('dateRegistration', 'like', '%' . $request->search . '%')
+                ->orWhere('created_at', 'like', '%' . $request->search . '%')
                 ->orWhere('semester', 'like', '%' . $request->search . '%');
         }
         $projects = $projects->paginate($limit)->appends($request->all());

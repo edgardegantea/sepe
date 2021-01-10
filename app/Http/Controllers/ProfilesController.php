@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\ProfilesModel;
+use App\Models\ProfilesModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 

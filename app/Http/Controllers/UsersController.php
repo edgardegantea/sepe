@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\UsersModel;
-use App\Entities\ProfilesModel;
+use App\Models\UsersModel;
+use App\Models\ProfilesModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 
@@ -80,7 +80,7 @@ class UsersController extends Controller
     public function show($user)
     {
         //
-        $user = UsersModel::where('id_Users', $user)->firstOrFail();
+        $user = UsersModel::where('id', $user)->firstOrFail();
         return view('users.show', compact('user'));
     }
 
@@ -94,7 +94,7 @@ class UsersController extends Controller
     {
         //
         $profiles = ProfilesModel::select('*')->get();
-        $users = UsersModel::where('id_Users', $user)->firstOrFail();
+        $users = UsersModel::where('id', $user)->firstOrFail();
         return view('users.edit', compact('user', 'users'));
     }
 
@@ -108,7 +108,7 @@ class UsersController extends Controller
     public function update(Request $request, $user)
     {
         //
-        $user = UsersModel::where('id_Users', $user)->firstOrFail();
+        $user = UsersModel::where('id', $user)->firstOrFail();
         $user = $this->createUpdateUser($request, $user);
         return redirect()
             ->route('users.show', $user)

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Entities;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class SubjectsModel extends Model
 {
-    protected $primaryKey = 'idSubject';
+    protected $primaryKey = 'id';
     protected $table = 'subjects';
     protected $fillable = [
         'name' => 'required|name|unique:subjects',

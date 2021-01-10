@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\EvaluatorsModel;
-use App\Entities\ProjectsModel;
+use App\Models\EvaluatorsModel;
+use App\Models\ProjectsModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 

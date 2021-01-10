@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\TeachersModel;
-use App\Entities\ProjectsModel;
+use App\Models\TeachersModel;
+use App\Models\ProjectsModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 use Illuminate\Support\Facades\DB;
@@ -88,7 +88,7 @@ class TeachersController extends Controller
     public function show($teacher)
     {
         //
-        $teacher = TeachersModel::where('idTeacher', $teacher)->firstOrFail();
+        $teacher = TeachersModel::where('id', $teacher)->firstOrFail();
         return view('teachers.show', compact('teacher'));
     }
 
@@ -125,7 +125,7 @@ class TeachersController extends Controller
     public function update(Request $request, $teacher)
     {
         //
-        $teacher = TeachersModel::where('idTeacher', $teacher)->firstOrFail();
+        $teacher = TeachersModel::where('id', $teacher)->firstOrFail();
         $teacher = $this->createUpdateteacher($request, $teacher);
         return redirect()
             ->route('teachers.show', $teacher)

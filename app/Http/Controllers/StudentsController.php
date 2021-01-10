@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\StudentsModel;
+use App\Models\StudentsModel;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade;
 
@@ -22,8 +22,8 @@ class StudentsController extends Controller
         $limit = (isset($request->limit)) ? $request->limit : 10;
 
         if (isset($request->serarch)) {
-            $students = $students->where('firstname', 'like', '%' . $request->search . '%')
-                ->orWhere('lastname', 'like', '%' . $request->search . '%')
+            $students = $students->where('firstName', 'like', '%' . $request->search . '%')
+                ->orWhere('lastName', 'like', '%' . $request->search . '%')
                 ->orWhere('semester', 'like', '%' . $request->search . '%')
                 ->orWhere('engineering', 'like', '%' . $request->search . '%')
                 ->orWhere('controlNumber', 'like', '%' . $request->search . '%')
@@ -68,8 +68,8 @@ class StudentsController extends Controller
     public function createUpdatestudent(Request $request, $student)
     {
         //$student->idStudent = $request->idStudent;
-        $student->firstname = $request->firstname;
-        $student->lastname = $request->lastname;
+        $student->firstName = $request->firstName;
+        $student->lastName = $request->lastName;
         $student->semester = $request->semester;
         $student->engineering = $request->engineering;
         $student->controlNumber = $request->controlNumber;
@@ -87,7 +87,7 @@ class StudentsController extends Controller
     public function show($student)
     {
         //
-        $student = StudentsModel::where('idStudent', $student)->firstOrFail();
+        $student = StudentsModel::where('id', $student)->firstOrFail();
         return view('students.show', compact('student'));
     }
 
@@ -100,7 +100,7 @@ class StudentsController extends Controller
     public function edit($student)
     {
         //
-        $students = StudentsModel::where('idStudent', $student)->firstOrFail();
+        $students = StudentsModel::where('id', $student)->firstOrFail();
         return view('students.edit', compact('student', 'students'));
     }
 
@@ -114,7 +114,7 @@ class StudentsController extends Controller
     public function update(Request $request, $student)
     {
         //
-        $student = StudentsModel::where('idStudent', $student)->firstOrFail();
+        $student = StudentsModel::where('id', $student)->firstOrFail();
         $student = $this->createUpdatestudent($request, $student);
         return redirect()
             ->route('students.show', $student)

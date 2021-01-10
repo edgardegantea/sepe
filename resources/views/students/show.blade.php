@@ -7,16 +7,16 @@
                 <i class="fa fa-arrow-left">volver</i></a>
         </div>
         <div class="card-body">
-            <p><b>ID:</b> {{ $student->idStudent}}</p>
-            <p><b>Nombre:</b> {{ $student->firstname}}</p>
-            <p><b>Apellidos:</b> {{ $student->lastname}} </p>
+            <p><b>ID:</b> {{ $student->id}}</p>
+            <p><b>Nombre:</b> {{ $student->firstName}}</p>
+            <p><b>Apellidos:</b> {{ $student->lastName}} </p>
             <p><b>Semestre:</b> {{ $student->semester}} </p>
             <p><b>Ingeniería:</b> {{ $student->engineering}} </p>
             <p><b>Número de control:</b> {{ $student->controlNumber}} </p>
             <p><b>Correo electrónico institutional:</b> {{ $student->email}} </p>
         </div>
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('students.edit', $student->idStudent) }}">
+            <a class="btn btn-primary" href="{{route('students.edit', $student->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>
