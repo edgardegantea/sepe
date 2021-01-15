@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class EvaluatorsModel extends Model
 {
-    protected $primaryKey = 'id';
-    protected $foreingKey = 'idProject';
+    //protected $primaryKey = 'id';
+    //protected $foreingKey = 'idProject';
     protected $table = 'evaluators';
     protected $fillable = [
         'firstName' => 'required|firstName|unique:evaluators',
@@ -15,10 +15,7 @@ class EvaluatorsModel extends Model
         'email' => 'required|email|unique:evaluators',
     ];
 
-    public $timestamps = false;
+    //public $timestamps = false;
 
-    public function Projects()
-    {
-        return $this->belongsTo('App\Models\ProjectsModel', 'idProject', 'idProject');
-    }
+
 }

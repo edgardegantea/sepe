@@ -1,22 +1,31 @@
 @extends('layouts.app')
 @section('content')
-    <div class="card mt-3">
-        <div class="card-header d-inline-flex">
-            <b><h1>Detalle proyectos</h1></b>
-            <a href="{{ route('projects.index')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-arrow-left">volver</i></a>
-        </div>
-        <div class="card-body">
-            <p><b>ID:</b> {{ $project->id}}</p>
-            <p><b>Nombre:</b> {{ $project->name}}</p>
-            <p><b>Fecha de registro:</b> {{ $project->dateRegistration}} </p>
-            <p><b>Semestre:</b> {{ $project->semester}} </p>
-        </div>
-        <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('projects.edit', $project->id) }}">
-                <i class="fa fa-edit"></i>
-                Editar
-            </a>
+
+    <div class="container">
+
+
+        <div class="card mt-3">
+            <div class="card-header d-inline-flex">
+                <b><h1>Detalles del Proyecto</h1></b>
+                <a href="{{ route('projects.index')}}" class="btn btn-primary ml-auto">
+                    <i class="fa fa-arrow-left">Regresar</i></a>
+            </div>
+
+            <div class="card-body">
+                <p><b>ID:</b> {{ $project->id}}</p>
+                <p><b>Nombre: </b> {{ $project->name}}</p>
+                <p><b>Semestre: </b> {{ $project->semester}} </p>
+                <p><b>Descripción: </b> {{ $project->description }}</p>
+                <p><b>Fecha de registro: </b> {{ $project->created_at}} </p>
+
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" href="{{route('projects.edit', $project->id) }}">
+                    <i class="fa fa-edit"></i>
+                    Editar
+                </a>
+            </div>
         </div>
     </div>
+
 @endsection

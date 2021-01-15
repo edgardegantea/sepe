@@ -38,8 +38,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**Relacion de 1:n de usuario-
-    public function relacionUserAspecto(){
-        return $this->hasMany(Aspecto::class);
-    }*/
+    //Relacion de 1:n de usuario a projects-
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

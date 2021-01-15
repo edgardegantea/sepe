@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Actualizacion Parte1">
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Corrigiendo nombres de campos y rutas...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeachersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeachersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/EvaluatorsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EvaluatorsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/ProjectsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProjectsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TeachersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TeachersModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TeamsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TeamsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_221146_create_evaluators_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222708_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_222708_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222735_create_students_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222802_create_subjects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222824_create_teachers_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222843_create_teams_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_223008_create_teamsview_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/partials/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/partials/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +205,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Proyecto Sepe/sepe1.sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recetaslaravel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -277,6 +274,10 @@
       <workItem from="1610034065073" duration="106000" />
       <workItem from="1610034242075" duration="121000" />
       <workItem from="1610226371890" duration="22647000" />
+      <workItem from="1610308010838" duration="9191000" />
+      <workItem from="1610581382944" duration="12060000" />
+      <workItem from="1610644073446" duration="56000" />
+      <workItem from="1610664315578" duration="27367000" />
     </task>
     <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
       <created>1604173894031</created>
@@ -362,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610241030722</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Corrigiendo nombres de campos y rutas...">
+      <created>1610308278978</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610308278978</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +386,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
@@ -392,7 +401,8 @@
     <MESSAGE value="Union de las partes del proyecto." />
     <MESSAGE value="Agregando migraciones Parte1" />
     <MESSAGE value="Actualizacion Parte1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion Parte1" />
+    <MESSAGE value="Corrigiendo nombres de campos y rutas..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigiendo nombres de campos y rutas..." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

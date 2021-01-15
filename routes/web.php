@@ -3,11 +3,10 @@
 use App\Http\Controllers\AyudaController;
 use App\Http\Controllers\ElementController;
 use App\Http\Controllers\EvaluationController;
-use App\Http\Controllers\EvaluatorsController;
+use App\Http\Controllers\EvaluatorController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\IdentityController;
 use App\Http\Controllers\InteractionController;
-use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\RotuladoController;
 
 use \App\Http\Controllers\ProjectController;
@@ -17,9 +16,9 @@ use \App\Http\Controllers\LayoutpageController;
 use \App\Http\Controllers\ControlController;
 use \App\Http\Controllers\SearchController;
 
-use App\Http\Controllers\StudentsController;
-use App\Http\Controllers\SubjectsController;
-use App\Http\Controllers\TeachersController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\TeamsController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,7 +41,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('proyectos', ProjectController::class);
 Route::resource('aspectos', AspectoController::class);
 Route::resource('structures', StructureController::class);
 Route::resource('layoutpages', LayoutpageController::class);
@@ -57,11 +55,11 @@ Route::resource('rotulados', RotuladoController::class);
 
 Route::resource('help', HelpController::class);
 Route::resource('teams', TeamsController::class);
-Route::resource('projects', ProjectsController::class);
-Route::resource('teachers', TeachersController::class);
-Route::resource('students', StudentsController::class);
-Route::resource('subjects', SubjectsController::class);
-Route::resource('evaluators', EvaluatorsController::class);
+Route::resource('projects', ProjectController::class);
+Route::resource('teachers', TeacherController::class);
+Route::resource('students', StudentController::class);
+Route::resource('subjects', SubjectController::class);
+Route::resource('evaluators', EvaluatorController::class);
 
 
 Route::get('teams-pdf', 'TeamsController@exportPDF')->name('teams.pdf');

@@ -11,9 +11,9 @@ class Project extends Model
 
     protected $fillable = [
         'name',
+        'semester',
         'description'
     ];
-
 
     /** Relacion 1:1 de Project a Aspecto
 

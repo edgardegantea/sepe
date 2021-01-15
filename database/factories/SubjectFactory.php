@@ -2,18 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Project;
+use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class ProjectFactory extends Factory
+class SubjectFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Project::class;
+    protected $model = Subject::class;
 
     /**
      * Define the model's default state.
@@ -24,7 +23,6 @@ class ProjectFactory extends Factory
     {
         return [
             //
-
         ];
     }
 }

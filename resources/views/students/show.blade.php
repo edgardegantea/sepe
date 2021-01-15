@@ -11,7 +11,7 @@
             <p><b>Nombre:</b> {{ $student->firstName}}</p>
             <p><b>Apellidos:</b> {{ $student->lastName}} </p>
             <p><b>Semestre:</b> {{ $student->semester}} </p>
-            <p><b>Ingeniería:</b> {{ $student->engineering}} </p>
+            <p><b>Carrera:</b> {{ $student->engineering}} </p>
             <p><b>Número de control:</b> {{ $student->controlNumber}} </p>
             <p><b>Correo electrónico institutional:</b> {{ $student->email}} </p>
         </div>

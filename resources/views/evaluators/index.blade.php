@@ -81,7 +81,7 @@
                             {{ $evaluator->email }}
                         </td>
                         <td>
-                            {{ $evaluator->idProject}}.{{ $evaluator->projects->projects}}
+                            {{ $evaluator->id}}.{{ $evaluator->projects->projects}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">
