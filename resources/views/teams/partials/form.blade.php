@@ -35,3 +35,4 @@
                    value="{{(isset($team))?$team->idEvaluator:old('idEvaluator')}}" required>
         </div>
     </div>
+</div>

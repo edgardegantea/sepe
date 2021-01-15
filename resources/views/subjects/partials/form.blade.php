@@ -15,3 +15,4 @@
                    value="{{(isset($subject))?$subject->teacher:old('teacher')}}" required>
         </div>
     </div>
+</div>

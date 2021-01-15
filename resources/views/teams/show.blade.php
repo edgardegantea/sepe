@@ -10,9 +10,6 @@
             <p><b>ID:</b> {{ $team->id}}</p>
             <p><b>Ingeniería:</b> {{ $team->engineering}} </p>
             <p><b>Semestre:</b> {{ $team->semester}} </p>
-            <p><b>ID proyecto:</b> {{ $team->idProject}}</p>
-            <p><b>ID estudiante:</b> {{ $team->idStudent}} </p>
-            <p><b>ID evaludor:</b> {{ $team->idEvaluator}} </p>
         </div>
         <div class="card-footer">
             <a class="btn btn-primary" href="{{route('teams.edit', $team->id) }}">

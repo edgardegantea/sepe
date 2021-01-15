@@ -47,10 +47,6 @@
                     </div>
                 </div>
             </div>
-
-            @if($subjects->total() > 10)
-                {{$subjects->links()}}
-            @endif
         </div>
 
         <div class="table-responsive">
@@ -60,6 +56,7 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Docente asignado</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -116,26 +113,6 @@
                 @endforeach
                 </tbody>
             </table>
-
-        </div>
-        <div class="card-footer">
-            @if($subjects->total() > 10)
-                {{$subjects->links()}}
-            @endif
         </div>
     </div>
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $('#limit').on('change', function () {
-            window.location.href = '{{ route( "subjects.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
-        })
-
-        $('#search').on('keyup', function (e) {
-            if (e.keyCode == 13) {
-                window.location.href = '{{ route("subjects.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
-            }
-        })
-    </script>
 @endsection

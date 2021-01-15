@@ -6,20 +6,37 @@
             <a href="{{ route('teams.index')}}" class="btn btn-link ml-auto">
                 <i class="fa fa-arrow-left"></i></a>
         </div>
+
         <div class="card-body">
-            <form action="{{ route('teams.store')}}" method="POST" enctype="multipart/form-data" id="create">
-                @include('teams.partials.form')
+
+            <form method="POST" name="" action="{{ route('teams.store') }}">
+                @csrf
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Carrera</label>
+                            <select name="engineering" id="" required>
+                                <option value="">--Seleccione tu carrera--</option>
+                                <option value="Ingeniería Informática">Ingeniería Informática</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="" class="col-form-label">Semestre</label>
+                            <select name="semester" id="" required>
+                                <option value="">--Selecciona tu semestre--</option>
+                                @for($i = 1; $i<=13;$i++)
+                                    <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ route('teams.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
+                <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
             </form>
-        </div>
-        <div class="card-footer">
-            <button class="btn btn-success" form="create">
-                <i class="fa fa-plus"></i>
-                Crear
-            </button>
-            <button class="btn btn-primary" form="create">
-                <i class="fa fa-plus"></i>
-                Volver
-            </button>
         </div>
     </div>
 @endsection

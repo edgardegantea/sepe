@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +20,8 @@ class TeamController extends Controller
     public function index()
     {
         //
+        $teams = Team::all();
+        return view('teams.index', compact('teams'));
     }
 
     /**
@@ -25,6 +32,7 @@ class TeamController extends Controller
     public function create()
     {
         //
+        return view('teams.create');
     }
 
     /**
@@ -36,6 +44,14 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'engineering' => 'required',
+            'semester' => 'required'
+        ]);
+
+        Team::create($request->all());
+        return redirect()->route('teams.index');
+
     }
 
     /**
@@ -47,6 +63,7 @@ class TeamController extends Controller
     public function show(Team $team)
     {
         //
+        return view('teams.show', compact('team'));
     }
 
     /**
@@ -58,6 +75,7 @@ class TeamController extends Controller
     public function edit(Team $team)
     {
         //
+        return view('teams.edit', compact('team'));
     }
 
     /**
@@ -70,6 +88,15 @@ class TeamController extends Controller
     public function update(Request $request, Team $team)
     {
         //
+        $request->validate([
+            'engineering' => 'required',
+            'semester' => 'required'
+        ]);
+
+        $team->update($request->all());
+
+        return redirect()->route('teams.index');
+
     }
 
     /**
@@ -81,5 +108,7 @@ class TeamController extends Controller
     public function destroy(Team $team)
     {
         //
+        $team->delete();
+        return redirect()->route('teams.index');
     }
 }

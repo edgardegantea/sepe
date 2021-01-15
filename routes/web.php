@@ -19,7 +19,7 @@ use \App\Http\Controllers\SearchController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\TeamsController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,7 +54,7 @@ Route::resource('interactions', InteractionController::class);
 Route::resource('rotulados', RotuladoController::class);
 
 Route::resource('help', HelpController::class);
-Route::resource('teams', TeamsController::class);
+Route::resource('teams', TeamController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('teachers', TeacherController::class);
 Route::resource('students', StudentController::class);
