@@ -11,7 +11,6 @@
             <p><b>Nombre:</b> {{ $evaluator->firstName}} </p>
             <p><b>Apellidos:</b> {{ $evaluator->lastName}} </p>
             <p><b>Correo electrónico institucional:</b> {{ $evaluator->email}}</p>
-            <p><b>ID proyecto:</b> {{ $evaluator->idProject}} </p>
         </div>
         <div class="card-footer">
             <a class="btn btn-primary" href="{{route('evaluators.edit', $evaluator->id) }}">

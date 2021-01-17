@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class AspectoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -71,6 +76,7 @@ class AspectoController extends Controller
     public function show(Aspecto $aspecto)
     {
         //
+        return view('aspectos.show', compact('aspecto'));
     }
 
     /**
@@ -94,6 +100,25 @@ class AspectoController extends Controller
     public function update(Request $request, Aspecto $aspecto)
     {
         //
+        $data = $request->validate([
+            'codigo' => 'required',
+            'criterio' => 'required',
+            'valor' => 'required',
+            'relevancia' => 'required',
+            'comentario' => ''
+        ]);
+
+
+        for ($i = 0; $i < count($data['codigo']); $i++) {
+            $registro = new Aspecto();
+            $registro->codigo = $data['codigo'][$i];
+            $registro->criterio = $data['criterio'][$i];
+            $registro->valor = $data['valor'][$i];
+            $registro->relevancia = $data['relevancia'][$i];
+            $registro->comentario = $data['comentario'][$i];
+
+            $registro->save();
+        }
 
     }
 

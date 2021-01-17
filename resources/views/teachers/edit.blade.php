@@ -2,32 +2,50 @@
 @section('content')
     <div class="card mt-3">
         <div class="card-header d-inline-flex">
-            <b><h1>Formulario editar docentes</h1></b>
-            <a href="{{ route('teachers.index')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-arrow-left">volver</i></a>
+            <b><h1>Actualizar datos</h1></b>
+            <a href="{{ route('teachers.index')}}" class="btn btn-link ml-auto">
+                <i class="fa fa-arrow-left"></i></a>
         </div>
         <div class="card-body">
-            <form action="{{ route('teachers.update', $teacher->id)}}" method="POST"
-                  enctype="multipart/form-data" id="create">
-                @method('PUT')
-                @include('teachers.partials.form')
-            </form>
-        </div>
-        <div class="card-footer">
-            <button class="btn btn-primary" form="create">
-                <i class="fa fa-save"></i>
-                Guardar cambios
-            </button>
-            <button class="btn btn-danger" form="delete_{{ $teacher->id}}"
-                    onclick="return confirm('¿Esta seguro de eliminar registro?')">
-                <i class="fa fa-trash"></i>
-                Eliminar
-            </button>
-            <form action="{{ route('teachers.destroy', $teacher->id) }}" id="delete_{{$teacher->id}}"
-                  method="post" enctype="multipart/form-data" hidden>
+            <form action="{{ route('teachers.update', $teacher->id)}}" method="POST">
                 @csrf
-                @method('DELETE')
+
+                @method('PUT')
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Nombre</label>
+                            <input type="text" class="form-control" name="firstName" value="{{ $teacher->firstName }}"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Apellidos</label>
+                            <input type="text" class="form-control" name="lastName" value="{{ $teacher->lastName }}"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Número de control</label>
+                            <input type="text" class="form-control" name="controlNumber"
+                                   value="{{ $teacher->controlNumber }}" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Correo electrónico institucional</label>
+                            <input type="text" class="form-control" name="email" value="{{ $teacher->email }}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{{ route('teachers.index') }}" class="btn btn-secondary" tabindex="5">Regresar</a>
+                <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
             </form>
         </div>
+    </div>
     </div>
 @endsection

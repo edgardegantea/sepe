@@ -12,6 +12,6 @@ class Evaluator extends Model
     protected $fillable = [
         'firstName',
         'lastName',
-        'name'
+        'email'
     ];
 }

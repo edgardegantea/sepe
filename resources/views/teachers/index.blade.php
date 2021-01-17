@@ -47,22 +47,17 @@
                     </div>
                 </div>
             </div>
-
-            @if($teachers->total() > 10)
-                {{$teachers->links()}}
-            @endif
         </div>
 
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID docente</th>
+                    <th>ID Docente</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Número de control</th>
                     <th>Correo electrónico institucional</th>
-                    <th>ID proyecto</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -83,9 +78,6 @@
                         </td>
                         <td>
                             {{ $teacher->email }}
-                        </td>
-                        <td>
-                            {{ $teacher->idProject}}.{{ $teacher->name}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">
@@ -129,11 +121,6 @@
                 @endforeach
                 </tbody>
             </table>
-        </div>
-        <div class="card-footer">
-            @if($teachers->total() > 10)
-                {{$teachers->links()}}
-            @endif
         </div>
     </div>
 @endsection

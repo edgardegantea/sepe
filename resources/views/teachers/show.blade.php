@@ -12,7 +12,6 @@
             <p><b>Apellidos:</b> {{ $teacher->lastName}} </p>
             <p><b>Número de control:</b> {{ $teacher->controlNumber}}</p>
             <p><b>Correo electrónico institucional:</b> {{ $teacher->email}} </p>
-            <p><b>ID proyecto:</b> {{ $teacher->idProject}} </p>
         </div>
         <div class="card-footer">
             <a class="btn btn-primary" href="{{route('teachers.edit', $teacher->id) }}">

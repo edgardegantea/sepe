@@ -28,3 +28,4 @@
                    value="{{(isset($evaluator))?$evaluator->idProject:old('idProject')}}" required>
         </div>
     </div>
+</div>

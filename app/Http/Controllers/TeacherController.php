@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Utils;
 
 class TeacherController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +22,8 @@ class TeacherController extends Controller
     public function index()
     {
         //
+        $teachers = Teacher::all();
+        return view('teachers.index', compact('teachers'));
     }
 
     /**
@@ -25,6 +34,7 @@ class TeacherController extends Controller
     public function create()
     {
         //
+        return view('teachers.create');
     }
 
     /**
@@ -36,6 +46,16 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'controlNumber' => 'required',
+            'email' => 'required'
+        ]);
+
+        Teacher::create($request->all());
+        return redirect()->route('teachers.index');
+
     }
 
     /**
@@ -47,6 +67,7 @@ class TeacherController extends Controller
     public function show(Teacher $teacher)
     {
         //
+        return view('teachers.show', compact('teacher'));
     }
 
     /**
@@ -58,6 +79,7 @@ class TeacherController extends Controller
     public function edit(Teacher $teacher)
     {
         //
+        return view('teachers.edit', compact('teacher'));
     }
 
     /**
@@ -70,6 +92,15 @@ class TeacherController extends Controller
     public function update(Request $request, Teacher $teacher)
     {
         //
+        $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'controlNumber' => 'required',
+            'email' => 'required'
+        ]);
+
+        $teacher->update($request->all());
+        return redirect()->route('teachers.index');
     }
 
     /**
@@ -81,5 +112,7 @@ class TeacherController extends Controller
     public function destroy(Teacher $teacher)
     {
         //
+        $teacher->delete();
+        return redirect()->route('teachers.index');
     }
 }

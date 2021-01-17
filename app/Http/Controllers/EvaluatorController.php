@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class  EvaluatorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +21,8 @@ class  EvaluatorController extends Controller
     public function index()
     {
         //
+        $evaluators = Evaluator::all();
+        return view('evaluators.index', compact('evaluators'));
     }
 
     /**
@@ -25,6 +33,7 @@ class  EvaluatorController extends Controller
     public function create()
     {
         //
+        return view('evaluators.create');
     }
 
     /**
@@ -36,6 +45,15 @@ class  EvaluatorController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required'
+        ]);
+
+        Evaluator::create($request->all());
+        return redirect()->route('evaluators.index');
+
     }
 
     /**
@@ -47,6 +65,7 @@ class  EvaluatorController extends Controller
     public function show(Evaluator $evaluator)
     {
         //
+        return view('evaluators.show', compact('evaluator'));
     }
 
     /**
@@ -58,6 +77,7 @@ class  EvaluatorController extends Controller
     public function edit(Evaluator $evaluator)
     {
         //
+        return view('evaluators.edit', compact('evaluator'));
     }
 
     /**
@@ -70,6 +90,15 @@ class  EvaluatorController extends Controller
     public function update(Request $request, Evaluator $evaluator)
     {
         //
+        $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required'
+        ]);
+
+        $evaluator->update($request->all());
+        return redirect()->route('evaluators.index');
+
     }
 
     /**
@@ -81,5 +110,7 @@ class  EvaluatorController extends Controller
     public function destroy(Evaluator $evaluator)
     {
         //
+        $evaluator->delete();
+        return redirect()->route('evaluators.index');
     }
 }

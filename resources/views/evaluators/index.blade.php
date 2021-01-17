@@ -47,10 +47,6 @@
                     </div>
                 </div>
             </div>
-
-            @if($evaluators->total() > 10)
-                {{$evaluators->links()}}
-            @endif
         </div>
 
         <div class="table-responsive">
@@ -61,7 +57,6 @@
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Correo electrónico institucional</th>
-                    <th>ID proyecto</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -79,9 +74,6 @@
                         </td>
                         <td>
                             {{ $evaluator->email }}
-                        </td>
-                        <td>
-                            {{ $evaluator->id}}.{{ $evaluator->projects->projects}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">
@@ -126,11 +118,6 @@
                 @endforeach
                 </tbody>
             </table>
-        </div>
-        <div class="card-footer">
-            @if($evaluators->total() > 10)
-                {{$evaluators->links()}}
-            @endif
         </div>
     </div>
 @endsection
