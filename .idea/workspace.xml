@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Modulos de Equipos y Asignaturas completos.">
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluatorsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeachersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Evaluator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Evaluator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EvaluatorsModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/StudentsModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Teacher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TeachersModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TeamsModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evaluators/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teachers/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_09_222708_create_projects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_234831_create_subjects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_234831_create_subjects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SubjectSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SubjectSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,49 +34,9 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="Eliseo" />
-              </list>
-            </value>
-          </entry>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Eliseo" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Eliseo2" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -190,6 +149,10 @@
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hiFOX9piWmT8bwI52GrwjPeCE8" />
@@ -199,9 +162,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recetaslaravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -209,16 +171,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\sepe\resources\views\aspectos" />
-      <recent name="C:\laragon\www\sepe" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\sepe\app\Models" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -236,154 +194,9 @@
       <option name="presentableId" value="Default" />
       <updated>1600485973568</updated>
       <workItem from="1600485974942" duration="186000" />
-      <workItem from="1600492739276" duration="5590000" />
-      <workItem from="1603734933661" duration="1824000" />
-      <workItem from="1603738923884" duration="11775000" />
-      <workItem from="1603847065448" duration="12193000" />
-      <workItem from="1604171560578" duration="3573000" />
-      <workItem from="1604256617895" duration="96000" />
-      <workItem from="1604364814068" duration="3793000" />
-      <workItem from="1604461262965" duration="1905000" />
-      <workItem from="1604980922109" duration="1905000" />
-      <workItem from="1605072015229" duration="210000" />
-      <workItem from="1605169918033" duration="32414000" />
-      <workItem from="1605311383410" duration="16746000" />
-      <workItem from="1605570266221" duration="53315000" />
-      <workItem from="1605858583972" duration="23507000" />
-      <workItem from="1605931281779" duration="767000" />
-      <workItem from="1606114349217" duration="555000" />
-      <workItem from="1606276715168" duration="2986000" />
-      <workItem from="1606804520373" duration="1073000" />
-      <workItem from="1606880332338" duration="1969000" />
-      <workItem from="1606946571412" duration="17256000" />
-      <workItem from="1607119595586" duration="12065000" />
-      <workItem from="1607229536922" duration="15215000" />
-      <workItem from="1607324063150" duration="12673000" />
-      <workItem from="1607371314144" duration="6284000" />
-      <workItem from="1607398363954" duration="4306000" />
-      <workItem from="1607474447123" duration="224000" />
-      <workItem from="1607532817895" duration="20295000" />
-      <workItem from="1607576784018" duration="1716000" />
-      <workItem from="1607650888463" duration="3758000" />
-      <workItem from="1609972914975" duration="121000" />
-      <workItem from="1609973053412" duration="529000" />
-      <workItem from="1610034065073" duration="106000" />
-      <workItem from="1610034242075" duration="121000" />
-      <workItem from="1610226371890" duration="22647000" />
-      <workItem from="1610308010838" duration="9191000" />
-      <workItem from="1610581382944" duration="12060000" />
-      <workItem from="1610644073446" duration="56000" />
-      <workItem from="1610664315578" duration="35362000" />
-      <workItem from="1610768605552" duration="633000" />
-      <workItem from="1610834678339" duration="13442000" />
-      <workItem from="1610912159182" duration="452000" />
+      <workItem from="1614550372504" duration="9862000" />
+      <workItem from="1614571640097" duration="19457000" />
     </task>
-    <task id="LOCAL-00001" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
-      <created>1604173894031</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604173894031</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador.">
-      <created>1604174378823</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1604174378823</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users.">
-      <created>1605827157285</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605827157300</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Añadiendo seeders">
-      <created>1606114628157</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1606114628157</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Correccion de formulario y migraciones">
-      <created>1607242857819</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1607242857819</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Agregando modulos faltantes">
-      <created>1607245918853</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1607245918853</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Completos los modulos con la parte de create.">
-      <created>1607317948591</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1607317948591</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Clompletando la parte de instrucciones de los modulos.">
-      <created>1607404974071</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1607404974071</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Se cambio el tipo de dato en el campo &quot;valor&quot;.">
-      <created>1607484892351</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1607484892351</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Union de las partes del proyecto.">
-      <created>1607577640688</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1607577640688</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Actualizacion Parte1">
-      <created>1610241020588</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1610241020588</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Actualizacion Parte1">
-      <created>1610241030722</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1610241030722</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Corrigiendo nombres de campos y rutas...">
-      <created>1610308278978</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1610308278978</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Modulo Estudiantes y Proyectos con CRUD completo y funcionando.">
-      <created>1610699111511</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1610699111511</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Modulos de Equipos y Asignaturas completos.">
-      <created>1610754730664</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1610754730664</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,24 +213,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador" />
-    <MESSAGE value="Se agrego el modulo de Aspectos Generales, se creo un modelo llamado &quot;Aspecto&quot;, junto con su blade de index, create, y la migración hacia la base de datos y el controlador." />
-    <MESSAGE value="Se agrego el modulo de Structure, LayoutPage, Control, Search y se hizo la FK con la tabla Users." />
-    <MESSAGE value="Añadiendo seeders" />
-    <MESSAGE value="Correccion de formulario y migraciones" />
-    <MESSAGE value="Agregando modulos faltantes" />
-    <MESSAGE value="Completos los modulos con la parte de create." />
-    <MESSAGE value="Clompletando la parte de instrucciones de los modulos." />
-    <MESSAGE value="Se cambio el tipo de dato en el campo &quot;valor&quot;." />
-    <MESSAGE value="Union de las partes del proyecto." />
-    <MESSAGE value="Agregando migraciones Parte1" />
-    <MESSAGE value="Actualizacion Parte1" />
-    <MESSAGE value="Corrigiendo nombres de campos y rutas..." />
-    <MESSAGE value="Modulo Estudiantes y Proyectos con CRUD completo y funcionando." />
-    <MESSAGE value="Modulos de Equipos y Asignaturas completos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modulos de Equipos y Asignaturas completos." />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

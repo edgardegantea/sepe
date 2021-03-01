@@ -11,8 +11,10 @@ class Project extends Model
 
     protected $fillable = [
         'name',
+        'description',
         'semester',
-        'description'
+        'engineer_id',
+        'subject_id'
     ];
 
     /** Relacion 1:1 de Project a Aspecto
@@ -20,5 +22,17 @@ class Project extends Model
     public function relacionAspectoProyecto(){
         return $this->hasOne(Aspecto::class);
     }*/
+
+    //Obtener carreras por FK
+    public function carrera(){
+        return $this->belongsTo(Engineer::class);
+    }
+
+    //Obtener materias por FK
+    public function materia(){
+        return $this->belongsTo(Subject::class);
+    }
+
+
 
 }

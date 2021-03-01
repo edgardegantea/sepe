@@ -55,7 +55,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Docente asignado</th>
                     <th>Acciones</th>
                 </tr>
                 </thead>
@@ -67,9 +66,6 @@
                         </td>
                         <td>
                             {{ $subject->name}}
-                        </td>
-                        <td>
-                            {{ $subject->teacher}}
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Acciones">

@@ -9,7 +9,6 @@
         <div class="card-body">
             <p><b>ID:</b> {{ $subject->id}}</p>
             <p><b>Nombre:</b> {{ $subject->name}}</p>
-            <p><b>Docente asignado:</b> {{ $subject->teacher}} </p>
         </div>
         <div class="card-footer">
             <a class="btn btn-primary" href="{{route('subjects.edit', $subject->id) }}">

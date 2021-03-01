@@ -47,7 +47,6 @@ class SubjectController extends Controller
         //
         $request->validate([
             'name' => 'required',
-            'teacher' => 'required'
         ]);
 
         Subject::create($request->all());
@@ -92,7 +91,6 @@ class SubjectController extends Controller
         //
         $request->validate([
             'name' => 'required',
-            'teacher' => 'required'
         ]);
 
         $subject->update($request->all());

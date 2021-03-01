@@ -16,10 +16,11 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name', 250)->unique();
-            $table->integer('semester');
             $table->text('description');
-            //$table->string('system', 20);
-            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea el proyecto');
+            $table->integer('semester');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('engineer_id')->references('id')->on('engineers')->onDelete('cascade');;
+            $table->foreignId('subject_id')->references('id')->on('subjects')->onDelete('cascade');
             $table->timestamps();
         });
     }

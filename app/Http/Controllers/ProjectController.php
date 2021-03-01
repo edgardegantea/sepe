@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Engineer;
 use App\Models\Project;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -34,7 +36,11 @@ class ProjectController extends Controller
     public function create()
     {
         //
-        return view('projects.create');
+        $materias = Subject::all(['id', 'name']);
+        $carreras = Engineer::all(['id', 'name']);
+
+
+        return view('projects.create',compact('materias', 'carreras'));
     }
 
     /**
@@ -48,14 +54,18 @@ class ProjectController extends Controller
         //
         $data = $request->validate([
             'name' => 'required',
+            'description' => 'required',
             'semester' => 'required',
-            'description' => 'required'
+            'engineer_id' => 'required',
+            'subject_id' => 'required',
         ]);
 
         auth()->user()->projects()->create([
             'name' => $data['name'],
+            'description' => $data['description'],
             'semester' => $data['semester'],
-            'description' => $data['description']
+            'engineer_id' => $data['engineer_id'],
+            'subject_id' => $data['subject_id'],
         ]);
 
         return redirect()->route('projects.index');

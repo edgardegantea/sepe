@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(AspectoSeeder::class);
-        User::factory(10)->create();
+        //User::factory(10)->create();
+        $this->call(SubjectSeeder::class);
+        $this->call(EngineerSeeder::class);
     }
 }

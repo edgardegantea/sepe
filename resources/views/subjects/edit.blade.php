@@ -19,13 +19,6 @@
                             <input type="text" class="form-control" name="name" value="{{ $subject->name }}" required>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label for="">Docente asignado</label>
-                            <input type="text" class="form-control" name="teacher" value="{{ $subject->teacher }}"
-                                   required>
-                        </div>
-                    </div>
                 </div>
 
                 <a href="{{ route('subjects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>

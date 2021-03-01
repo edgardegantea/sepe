@@ -28,8 +28,10 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Semestre</th>
                         <th scope="col">Descripción</th>
+                        <th scope="col">Semestre</th>
+                        <th scope="col">Carrera</th>
+                        <th scope="col">Materia</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -43,11 +45,18 @@
                                 {{ $project->name}}
                             </td>
                             <td>
-                            {{ $project->semester}}<!-- created_at-->
-                            </td>
-                            <td>
                                 {{ $project->description}}
                             </td>
+                            <td>
+                            {{ $project->semester}}
+                            </td>
+                            <td>
+                                {{ $project->carrera}}
+                            </td>
+                            <td>
+                                {{ $project->materia}}
+                            </td>
+
                             <td>
                                 <div class="btn-group" role="group" aria-label="Acciones">
 
