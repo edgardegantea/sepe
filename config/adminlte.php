@@ -238,8 +238,6 @@ return [
             'text'        => 'Proyectos',
             'url'         => 'projects',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => CRUD,
-            'label_color' => 'success',
         ],
 
         [
