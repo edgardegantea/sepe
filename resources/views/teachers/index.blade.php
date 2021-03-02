@@ -1,52 +1,20 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Docentes</h1>
+@stop
 
 @section('content')
-
     <div class="card mt-3">
-        <nav class="nav nav-pills nav-fill">
-            <a class="nav-link" href="{{ route('subjects.index')}}">Asignaturas</a>
-            <a class="nav-link" href="{{ route('students.index')}}">Estudiantes</a>
-            <a class="nav-link" href="{{ route('teams.index')}}">Equipos</a>
-            <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
-            <a class="nav-link" href="{{ route('projects.index')}}">Proyectos</a>
-        </nav>
 
         <!-- DIV PARA BOTÓN CREAR -->
         <div class="card-header d-inline-flex">
-            <b><h1>Docentes</h1></b>
             <a href="{{ route('teachers.create')}}" class="btn btn-primary ml-auto">
                 <i class="fa fa-plus"></i>
                 Agregar
             </a>
-        </div>
-
-        <div class="card-body">
-            <div class=row>
-                <div class="col-4">
-                    <div class="form-group m-0">
-                        <label>
-                            Listar:
-                        </label>
-
-                        <!-- Limitar tamaño de consulta en la tabla -->
-                        <select class="form-control" id="limit" name="limit">
-                            @foreach ([10,20,50,100] as $limit)
-                                <option value="{{$limit}}" @if (isset($_GET['limit']))
-                                    {{($_GET['limit']==$limit)?'selected':''}} @endif>{{$limit}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="form-group">
-                        <label>
-                            Buscar:
-                        </label>
-                        <input class="form-control" id="search" name="search" type="text"
-                               value="{{(isset($_GET['search']))?$_GET['search']:''}}">
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="table-responsive">
@@ -122,19 +90,12 @@
                 </tbody>
             </table>
         </div>
-    </div>
-@endsection
+    </div>@stop
 
-@section('scripts')
-    <script type="text/javascript">
-        $('#limit').on('change', function () {
-            window.location.href = '{{ route( "teachers.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
-        })
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 
-        $('#search').on('keyup', function (e) {
-            if (e.keyCode == 13) {
-                window.location.href = '{{ route("teachers.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
-            }
-        })
-    </script>
-@endsection
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

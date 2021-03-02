@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Actualizar datos del docente</h1>
+@stop
+
 @section('content')
     <div class="card mt-3">
-        <div class="card-header d-inline-flex">
-            <b><h1>Actualizar datos</h1></b>
-            <a href="{{ route('teachers.index')}}" class="btn btn-link ml-auto">
-                <i class="fa fa-arrow-left"></i></a>
-        </div>
         <div class="card-body">
             <form action="{{ route('teachers.update', $teacher->id)}}" method="POST">
                 @csrf
@@ -46,6 +48,12 @@
                 <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
             </form>
         </div>
-    </div>
-    </div>
-@endsection
+    </div>@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

@@ -1,12 +1,17 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Criterios del Heurístico "Identidad e Información"</h1>
+@stop
 
 @section('content')
     <div class="container">
-        <h2>Criterios del Heurístico "Identidad e Información"</h2>
         <p>Elementos relacionados con la identidad del sitio, la información proporcionada sobre el proveedor y la
             autoría de los contenidos.</p>
 
-        <a href="{{ route('proyectos.index') }}" class="btn btn-primary">Proyectos</a>
+        <a href="{{ route('projects.index') }}" class="btn btn-primary">Proyectos</a>
         @include('partials.instructions')
 
     </div>
@@ -154,6 +159,12 @@
             <input type="submit" class="btn btn-success">
             <a href="" class="btn btn-primary">Regresar</a>
         </form>
-    </div>
+    </div>@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

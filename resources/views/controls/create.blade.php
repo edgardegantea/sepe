@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Criterios del "Control y Retroalimentación"</h1>
+@stop
 
 @section('content')
     <div class="container">
@@ -6,7 +12,7 @@
         <p>Elementos relacionados con libertad del usuario en la navegación y la información proporcionada al mismo en
             el proceso.</p>
 
-        <a href="{{ route('proyectos.index') }}" class="btn btn-primary">Proyectos</a>
+        <a href="{{ route('projects.index') }}" class="btn btn-primary">Proyectos</a>
 
         @include('partials.instructions')
 
@@ -211,5 +217,12 @@
             <a href="" class="btn btn-primary">Regresar</a>
         </form>
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

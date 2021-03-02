@@ -1,32 +1,22 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Estudiantes</h1>
+@stop
 
 @section('content')
-
     <div class="container">
         <div class="card mt-3">
 
-            <nav class="nav nav-pills nav-fill">
-                <a class="nav-link" href="{{ route('subjects.index')}}">Asignaturas</a>
-                <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
-                <a class="nav-link" href="{{ route('teams.index')}}">Equipos</a>
-                <a class="nav-link" href="{{ route('teachers.index')}}">Docentes</a>
-                <a class="nav-link" href="{{ route('projects.index')}}">Proyectos</a>
-            </nav>
-
             <!-- DIV PARA BOTÓN CREAR -->
             <div class="card-header d-inline-flex">
-                <b><h1>Estudiantes</h1></b>
                 <a href="{{ route('students.create')}}" class="btn btn-primary ml-auto">
                     <i class="fa fa-plus"></i>
                     Agregar
                 </a>
             </div>
-
-        <!-- GENERAR EL PDF
-    <a href="{{ route('students.pdf') }}" class='btn btn-secondary ml-auto'>
-    PDF
-    </a></div> -->
-
 
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -112,5 +102,12 @@
             </div>
         </div>
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

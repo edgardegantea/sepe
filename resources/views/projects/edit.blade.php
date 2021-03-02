@@ -1,13 +1,14 @@
-@extends('layouts.app')
-@section('content')
+@extends('adminlte::page')
 
+@section('title', 'Editar Proyecto')
+
+@section('content_header')
+    <h1>Editar Proyecto</h1>
+@stop
+
+@section('content')
     <div class="container">
         <div class="card mt-3">
-            <div class="card-header d-inline-flex">
-                <b><h1>Editar Proyecto</h1></b>
-
-            </div>
-
             <div class="card-body">
 
                 <form method="POST" name="" action="{{ route('projects.update', $project->id) }}">
@@ -44,4 +45,12 @@
 
     </div>
 
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

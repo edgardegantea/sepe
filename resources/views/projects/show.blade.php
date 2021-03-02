@@ -1,12 +1,15 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
 @section('content')
-
     <div class="container">
-
-
         <div class="card mt-3">
             <div class="card-header d-inline-flex">
-                <b><h1>Detalles del Proyecto</h1></b>
                 <a href="{{ route('projects.index')}}" class="btn btn-primary ml-auto">
                     <i class="fa fa-arrow-left">Regresar</i></a>
             </div>
@@ -27,5 +30,12 @@
             </div>
         </div>
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

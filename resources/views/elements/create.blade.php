@@ -1,11 +1,16 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Criterios del Heurístico "Elementos Multimedia"</h1>
+@stop
 
 @section('content')
     <div class="container">
-        <h2>Criterios del Heurístico "Elementos Multimedia"</h2>
         <p>Elementos relacionados con el grado de adecuación de los contenidos multimedia al sitio web.</p>
 
-        <a href="{{ route('proyectos.index') }}" class="btn btn-primary">Proyectos</a>
+        <a href="{{ route('projects.index') }}" class="btn btn-primary">Proyectos</a>
         @include('partials.instructions')
 
     </div>
@@ -137,5 +142,13 @@
         </form>
     </div>
 
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
 

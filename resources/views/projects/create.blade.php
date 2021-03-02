@@ -1,12 +1,14 @@
-@extends('layouts.app')
-@section('content')
+@extends('adminlte::page')
 
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
     <div class="container">
         <div class="card mt-3">
-            <div class="card-header d-inline-flex">
-                <b><h1>Crear nuevo Proyecto</h1></b>
-            </div>
-
             <div class="card-body">
 
                 <form method="POST" name="" action="{{ route('projects.store') }}">
@@ -77,5 +79,12 @@
         </div>
 
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
