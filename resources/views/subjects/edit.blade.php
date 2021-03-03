@@ -12,7 +12,7 @@
             <div class="card-header d-inline-flex">
 
                 <a href="{{ route('subjects.index')}}" class="btn btn-link ml-auto">
-                    <i class="fa fa-arrow-left"></i></a>
+                    <i class="fa fa-arrow-left"></i>Volver</a>
             </div>
             <div class="card-body">
                 <form action="{{ route('subjects.update', $subject->id)}}" method="POST">

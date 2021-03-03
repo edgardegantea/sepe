@@ -17,9 +17,11 @@
             <div class="card-body">
                 <p><b>ID:</b> {{ $project->id}}</p>
                 <p><b>Nombre: </b> {{ $project->name}}</p>
-                <p><b>Semestre: </b> {{ $project->semester}} </p>
                 <p><b>Descripción: </b> {{ $project->description }}</p>
-                <p><b>Fecha de registro: </b> {{ $project->created_at}} </p>
+                <p><b>Semestre: </b> {{ $project->semester}} </p>
+                <p><b>Carrera: </b> {{ $project->carrera}} </p>
+                <p><b>Materia: </b> {{ $project->materia}} </p>
+
 
             </div>
             <div class="card-footer">

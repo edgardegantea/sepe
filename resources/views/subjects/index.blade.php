@@ -8,14 +8,6 @@
 
 @section('content')
     <div class="card mt-3">
-        <nav class="nav nav-pills nav-fill">
-            <a class="nav-link" href="{{ route('evaluators.index')}}">Evaluadores</a>
-            <a class="nav-link" href="{{ route('students.index')}}">Estudiantes</a>
-            <a class="nav-link" href="{{ route('teams.index')}}">Equipos</a>
-            <a class="nav-link" href="{{ route('teachers.index')}}">Docentes</a>
-            <a class="nav-link" href="{{ route('projects.index')}}">Proyectos</a>
-        </nav>
-
         <!-- DIV PARA BOTÓN CREAR -->
         <div class="card-header d-inline-flex">
             <a href="{{ route('subjects.create')}}" class="btn btn-primary ml-auto">

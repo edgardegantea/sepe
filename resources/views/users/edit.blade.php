@@ -1,33 +1,57 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Editar Usuario</h1>
+@stop
+
 @section('content')
-    <div class="card mt-3">
+
+    @if(session('info'))
+        <div class="alert alert-default-success">
+            <strong>
+                {{ session('info') }}
+            </strong>
+        </div>
+    @endif
+
+
+    <div class="card">
         <div class="card-header d-inline-flex">
-            <b>Formulario editar usuarios</b>
             <a href="{{ route('users.index')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-arrow-left">volver</i></a>
+                Regresar
+            </a>
         </div>
+
+
         <div class="card-body">
-            <form action="{{ route('users.update', $user->id_Users)}}" method="POST" enctype="multipart/form-data"
-                  id="create">
-                @method('PUT')
-                @include('users.partials.form')
-            </form>
-        </div>
-        <div class="card-footer">
-            <button class="btn btn-primary" form="create">
-                <i class="fa fa-save"></i>
-                Guardar cambios
-            </button>
-            <button class="btn btn-danger" form="delete_{{ $user->id_Users}}"
-                    onclick="return confirm('¿Esta seguro de eliminar registro?')">
-                <i class="fa fa-trash"></i>
-                Eliminar
-            </button>
-            <form action="{{ route('users.destroy', $user->id_Users) }}" id="delete_{{$user->id_Users}}" method="post"
-                  enctype="multipart/form-data" hidden>
-                @csrf
-                @method('DELETE')
-            </form>
+            <p class="h5">Nombre:</p>
+            <p class="form-control">{{ $user->name }}</p>
+
+            <h2 class="h5">Listado de roles</h2>
+            {!! Form::model(['route' => ['users.update', $user], 'method' => 'put']) !!}
+            @foreach($roles as $role)
+                <div>
+                    <label>
+                        {!! Form::checkbox('roles[]',$role->id, null, ['class' => 'mr-1']) !!}
+                        {{ $role->name }}
+                    </label>
+                </div>
+            @endforeach
+
+            {!! Form::submit('Asignar rol', ['class' => 'btn btn-primary mt-2']) !!}
+            {!! Form::close() !!}
+
+
         </div>
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

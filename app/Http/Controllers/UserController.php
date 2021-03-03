@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Subject;
+use App\Models\User;
 use Illuminate\Http\Request;
-use voku\helper\ASCII;
 
-class SubjectController extends Controller
+use Spatie\Permission\Models\Role;
+
+class UserController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -20,9 +22,8 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
-        $subjects = Subject::all();
-        return view('subjects.index', compact('subjects'));
+        $users = User::all();
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -32,8 +33,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
-        return view('subjects.create');
+        return view('users.create');
     }
 
     /**
@@ -45,70 +45,57 @@ class SubjectController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'name' => 'required',
-        ]);
-
-        Subject::create($request->all());
-
-        return redirect()->route('subjects.index');
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Subject $subject
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Subject $subject)
+    public function show(user $user)
     {
-        //
-        return view('subjects.show', compact('subject'));
+        return view('users.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\Subject $subject
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Subject $subject)
+    public function edit(User $user)
     {
-        //
-        return view('subjects.edit', compact('subject'));
+        $roles = Role::all();
+
+        return view('users.edit', compact('user', 'roles'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Subject $subject
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Subject $subject)
+    public function update(Request $request, User $user)
     {
-        //
-        $request->validate([
-            'name' => 'required',
-        ]);
+        $user->roles()->sync($request->roles);
 
-        $subject->update($request->all());
-
-        return redirect()->route('subjects.index');
+        return redirect()->route('users.edit', $user)->with('info', 'Los roles se asignaron correctamente.');
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Subject $subject
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Subject $subject)
+    public function destroy(User $user)
     {
         //
-        $subject->delete();
-        return redirect()->route('subjects.index');
+        $user->delete();
+        return redirect()->route('users.index');
     }
 }

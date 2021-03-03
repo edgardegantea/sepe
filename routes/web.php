@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\AyudaController;
 use App\Http\Controllers\ElementController;
 use App\Http\Controllers\EvaluationController;
@@ -40,6 +42,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::resource('users', UserController::class);
 
 Route::resource('aspectos', AspectoController::class);
 Route::resource('structures', StructureController::class);

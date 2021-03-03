@@ -23,9 +23,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+
         $projects = auth()->user()->projects;
-        return view('projects.index')->with('projects', $projects);
+        return view('projects.index', compact('projects'));
     }
 
     /**
@@ -92,7 +92,10 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         //
-        return view('projects.edit', compact('project'));
+        $materias = Subject::all(['id', 'name']);
+        $carreras = Engineer::all(['id', 'name']);
+
+        return view('projects.edit', compact('project', 'materias', 'carreras'));
     }
 
     /**

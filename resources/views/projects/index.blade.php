@@ -28,7 +28,7 @@
                         <th>Semestre</th>
                         <th>Carrera</th>
                         <th>Materia</th>
-                        <th colspan="3">Acciones</th>
+                        <th colspan="4">Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -52,6 +52,12 @@
                             <td>
                                 {{ $project->materia}}
                             </td>
+
+                            <td width="10px">
+                                <a class="btn btn-success btn-sm" href="{{ route('aspectos.create') }}">Calificar</a>
+                            </td>
+
+
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{ route('projects.show', $project->id) }}">Mostrar</a>
                             </td>

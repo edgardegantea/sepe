@@ -1,128 +1,67 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Usuarios</h1>
+@stop
 
 @section('content')
-
-    <div class="card mt-3">
-
-        <!-- DIV PARA BOTÓN CREAR -->
+    LIsta de usuarios
+    <div class="card">
         <div class="card-header d-inline-flex">
-            <b>Usuarios</b>
             <a href="{{ route('users.create')}}" class="btn btn-primary ml-auto">
                 <i class="fa fa-plus"></i>
                 Agregar
             </a>
         </div>
-
-    <!-- GENERAR EL PDF
-    <a href="{{ route('users.pdf') }}" class='btn btn-secondary ml-auto'>
-    PDF
-    </a></div> -->
-
         <div class="card-body">
-            <div class=row>
-                <div class="col-4">
-                    <div class="form-group m-0">
-                        <label>
-                            Listar:
-                        </label>
-
-                        <!-- Limitar tamaño de consulta en la tabla -->
-                        <select class="form-control" id="limit" name="limit">
-                            @foreach ([10,20,50,100] as $limit)
-                                <option value="{{$limit}}" @if (isset($_GET['limit']))
-                                    {{($_GET['limit']==$limit)?'selected':''}} @endif>{{$limit}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="form-group">
-                        <label>
-                            Buscar:
-                        </label>
-                        <input class="form-control" id="search" name="search" type="text"
-                               value="{{(isset($_GET['search']))?$_GET['search']:''}}">
-                    </div>
-                </div>
-            </div>
-
-            @if($users->total() > 10)
-                {{$users->links()}}
-            @endif
-        </div>
-
-        <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
-
-                    <th>Acciones</th>
+                    <th>Correo Institucional</th>
+                    <th>N° Control</th>
+                    <th colspan="3">Acciones</th>
                 </tr>
                 </thead>
+
                 <tbody>
                 @foreach($users as $user)
                     <tr>
-                        <td>
-                            {{ $user->id_Users }}
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->lastName }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->controlNumber }}</td>
+                        <td width="10px">
+                            <a class="btn btn-primary btn-sm" href="{{ route('users.show', $user->id) }}">Ver</a>
                         </td>
-                        <td>
-                            {{ $user->firstname}}
+                        <td width="10px">
+                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Editar</a>
                         </td>
-                        <td>
-                            {{ $user->lastname}}
-                        </td>
-                        <td>
-                            {{ $user->id_Profiles}}
-                        </td>
-
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Acciones">
-                                <a href="{{route('users.show', $user->id_Users)}}" class="btn btn-info btn-sm">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a href="{{route('users.edit', $user->id_Users)}}" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <button type="submit" class="btn btn-danger btn-sm" form="delete_{{$user->id_Users}}"
-                                        onclick="return confirm('¿Estas seguro que deseas eliminar el item?')">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                                <form action="{{route('users.destroy', $user->id_Users)}}"
-                                      id="delete_{{$user->id_Users}}"
-                                      method="post" enctype="multipart/form-data" hidden>
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
-                            </div>
-
+                        <td width="10px">
+                            <form action="{{ route('users.destroy', $user->id ) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
-
-        </div>
-        <div class="card-footer">
-            @if($users->total() > 10)
-                {{$users->links()}}
-            @endif
         </div>
     </div>
-@endsection
 
-@section('scripts')
-    <script type="text/javascript">
-        $('#limit').on('change', function () {
-            window.location.href = '{{ route( "users.index" ) }}?limit=' + $(this).val() + '&search=' + $('#search').val()
-        })
+@stop
 
-        $('#search').on('keyup', function (e) {
-            if (e.keyCode == 13) {
-                window.location.href = '{{ route("users.index") }}?limit=' + $('#limit').val() + '&search=' + $(this).val()
-            }
-        })
-    </script>
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

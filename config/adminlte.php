@@ -234,52 +234,55 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+
+        ['header' => 'USUARIOS'],
         [
-            'text'        => 'Proyectos',
-            'url'         => 'projects',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'Lista de usuarios',
+            'url'         => 'users',
+            'icon'        => 'fas fa-users fa-fw',
         ],
 
+        ['header' => 'ADMINISTRADOR'],
         [
             'text'        => 'Estudiantes',
             'url'         => 'students',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 2,
-            'label_color' => 'success',
         ],
 
         [
             'text'        => 'Asignaturas',
             'url'         => 'subjects',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
 
         [
             'text'        => 'Equipos',
             'url'         => 'teams',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 2,
-            'label_color' => 'success',
         ],
 
         [
             'text'        => 'Docentes',
             'url'         => 'teachers',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 2,
-            'label_color' => 'success',
         ],
 
+        ['header' => 'PROYECTOS'],
+        [
+            'text'        => 'Lista de Proyectos',
+            'url'         => 'projects',
+            'icon'        => 'far fa-fw fa-file',
+        ],
+        [
+            'text'        => 'Crear nuevo Proyecto',
+            'route'         => 'projects.create',
+            'icon'        => 'far fa-fw fa-file',
+        ],
         [
             'text'        => 'Evaluaciones',
             'url'         => 'evaluations',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 2,
-            'label_color' => 'success',
         ],
-
 
         ['header' => 'account_settings'],
         [

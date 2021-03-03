@@ -1,22 +1,41 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Detalles de usuario</h1>
+@stop
+
 @section('content')
-    <div class="card mt-3">
-        <div class="card-header d-inline-flex">
-            <b>Detalle usuarios</b>
-            <a href="{{ route('users.index')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-arrow-left">volver</i></a>
+    <div class="card">
+
+        <div class="card-header">
+            <a href="{{ route('users.index')}}" class="btn btn-primary">Volver</a>
         </div>
+
         <div class="card-body">
-            <p><b>ID:</b> {{ $user->id_Users}}</p>
-            <p><b>Nombre:</b> {{ $user->firstname}}</p>
-            <p><b>Apellidos:</b> {{ $user->lastname}} </p>
-            <p><b>ID perfil:</b> {{ $user->id_Profiles}} </p>
+            <p><b>ID: </b> {{ $user->id}}</p>
+            <p><b>Nombre: </b> {{ $user->name}}</p>
+            <p><b>Apellidos: </b> {{ $user->lastName }}</p>
+            <p><b>Correo Institucional: </b> {{ $user->email }}</p>
+            <p><b>Número de control: </b> {{ $user->controlNumber }}</p>
+            <p><b></b></p>
         </div>
+
         <div class="card-footer">
-            <a class="btn btn-primary" href="{{route('users.edit', $user->id_Users) }}">
+            <a class="btn btn-primary" href="{{route('users.edit', $user->id) }}">
                 <i class="fa fa-edit"></i>
                 Editar
             </a>
         </div>
+
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
