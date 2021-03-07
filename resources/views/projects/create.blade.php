@@ -52,24 +52,6 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="subject">Ingeniería</label>
-
-                        <select
-                            name="engineer_id"
-                            class="form-control @error('engineer_id') is-invalid @enderror"
-                            id="engineer_id">
-
-                            <option value="">--Seleccione--</option>
-                            @foreach( $carreras as $carrera )
-                                <option
-                                    value="{{ $carrera->id }}"
-                                    {{ old('carrera') == $carrera->id ? 'selected' : '' }}
-                                >{{ $carrera->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
                     <a href="{{ route('projects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
                     <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 

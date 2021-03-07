@@ -15,9 +15,15 @@ class Aspecto extends Model
         'valor',
         'relevancia',
         'comentario',
+        'project_id'
     ];
 
-    /**public function RelacionAspectoProyecto(){
+    //relacion inversa 1 a muchos
+
+    public function project()
+    {
         return $this->belongsTo(Project::class);
-    }*/
+    }
+
+
 }

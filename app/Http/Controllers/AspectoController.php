@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aspecto;
+use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AspectoController extends Controller
 {
@@ -30,7 +33,9 @@ class AspectoController extends Controller
      */
     public function create()
     {
-        return view('aspectos.create');
+        $projects = Project::find(1)->id;
+
+        return view('aspectos.create', compact('projects'));
     }
 
     /**
@@ -42,12 +47,15 @@ class AspectoController extends Controller
     public function store(Request $request)
     {
         //validación
+
+
         $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => ''
+            'comentario' => '',
+            'project_id' => 'required'
         ]);
 
         //Se insertan los valores a nuestra base de datos.
@@ -58,7 +66,7 @@ class AspectoController extends Controller
             $registro->valor = $data['valor'][$i];
             $registro->relevancia = $data['relevancia'][$i];
             $registro->comentario = $data['comentario'][$i];
-
+            $registro->project_id = $data['project_id'][$i];
             $registro->save();
         }
 

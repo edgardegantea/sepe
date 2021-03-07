@@ -7,6 +7,17 @@
 @stop
 
 @section('content')
+
+    @if(session('info'))
+        <div class="alert alert-success">
+            <strong>
+                {{ session('info') }}
+            </strong>
+        </div>
+    @endif
+
+
+
     LIsta de usuarios
     <div class="card">
         <div class="card-header d-inline-flex">
@@ -40,7 +51,7 @@
                             <a class="btn btn-primary btn-sm" href="{{ route('users.show', $user->id) }}">Ver</a>
                         </td>
                         <td width="10px">
-                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Editar</a>
+                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Roles</a>
                         </td>
                         <td width="10px">
                             <form action="{{ route('users.destroy', $user->id ) }}" method="post">

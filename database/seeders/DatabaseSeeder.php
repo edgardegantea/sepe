@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Aspecto;
+use App\Models\Project;
+use App\Models\Subject;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +16,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(AspectoSeeder::class);
-        //User::factory(10)->create();
         $this->call(SubjectSeeder::class);
-        $this->call(EngineerSeeder::class);
+        Subject::factory(50)->create();
 
         $this->call(RoleSeeder::class);
+
+        $this->call(UserSeeder::class);
+
+        Project::factory(100)->create();
+
+
+
+
+
     }
 }

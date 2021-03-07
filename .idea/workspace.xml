@@ -1,27 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Configurando panel adiminstrativo con adminLTE">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sepe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sepe.iml" afterDir="false" />
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Roles creados">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_02_21_14_47_[Default_Changelist]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_02_21_14_47__Default_Changelist_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aspecto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aspecto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Ayuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ayuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Control.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Control.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Element.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Element.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Identity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Identity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Interaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Interaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Layoutpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Layoutpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Rotulado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Rotulado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Structure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/SubjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/SubjectFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_011409_create_aspectos_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_023637_create_structures_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_013338_create_layoutpages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_020834_create_controls_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_14_023314_create_searches_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_082338_create_identities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083050_create_rotulados_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083627_create_interactions_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_083829_create_elements_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_06_084141_create_ayudas_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_01_071316_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_01_071316_create_projects_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/camposForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/camposForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/selectOne.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +199,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor/adminlte/dist/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,11 +209,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/vendor/adminlte/dist/img" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -208,7 +239,13 @@
       <workItem from="1614631736997" duration="4175000" />
       <workItem from="1614636457116" duration="18197000" />
       <workItem from="1614705109372" duration="200000" />
-      <workItem from="1614708126499" duration="27973000" />
+      <workItem from="1614708126499" duration="28638000" />
+      <workItem from="1614914560458" duration="11247000" />
+      <workItem from="1614973821356" duration="27463000" />
+      <workItem from="1615013991895" duration="6217000" />
+      <workItem from="1615057345124" duration="31116000" />
+      <workItem from="1615152269795" duration="14000" />
+      <workItem from="1615152411479" duration="2954000" />
     </task>
     <task id="LOCAL-00001" summary="Trabajando con la relacion de las tablas">
       <created>1614622611595</created>
@@ -238,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614714272813</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Aplicando laravel permission">
+      <created>1614747314511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614747314511</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +304,7 @@
     <MESSAGE value="Trabajando con la relacion de las tablass" />
     <MESSAGE value="Trabajando con la relacion de las tablas" />
     <MESSAGE value="Configurando panel adiminstrativo con adminLTE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configurando panel adiminstrativo con adminLTE" />
+    <MESSAGE value="Aplicando laravel permission" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicando laravel permission" />
   </component>
 </project>

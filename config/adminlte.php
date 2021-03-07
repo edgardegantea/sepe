@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>SE</b>PE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/sepe.jpeg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -235,53 +235,58 @@ return [
             'can'  => 'manage-blog',
         ],
 
-        ['header' => 'USUARIOS'],
         [
             'text'        => 'Lista de usuarios',
             'url'         => 'users',
             'icon'        => 'fas fa-users fa-fw',
+            'can'         => 'users.index'
         ],
 
-        ['header' => 'ADMINISTRADOR'],
         [
             'text'        => 'Estudiantes',
             'url'         => 'students',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-graduation-cap',
+            'can'         => 'students.index'
         ],
 
         [
             'text'        => 'Asignaturas',
             'url'         => 'subjects',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-book',
+            'can'         => 'subjects.index'
         ],
 
         [
             'text'        => 'Equipos',
             'url'         => 'teams',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-user-friends',
+            'can'         => 'teams.index'
         ],
 
         [
             'text'        => 'Docentes',
             'url'         => 'teachers',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-chalkboard-teacher',
+            'can'         => 'teachers.index'
         ],
 
         ['header' => 'PROYECTOS'],
         [
             'text'        => 'Lista de Proyectos',
             'url'         => 'projects',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-clipboard-list',
+            'can'         => 'projects.index'
         ],
         [
             'text'        => 'Crear nuevo Proyecto',
-            'route'         => 'projects.create',
-            'icon'        => 'far fa-fw fa-file',
+            'route'       => 'projects.create',
+            'icon'        => 'fas fa-project-diagram',
+            'can'         => 'projects.create'
         ],
         [
             'text'        => 'Evaluaciones',
             'url'         => 'evaluations',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-tasks',
         ],
 
         ['header' => 'account_settings'],

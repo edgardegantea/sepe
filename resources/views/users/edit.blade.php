@@ -8,15 +8,6 @@
 
 @section('content')
 
-    @if(session('info'))
-        <div class="alert alert-default-success">
-            <strong>
-                {{ session('info') }}
-            </strong>
-        </div>
-    @endif
-
-
     <div class="card">
         <div class="card-header d-inline-flex">
             <a href="{{ route('users.index')}}" class="btn btn-primary ml-auto">
@@ -30,7 +21,7 @@
             <p class="form-control">{{ $user->name }}</p>
 
             <h2 class="h5">Listado de roles</h2>
-            {!! Form::model(['route' => ['users.update', $user], 'method' => 'put']) !!}
+            {!! Form::model($user, ['route' => ['users.update', $user], 'method' => 'PUT']) !!}
             @foreach($roles as $role)
                 <div>
                     <label>

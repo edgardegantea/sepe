@@ -16,4 +16,12 @@ class Interaction extends Model
         'relevancia',
         'comentario',
     ];
+
+    //relacion inversa 1 a muchos
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
 }

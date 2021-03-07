@@ -20,8 +20,10 @@ class CreateSearchesTable extends Migration
             $table->float('valor', 3, 1);
             $table->string('relevancia', 200);
             $table->text('comentario')->nullable();
-            //$table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que inicio sesion');
-            //$table->foreignId('project_id')->references('id')->on('projects')->comment('Relacion con el proyecto seleccionado');
+
+            $table->unsignedBigInteger('project_id');
+
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->timestamps();
         });
     }

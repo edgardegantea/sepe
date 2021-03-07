@@ -43,30 +43,12 @@
                             class="form-control @error('subject_id') is-invalid @enderror"
                             id="subject_id">
 
-                            <option value="">--Seleccione--</option>
-                            @foreach( $materias as $materia )
+                            <option value="">{{ $project->subject->name }}</option>
+                            @foreach( $project->subject as $subject->id )
                                 <option
-                                    value="{{ $materia->id }}"
-                                    {{ old('materia') == $materia->id ? 'selected' : '' }}
-                                >{{ $materia->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Ingeniería</label>
-
-                        <select
-                            name="engineer_id"
-                            class="form-control @error('engineer_id') is-invalid @enderror"
-                            id="engineer_id">
-
-                            <option value="">--Seleccione--</option>
-                            @foreach( $carreras as $carrera )
-                                <option
-                                    value="{{ $carrera->id }}"
-                                    {{ old('carrera') == $carrera->id ? 'selected' : '' }}
-                                >{{ $carrera->name }}</option>
+                                    value="{{ $subject->id }}"
+                                    {{ old('subject') == $subject->id ? 'selected' : '' }}
+                                >{{ $subject->name }}</option>
                             @endforeach
                         </select>
                     </div>

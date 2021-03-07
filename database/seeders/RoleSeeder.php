@@ -20,11 +20,17 @@ class RoleSeeder extends Seeder
         $role2 = Role::create(['name' => 'Teacher']);
         $role3 = Role::create(['name' => 'Student']);
 
+        //Permisos de usuario
+        Permission::create(['name'=> 'users.index'])->syncRoles([$role1]);
+        Permission::create(['name'=> 'users.create'])->syncRoles([$role1]);
+        Permission::create(['name'=> 'users.edit'])->syncRoles([$role1]);
+        Permission::create(['name'=> 'users.destroy'])->syncRoles([$role1]);
+
         //Permisos para asignaturas
-        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'subjects.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'subjects.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'subjects.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1]);
+        Permission::create(['name' => 'subjects.create'])->syncRoles([$role1]);
+        Permission::create(['name' => 'subjects.edit'])->syncRoles([$role1]);
+        Permission::create(['name' => 'subjects.destroy'])->syncRoles([$role1]);
 
         //permisos para docentes
         Permission::create(['name' => 'teachers.index'])->syncRoles([$role1, $role2]);

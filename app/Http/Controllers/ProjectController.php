@@ -23,7 +23,6 @@ class ProjectController extends Controller
      */
     public function index()
     {
-
         $projects = auth()->user()->projects;
         return view('projects.index', compact('projects'));
     }
@@ -37,10 +36,9 @@ class ProjectController extends Controller
     {
         //
         $materias = Subject::all(['id', 'name']);
-        $carreras = Engineer::all(['id', 'name']);
 
 
-        return view('projects.create',compact('materias', 'carreras'));
+        return view('projects.create',compact('materias'));
     }
 
     /**
@@ -56,7 +54,6 @@ class ProjectController extends Controller
             'name' => 'required',
             'description' => 'required',
             'semester' => 'required',
-            'engineer_id' => 'required',
             'subject_id' => 'required',
         ]);
 
@@ -64,7 +61,6 @@ class ProjectController extends Controller
             'name' => $data['name'],
             'description' => $data['description'],
             'semester' => $data['semester'],
-            'engineer_id' => $data['engineer_id'],
             'subject_id' => $data['subject_id'],
         ]);
 
@@ -93,9 +89,8 @@ class ProjectController extends Controller
     {
         //
         $materias = Subject::all(['id', 'name']);
-        $carreras = Engineer::all(['id', 'name']);
 
-        return view('projects.edit', compact('project', 'materias', 'carreras'));
+        return view('projects.edit', compact('project', 'materias'));
     }
 
     /**

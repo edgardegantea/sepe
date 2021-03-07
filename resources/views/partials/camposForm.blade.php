@@ -1,6 +1,6 @@
 <td>
-    <input type="text" name="relevancia[]" id="" required maxlength="200">
+    <input class="form-group" type="text" name="relevancia[]" id="" required maxlength="200" placeholder="EScribir">
 </td>
 <td>
-    <textarea name="comentario[]" id="" cols="30" rows="1"></textarea>
+    <textarea class="form-group" name="comentario[]" id="" cols="30" rows="1" placeholder="Opcional"></textarea>
 </td>

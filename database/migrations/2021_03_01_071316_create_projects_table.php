@@ -18,9 +18,12 @@ class CreateProjectsTable extends Migration
             $table->string('name', 250)->unique();
             $table->text('description');
             $table->integer('semester');
-            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('engineer_id')->references('id')->on('engineers')->onDelete('cascade');;
-            $table->foreignId('subject_id')->references('id')->on('subjects')->onDelete('cascade');
+
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('subject_id');
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
             $table->timestamps();
         });
     }

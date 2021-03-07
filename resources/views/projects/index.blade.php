@@ -8,76 +8,27 @@
 
 @section('content')
 
-    <div class="card">
-        <!-- DIV PARA BOTÓN CREAR -->
-        <div class="card-header d-inline-flex">
-            <a href="{{ route('projects.create')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-plus"></i>
-                Agregar
-            </a>
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach($projects as $project)
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ 'img/sepe.jpeg' }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold text-center">{{ $project->name }}</h5>
+                            <p class="card-text text-center">{{ $project->description }}</p>
+                            <a href="{{ route('projects.show', $project->id) }}"
+                               class="btn btn-outline-primary btn-block">Ver
+                                más</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Semestre</th>
-                        <th>Carrera</th>
-                        <th>Materia</th>
-                        <th colspan="4">Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($projects as $project)
-                        <tr>
-                            <td>
-                                {{ $project->id }}
-                            </td>
-                            <td>
-                                {{ $project->name}}
-                            </td>
-                            <td>
-                                {{ $project->description}}
-                            </td>
-                            <td>
-                                {{ $project->semester}}
-                            </td>
-                            <td>
-                                {{ $project->carrera}}
-                            </td>
-                            <td>
-                                {{ $project->materia}}
-                            </td>
-
-                            <td width="10px">
-                                <a class="btn btn-success btn-sm" href="{{ route('aspectos.create') }}">Calificar</a>
-                            </td>
-
-
-                            <td width="10px">
-                                <a class="btn btn-primary btn-sm" href="{{ route('projects.show', $project->id) }}">Mostrar</a>
-                            </td>
-                            <td width="10px">
-                                <a class="btn btn-secondary btn-sm" href="{{ route('projects.edit', $project->id) }}">Editar</a>
-                            </td>
-                            <td width="10px">
-                                <form action="{{ route('projects.destroy', $project->id) }}" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
+
 @stop
 
 @section('css')

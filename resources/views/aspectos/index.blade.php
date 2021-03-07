@@ -7,10 +7,14 @@
 @stop
 
 @section('content')
-    <div class="container">
+    <div class="card">
 
-        <div>
+        <div class="card-header">
             <a href="{{ route('aspectos.create') }}">Hacer nueva evaluación</a>
+        </div>
+
+        <div class="card-body">
+
         </div>
 
         <div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLayoutpagesTable extends Migration
+class CreateIdentitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,17 @@ class CreateLayoutpagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('layoutpages', function (Blueprint $table) {
+        Schema::create('identities', function (Blueprint $table) {
             $table->id();
             $table->string('codigo', 10);
             $table->text('criterio');
             $table->float('valor', 3, 1);
             $table->string('relevancia', 200);
             $table->text('comentario')->nullable();
-            //$table->foreignId('project_id')->references('id')->on('projects')->comment('Relacion con el proyecto seleccionado');
+
+            $table->unsignedBigInteger('project_id');
+
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +35,6 @@ class CreateLayoutpagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('layoutpages');
+        Schema::dropIfExists('identities');
     }
 }

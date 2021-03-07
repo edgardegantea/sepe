@@ -3,37 +3,30 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a class="btn btn-primary float-right" href="{{ route('subjects.index') }}">Regresar</a>
     <h1>Crear nueva asignatura</h1>
 @stop
 
 @section('content')
 
-    <div class="container">
+    <div class="card">
+        <div class="card-body">
+            {!! Form::open(['route' => 'subjects.store']) !!}
 
+            <div class="form-group">
+                {!! Form::label('name', 'Nombre') !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre de la asignatura.']) !!}
 
-        <div class="card mt-3">
-            <div class="card-header d-inline-flex">
-                <a href="{{ route('subjects.index')}}" class="btn btn-link ml-auto">
-                    <i class="fa fa-arrow-left"></i></a>
+                @error('name')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+
             </div>
-            <div class="card-body">
-                <form action="{{ route('subjects.store')}}" method="POST">
-                    @csrf
-                    <div class="row">
 
-                        <div class="col-12">
-                            <div class="form-group">
-                                <label for="">Nombre de la asignatura</label>
-                                <input type="text" class="form-control" name="name" value="" required>
-                            </div>
-                        </div>
+            {!! Form::submit('Crear asignatura', ['class' => 'btn btn-primary']) !!}
 
-                    </div>
+            {!! Form::close() !!}
 
-                    <a href="{{ route('subjects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
-                    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
-                </form>
-            </div>
         </div>
     </div>
 @stop
