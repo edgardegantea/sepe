@@ -45,6 +45,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        User::create($request->all());
+
+        return redirect(route('users.index'));
     }
 
     /**
@@ -80,6 +83,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => 'required',
+            'lastName' => 'required',
+            'email' => 'required',
+            'controlNumber' => 'required'
+        ]);
+
+        $user->update($request->all());
+
         $user->roles()->sync($request->roles);
 
         return redirect()->route('users.index')->with('info', 'El rol se asignó correctamente.');

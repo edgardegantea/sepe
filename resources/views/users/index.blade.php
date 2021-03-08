@@ -3,6 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a href="{{ route('users.create')}}" class="btn btn-primary float-right">
+        Agregar
+    </a>
     <h1>Usuarios</h1>
 @stop
 
@@ -16,16 +19,8 @@
         </div>
     @endif
 
-
-
-    LIsta de usuarios
     <div class="card">
-        <div class="card-header d-inline-flex">
-            <a href="{{ route('users.create')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-plus"></i>
-                Agregar
-            </a>
-        </div>
+
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
@@ -35,7 +30,7 @@
                     <th>Apellidos</th>
                     <th>Correo Institucional</th>
                     <th>N° Control</th>
-                    <th colspan="3">Acciones</th>
+                    <th colspan="2">Acciones</th>
                 </tr>
                 </thead>
 
@@ -48,13 +43,11 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->controlNumber }}</td>
                         <td width="10px">
-                            <a class="btn btn-primary btn-sm" href="{{ route('users.show', $user->id) }}">Ver</a>
+                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Editar</a>
                         </td>
-                        <td width="10px">
-                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Roles</a>
-                        </td>
-                        <td width="10px">
-                            <form action="{{ route('users.destroy', $user->id ) }}" method="post">
+                        <td>
+                            <form action="{{ route('users.destroy', $user->id ) }}" method="post"
+                                  onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>

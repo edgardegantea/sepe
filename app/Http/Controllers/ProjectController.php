@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Engineer;
 use App\Models\Project;
 use App\Models\Subject;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class ProjectController extends Controller
 {
@@ -38,7 +38,7 @@ class ProjectController extends Controller
         $materias = Subject::all(['id', 'name']);
 
 
-        return view('projects.create',compact('materias'));
+        return view('projects.create', compact('materias'));
     }
 
     /**
@@ -54,13 +54,23 @@ class ProjectController extends Controller
             'name' => 'required',
             'description' => 'required',
             'semester' => 'required',
+            'logo' => 'required|image',
             'subject_id' => 'required',
         ]);
+
+        //Obteniendo ruta de la imagen del logo
+        $ruta_imagen = $request['logo']->store('upload-projects', 'public');
+
+        //Creando nuevo tamaño para el logo
+        $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400, 400);
+        $img->save();
+
 
         auth()->user()->projects()->create([
             'name' => $data['name'],
             'description' => $data['description'],
             'semester' => $data['semester'],
+            'logo' => $ruta_imagen,
             'subject_id' => $data['subject_id'],
         ]);
 
@@ -88,9 +98,9 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         //
-        $materias = Subject::all(['id', 'name']);
+        $subjects = Subject::all(['id', 'name']);
 
-        return view('projects.edit', compact('project', 'materias'));
+        return view('projects.edit', compact('project', 'subjects'));
     }
 
     /**
@@ -103,13 +113,33 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         //Hacemos la validación
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required',
+            'description' => 'required',
             'semester' => 'required',
-            'description' => 'required'
+            'subject_id' => 'required',
         ]);
+
         //actualizamos los datos
-        $project->update($request->all());
+        $project->name = $data['name'];
+        $project->description = $data['description'];
+        $project->semester = $data['semester'];
+        $project->subject_id = $data['subject_id'];
+
+
+        if (request('logo')) {
+            //Obteniendo ruta de la imagen del logo
+            $ruta_imagen = $request['logo']->store('upload-projects', 'public');
+
+            //Redimencionando la imagen
+            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400, 400);
+            $img->save();
+
+            $project->logo =$ruta_imagen;
+        }
+
+
+        $project->save();
 
         return redirect()->route('projects.index');
 

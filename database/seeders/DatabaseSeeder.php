@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
 
-        Project::factory(100)->create();
+        //Project::factory(100)->create();
 
 
 

@@ -3,15 +3,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a href="{{ route('users.index')}}" class="btn btn-primary float-right">Volver</a>
     <h1>Detalles de usuario</h1>
 @stop
 
 @section('content')
     <div class="card">
-
-        <div class="card-header">
-            <a href="{{ route('users.index')}}" class="btn btn-primary">Volver</a>
-        </div>
 
         <div class="card-body">
             <p><b>ID: </b> {{ $user->id}}</p>

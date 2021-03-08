@@ -13,7 +13,7 @@ class Project extends Model
         'name',
         'description',
         'semester',
-        'user_id',
+        'logo',
         'subject_id'
     ];
 

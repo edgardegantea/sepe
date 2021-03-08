@@ -19,7 +19,7 @@
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="{{ 'img/sepe.jpeg' }}" class="card-img-top" alt="...">
+                    <img src="{{ Storage::url( $project->logo ) }}" class="card-img-top" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -29,6 +29,16 @@
                         <p class="card-text">Asignatura: {{ $project->subject->name }}</p>
                         <p class="card-text"><small class="text-muted">Modulos calificados: 8/10</small></p>
                         <a class="btn btn-primary float-right" href="{{ route('aspectos.create') }}">Calificar</a>
+
+                        <form action="{{ route('projects.destroy', $project->id ) }}" method="post"
+                              onclick="return confirm('¿Está seguro de que desea elimiar el proyecto.?')">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger float-right mr-2">Eliminar</button>
+                        </form>
+
+
+
                     </div>
                 </div>
             </div>

@@ -17,11 +17,30 @@
 
 
         <div class="card-body">
-            <p class="h5">Nombre:</p>
-            <p class="form-control">{{ $user->name }}</p>
+
+            {!! Form::model($user, ['route' => ['users.update', $user], 'method' => 'PUT']) !!}
+
+            <div class="form-group">
+                {!! Form::label('name', 'Nombre') !!}
+                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('name', 'Apellidos') !!}
+                {!! Form::text('lastName', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('name', 'Correo Institucional') !!}
+                {!! Form::text('email', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('name', 'Correo Institucional') !!}
+                {!! Form::text('controlNumber', null, ['class' => 'form-control']) !!}
+            </div>
+
 
             <h2 class="h5">Listado de roles</h2>
-            {!! Form::model($user, ['route' => ['users.update', $user], 'method' => 'PUT']) !!}
             @foreach($roles as $role)
                 <div>
                     <label>

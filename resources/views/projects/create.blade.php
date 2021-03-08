@@ -11,17 +11,18 @@
         <div class="card mt-3">
             <div class="card-body">
 
-                <form method="POST" name="" action="{{ route('projects.store') }}">
+                <form method="POST" name="" action="{{ route('projects.store') }}" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-3">
-                        <label for="" class="col-form-label">Nombre del proyecto</label>
-                        <input type="text" class="form-control" name="name" value="" required>
+                        <label for="" class="col-form-label ">Nombre del proyecto</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value=""
+                               required>
                     </div>
 
                     <div class="mb-3">
                         <label for="" class="col-form-label">Descripción</label>
-                        <textarea class="form-control" name="description"></textarea>
+                        <textarea class="form-control" name="description" required></textarea>
                     </div>
 
                     <div class="mb-3">
@@ -34,13 +35,26 @@
                         </select>
                     </div>
 
+                    <div class="form-group mt-3">
+                        <label for="logo">Elegil logo</label>
+
+                        <input type="file" id="logo" class="form-group @error('logo') is-invalid @enderror" name="logo"
+                               required>
+
+                        @error('logo')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
                     <div class="form-group">
                         <label for="subject">Asignatura</label>
 
                         <select
                             name="subject_id"
                             class="form-control @error('subject_id') is-invalid @enderror"
-                            id="subject_id">
+                            id="subject_id" required>
 
                             <option value="">--Seleccione--</option>
                             @foreach( $materias as $materia )

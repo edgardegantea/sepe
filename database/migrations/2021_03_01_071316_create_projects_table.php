@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('name', 250)->unique();
             $table->text('description');
             $table->integer('semester');
+            $table->string('logo');
 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');

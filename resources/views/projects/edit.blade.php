@@ -11,7 +11,7 @@
         <div class="card mt-3">
             <div class="card-body">
 
-                <form method="POST" name="" action="{{ route('projects.update', $project->id) }}">
+                <form method="POST" name="" action="{{ route('projects.update', $project->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -30,6 +30,23 @@
                         </select>
                     </div>
 
+                    <div class="form-group mt-4">
+                        <p>Imagen actual</p>
+
+                        <img src="/storage/{{ $project->logo }}" style="width: 200px">
+
+
+                        <label for="logo">Elegil logo</label>
+
+                        <input type="file" id="logo" class="form-group @error('logo') is-invalid @enderror" name="logo">
+
+                        @error('logo')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
                     <div class="mb-3">
                         <label for="" class="col-form-label">Descripción</label>
                         <textarea class="form-control" name="description">{{ $project->description }}</textarea>
@@ -43,12 +60,13 @@
                             class="form-control @error('subject_id') is-invalid @enderror"
                             id="subject_id">
 
-                            <option value="">{{ $project->subject->name }}</option>
-                            @foreach( $project->subject as $subject->id )
+                            <option value="">{{ $project->subject->id }}</option>
+                            @foreach( $subjects as $subject )
                                 <option
                                     value="{{ $subject->id }}"
-                                    {{ old('subject') == $subject->id ? 'selected' : '' }}
-                                >{{ $subject->name }}</option>
+                                    {{ $project->subject_id == $subject->id ? 'selected' : '' }}>
+                                    {{ $subject->name }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
