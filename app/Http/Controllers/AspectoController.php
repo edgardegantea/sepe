@@ -13,6 +13,7 @@ class AspectoController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('can:aspectos.index');
     }
 
     /**
@@ -41,7 +42,7 @@ class AspectoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -78,7 +79,7 @@ class AspectoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param \App\Models\Aspecto $aspecto
      * @return \Illuminate\Http\Response
      */
     public function show(Aspecto $aspecto)
@@ -90,7 +91,7 @@ class AspectoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param \App\Models\Aspecto $aspecto
      * @return \Illuminate\Http\Response
      */
     public function edit(Aspecto $aspecto)
@@ -101,8 +102,8 @@ class AspectoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Aspecto $aspecto
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Aspecto $aspecto)
@@ -133,7 +134,7 @@ class AspectoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Aspecto  $aspecto
+     * @param \App\Models\Aspecto $aspecto
      * @return \Illuminate\Http\Response
      */
     public function destroy(Aspecto $aspecto)

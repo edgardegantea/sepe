@@ -250,10 +250,10 @@ return [
         ],
 
         [
-            'text'        => 'Asignaturas',
-            'url'         => 'subjects',
-            'icon'        => 'fas fa-book',
-            'can'         => 'subjects.index'
+            'text'        => 'Docentes',
+            'url'         => 'teachers',
+            'icon'        => 'fas fa-chalkboard-teacher',
+            'can'         => 'teachers.index'
         ],
 
         [
@@ -264,10 +264,10 @@ return [
         ],
 
         [
-            'text'        => 'Docentes',
-            'url'         => 'teachers',
-            'icon'        => 'fas fa-chalkboard-teacher',
-            'can'         => 'teachers.index'
+            'text'        => 'Asignaturas',
+            'url'         => 'subjects',
+            'icon'        => 'fas fa-book',
+            'can'         => 'subjects.index'
         ],
 
         ['header' => 'PROYECTOS'],

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:searchs.index');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class AyudaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:ayudas.index');
+    }
     /**
      * Display a listing of the resource.
      *

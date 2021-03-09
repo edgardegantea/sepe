@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Roles creados y permisos.">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sepe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sepe.iml" afterDir="false" />
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="CRUD DE USUARIOS Y PROYECTOS COMPLETOS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_01_071316_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_01_071316_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subjects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teams/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +223,8 @@
       <workItem from="1615013991895" duration="6217000" />
       <workItem from="1615057345124" duration="31116000" />
       <workItem from="1615152269795" duration="14000" />
-      <workItem from="1615152411479" duration="24585000" />
+      <workItem from="1615152411479" duration="26442000" />
+      <workItem from="1615229952226" duration="14620000" />
     </task>
     <task id="LOCAL-00001" summary="Trabajando con la relacion de las tablas">
       <created>1614622611595</created>
@@ -261,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615157941410</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CRUD DE USUARIOS Y PROYECTOS COMPLETOS">
+      <created>1615181381461</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615181381461</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +299,7 @@
     <MESSAGE value="Configurando panel adiminstrativo con adminLTE" />
     <MESSAGE value="Aplicando laravel permission" />
     <MESSAGE value="Roles creados y permisos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Roles creados y permisos." />
+    <MESSAGE value="CRUD DE USUARIOS Y PROYECTOS COMPLETOS" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD DE USUARIOS Y PROYECTOS COMPLETOS" />
   </component>
 </project>

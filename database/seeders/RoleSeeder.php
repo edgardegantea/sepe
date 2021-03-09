@@ -27,34 +27,34 @@ class RoleSeeder extends Seeder
         Permission::create(['name'=> 'users.destroy'])->syncRoles([$role1]);
 
         //Permisos para asignaturas
-        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1]);
+        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'subjects.create'])->syncRoles([$role1]);
         Permission::create(['name' => 'subjects.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'subjects.destroy'])->syncRoles([$role1]);
 
         //permisos para docentes
-        Permission::create(['name' => 'teachers.index'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'teachers.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'teachers.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'teachers.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'teachers.index'])->syncRoles([$role1]);
+        Permission::create(['name' => 'teachers.create'])->syncRoles([$role1]);
+        Permission::create(['name' => 'teachers.edit'])->syncRoles([$role1]);
+        Permission::create(['name' => 'teachers.destroy'])->syncRoles([$role1]);
 
         //permisos para equipos
-        Permission::create(['name' => 'teams.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'teams.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'teams.create'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'teams.edit'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'teams.destroy'])->syncRoles([$role1, $role2]);
 
         //permisos para estudiantes
-        Permission::create(['name' => 'students.index'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'students.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'students.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'students.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'students.index'])->syncRoles([$role1]);
+        Permission::create(['name' => 'students.create'])->syncRoles([$role1]);
+        Permission::create(['name' => 'students.edit'])->syncRoles([$role1]);
+        Permission::create(['name' => 'students.destroy'])->syncRoles([$role1]);
 
         //permisos para proyectos
         Permission::create(['name' => 'projects.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'projects.create'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'projects.edit'])->syncRoles([$role1, $role2, $role3]);
-        Permission::create(['name' => 'projects.destroy'])->syncRoles([$role1, $role2, $role3]);
+        Permission::create(['name' => 'projects.destroy'])->syncRoles([$role1, $role2]);
 
         //permisos para las evaluaciones
 

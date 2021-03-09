@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Models\Subject;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
 class ProjectController extends Controller
@@ -153,8 +154,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+
+
         $project->delete();
+
         return redirect()->route('projects.index');
     }
 }

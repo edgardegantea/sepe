@@ -14,7 +14,14 @@
             @foreach($projects as $project)
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ Storage::url( $project->logo ) }}" class="card-img-top" alt="...">
+
+                        @if($project->logo)
+                            <img src="{{ Storage::url(   $project->logo ) }}" class="card-img-top" alt="...">
+                        @else
+                            <img src="https://cdn.pixabay.com/photo/2017/02/04/15/25/desk-2037545_960_720.png" alt="">
+                        @endif
+
+
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold text-center">{{ $project->name }}</h5>
                             <p class="card-text text-center">{{ $project->description }}</p>

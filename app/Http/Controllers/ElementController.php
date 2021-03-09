@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ElementController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:elements.index');
+    }
     /**
      * Display a listing of the resource.
      *

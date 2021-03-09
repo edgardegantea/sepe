@@ -9,6 +9,11 @@ use function GuzzleHttp\Promise\all;
 
 class ControlController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:controls.index');
+    }
     /**
      * Display a listing of the resource.
      *

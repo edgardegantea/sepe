@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class InteractionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:interactions.index');
+    }
     /**
      * Display a listing of the resource.
      *

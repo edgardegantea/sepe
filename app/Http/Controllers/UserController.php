@@ -13,6 +13,7 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('can:users.index');
     }
 
     /**
@@ -94,7 +95,7 @@ class UserController extends Controller
 
         $user->roles()->sync($request->roles);
 
-        return redirect()->route('users.index')->with('info', 'El rol se asignó correctamente.');
+        return redirect()->route('users.index')->with('info', 'La información se guardó correctamente.');
 
     }
 

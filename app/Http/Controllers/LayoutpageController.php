@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class LayoutpageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:layoutpages.index');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class IdentityController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:identitys.index');
+    }
     /**
      * Display a listing of the resource.
      *

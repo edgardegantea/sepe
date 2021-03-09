@@ -3,9 +3,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <a href="{{ route('users.create')}}" class="btn btn-primary float-right">
-        Agregar
-    </a>
+    @can('users.create')
+        <a href="{{ route('users.create')}}" class="btn btn-primary float-right">
+            Agregar
+        </a>
+    @endcan
+
     <h1>Usuarios</h1>
 @stop
 
@@ -25,7 +28,6 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Correo Institucional</th>
@@ -37,21 +39,25 @@
                 <tbody>
                 @foreach($users as $user)
                     <tr>
-                        <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->lastName }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->controlNumber }}</td>
                         <td width="10px">
-                            <a class="btn btn-secondary btn-sm" href="{{ route('users.edit', $user->id) }}">Editar</a>
+                            @can('users.edit')
+                                <a class="btn btn-secondary btn-sm"
+                                   href="{{ route('users.edit', $user->id) }}">Editar</a>
+                            @endcan
                         </td>
                         <td>
-                            <form action="{{ route('users.destroy', $user->id ) }}" method="post"
-                                  onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                            </form>
+                            @can('users.destroy')
+                                <form action="{{ route('users.destroy', $user->id ) }}" method="post"
+                                      onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    @endcan
+                                </form>
                         </td>
                     </tr>
                 @endforeach
