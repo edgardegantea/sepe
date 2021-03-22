@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateControlsTable extends Migration
+class CreateAyudasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateControlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('controls', function (Blueprint $table) {
+        Schema::create('ayudas', function (Blueprint $table) {
             $table->id();
+
             $table->string('codigo', 10);
             $table->text('criterio');
             $table->float('valor', 3, 1);
@@ -24,6 +25,7 @@ class CreateControlsTable extends Migration
             $table->unsignedBigInteger('project_id');
 
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -35,6 +37,6 @@ class CreateControlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('controls');
+        Schema::dropIfExists('ayudas');
     }
 }

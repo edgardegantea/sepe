@@ -3,19 +3,15 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a href="{{ route('users.index')}}" class="btn btn-primary float-right">
+        Regresar
+    </a>
     <h1>Editar Usuario</h1>
 @stop
 
 @section('content')
 
     <div class="card">
-        <div class="card-header d-inline-flex">
-            <a href="{{ route('users.index')}}" class="btn btn-primary ml-auto">
-                Regresar
-            </a>
-        </div>
-
-
         <div class="card-body">
 
             {!! Form::model($user, ['route' => ['users.update', $user], 'method' => 'PUT']) !!}

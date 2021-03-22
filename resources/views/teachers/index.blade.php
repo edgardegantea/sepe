@@ -3,19 +3,15 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a href="{{ route('teachers.create')}}" class="btn btn-primary float-right">
+        <i class="fa fa-plus"></i>
+        Agregar
+    </a>
     <h1>Docentes</h1>
 @stop
 
 @section('content')
     <div class="card mt-3">
-
-        <!-- DIV PARA BOTÓN CREAR -->
-        <div class="card-header d-inline-flex">
-            <a href="{{ route('teachers.create')}}" class="btn btn-primary ml-auto">
-                <i class="fa fa-plus"></i>
-                Agregar
-            </a>
-        </div>
 
         <div class="table-responsive">
             <table class="table table-striped">

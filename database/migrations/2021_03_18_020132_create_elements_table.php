@@ -15,6 +15,7 @@ class CreateElementsTable extends Migration
     {
         Schema::create('elements', function (Blueprint $table) {
             $table->id();
+
             $table->string('codigo', 10);
             $table->text('criterio');
             $table->float('valor', 3, 1);
@@ -24,6 +25,7 @@ class CreateElementsTable extends Migration
             $table->unsignedBigInteger('project_id');
 
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

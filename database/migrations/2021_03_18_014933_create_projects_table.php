@@ -15,16 +15,21 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 250)->unique();
             $table->text('description');
             $table->integer('semester');
             $table->string('logo');
 
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('subject_id');
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->unsignedBigInteger('subject_id')->nullable();
+            $table->unsignedBigInteger('teams_id');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
+            $table->foreign('teacher_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('set null');
+            $table->foreign('teams_id')->references('id')->on('teams')->onDelete('cascade');
             $table->timestamps();
         });
     }

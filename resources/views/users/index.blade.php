@@ -32,6 +32,7 @@
                     <th>Apellidos</th>
                     <th>Correo Institucional</th>
                     <th>N° Control</th>
+                    <th>Roles asignados</th>
                     <th colspan="2">Acciones</th>
                 </tr>
                 </thead>
@@ -43,6 +44,11 @@
                         <td>{{ $user->lastName }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->controlNumber }}</td>
+                        <td>
+                            @foreach($roles as $role)
+                                <p> {{ $role->name }} </p>
+                            @endforeach
+                        </td>
                         <td width="10px">
                             @can('users.edit')
                                 <a class="btn btn-secondary btn-sm"

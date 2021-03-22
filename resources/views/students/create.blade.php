@@ -3,10 +3,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a class="btn btn-primary float-right" href="{{ route('students.index') }}">Regresar</a>
     <h1>Crear nuevo Estudiante</h1>
 @stop
 
 @section('content')
+
     <div class="card mt-3">
         <div class="card-body">
             <form method="POST" name="" action="{{ route('students.store') }}">
@@ -57,7 +59,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('students.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
+                    <a href="{{ route('students.index') }}" class="btn btn-secondary mr-2" tabindex="5">Cancelar</a>
                     <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
                 </div>
             </form>

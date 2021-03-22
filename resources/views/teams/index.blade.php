@@ -27,8 +27,11 @@
                     <thead>
                     <tr>
                         <th>ID equipo</th>
-                        <th>Ingeniería</th>
-                        <th>Semestre</th>
+                        <th>Nombre</th>
+                        <th>Integrante 1</th>
+                        <th>Integrante 2</th>
+                        <th>Integrante 3</th>
+                        <th>Integrante 4</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
@@ -39,10 +42,19 @@
                                 {{ $team->id }}
                             </td>
                             <td>
-                                {{ $team->engineering }}
+                                {{ $team->name }}
                             </td>
                             <td>
-                                {{ $team->semester }}
+                                {{ $team->member_1 }}
+                            </td>
+                            <td>
+                                {{ $team->member_2 }}
+                            </td>
+                            <td>
+                                {{ $team->member_3 }}
+                            </td>
+                            <td>
+                                {{ $team->member_4 }}
                             </td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Acciones">

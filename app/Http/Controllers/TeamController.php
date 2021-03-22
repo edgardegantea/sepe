@@ -46,8 +46,11 @@ class TeamController extends Controller
     {
         //
         $request->validate([
-            'engineering' => 'required',
-            'semester' => 'required'
+            'name' => 'required',
+            'member_1' => 'required',
+            'member_2' => 'required',
+            'member_3' => 'nullable',
+            'member_4' => 'nullable'
         ]);
 
         Team::create($request->all());
