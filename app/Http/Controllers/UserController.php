@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\ViewErrorBag;
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
@@ -26,7 +27,21 @@ class UserController extends Controller
 
         $users = User::all();
         $roles = Role::all();
-        return view('users.index', compact('users', 'roles'));
+
+        //$user = auth()->user();
+        //$userRoles = $user->roles()->get();
+        //return $userRoles;
+
+        //ver usuarios con el rol de Teacher
+        $teachers = User::role('Teacher')->get();
+
+        //ver usuarios con rol de Student
+        $students = User::role('Student')->get();
+
+        //ver usuarios que no tengan rol
+        $sinroles = User::doesntHave('roles')->get();
+
+        return view('users.index', compact('users', 'roles', 'teachers', 'students', 'sinroles'));
     }
 
     /**
@@ -48,7 +63,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        User::create($request->all());
+        User::create($request->all())->assignRole('Student');
 
         return redirect(route('users.index'));
     }

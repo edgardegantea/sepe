@@ -18,31 +18,6 @@ class CreateTeamsTable extends Migration
 
             $table->string('name');
 
-            $table->unsignedBigInteger('member_1')->nullable();
-            $table->unsignedBigInteger('member_2')->nullable();
-            $table->unsignedBigInteger('member_3')->nullable();
-            $table->unsignedBigInteger('member_4')->nullable();
-
-            $table->foreign('member_1')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
-
-            $table->foreign('member_2')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
-
-            $table->foreign('member_3')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
-
-            $table->foreign('member_4')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
-
             $table->timestamps();
         });
     }

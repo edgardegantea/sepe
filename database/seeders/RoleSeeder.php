@@ -19,6 +19,7 @@ class RoleSeeder extends Seeder
         $role1 = Role::create(['name' => 'Admin']);
         $role2 = Role::create(['name' => 'Teacher']);
         $role3 = Role::create(['name' => 'Student']);
+        $role4 = Role::create(['name' => 'JefeCarrera']);
 
         //Permisos de usuario
         Permission::create(['name'=> 'users.index'])->syncRoles([$role1]);
@@ -27,7 +28,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name'=> 'users.destroy'])->syncRoles([$role1]);
 
         //Permisos para asignaturas
-        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1, $role2, $role3]);
+        Permission::create(['name' => 'subjects.index'])->syncRoles([$role1, $role2, $role3, $role4]);
         Permission::create(['name' => 'subjects.create'])->syncRoles([$role1]);
         Permission::create(['name' => 'subjects.edit'])->syncRoles([$role1]);
         Permission::create(['name' => 'subjects.destroy'])->syncRoles([$role1]);
@@ -41,8 +42,8 @@ class RoleSeeder extends Seeder
         //permisos para equipos
         Permission::create(['name' => 'teams.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'teams.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'teams.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'teams.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'teams.edit'])->syncRoles([$role1, $role2, $role3, $role4]);
+        Permission::create(['name' => 'teams.destroy'])->syncRoles([$role1]);
 
         //permisos para estudiantes
         Permission::create(['name' => 'students.index'])->syncRoles([$role1]);
@@ -54,7 +55,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'projects.index'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'projects.create'])->syncRoles([$role1, $role2, $role3]);
         Permission::create(['name' => 'projects.edit'])->syncRoles([$role1, $role2, $role3]);
-        Permission::create(['name' => 'projects.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'projects.destroy'])->syncRoles([$role1]);
 
         //permisos para las evaluaciones
 

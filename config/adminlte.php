@@ -243,20 +243,6 @@ return [
         ],
 
         [
-            'text'        => 'Estudiantes',
-            'url'         => 'students',
-            'icon'        => 'fas fa-graduation-cap',
-            'can'         => 'students.index'
-        ],
-
-        [
-            'text'        => 'Docentes',
-            'url'         => 'teachers',
-            'icon'        => 'fas fa-chalkboard-teacher',
-            'can'         => 'teachers.index'
-        ],
-
-        [
             'text'        => 'Equipos',
             'url'         => 'teams',
             'icon'        => 'fas fa-user-friends',

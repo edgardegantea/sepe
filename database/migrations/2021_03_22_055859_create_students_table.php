@@ -15,12 +15,14 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('firstName', 100);
-            $table->string('lastName', 100);
-            $table->integer('semester');
-            $table->string('engineering', 50);
-            $table->string('controlNumber', 15);
-            $table->string('email', 100);
+
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }

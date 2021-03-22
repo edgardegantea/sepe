@@ -46,4 +46,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Project::class);
     }
+
+    //Relacion muchos a muchos
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
+    }
+
+
 }

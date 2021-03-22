@@ -10,8 +10,12 @@ class Team extends Model
     use HasFactory;
 
     protected $fillable = [
-        'engineering',
-        'semester'
+        'name'
     ];
 
+
+    //relacion muchos a muchos
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }

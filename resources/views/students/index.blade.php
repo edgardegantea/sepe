@@ -21,10 +21,8 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
-                    <th>Semestre</th>
-                    <th>Carrera</th>
-                    <th>Número de control</th>
                     <th>Correo electrónico institucional</th>
+                    <th>Número de control</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -35,16 +33,10 @@
                             {{ $student->id }}
                         </td>
                         <td>
-                            {{ $student->firstName}}
+                            {{ $student->name}}
                         </td>
                         <td>
                             {{ $student->lastName}}
-                        </td>
-                        <td>
-                            {{ $student->semester}}
-                        </td>
-                        <td>
-                            {{ $student->engineering}}
                         </td>
                         <td>
                             {{ $student->controlNumber}}
