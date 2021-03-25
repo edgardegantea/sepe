@@ -54,11 +54,11 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                             <th>Correo Institucional</th>
                             <th>N° Control</th>
-                            <th>Roles asignados</th>
                             <th colspan="2">Acciones</th>
                         </tr>
                         </thead>
@@ -66,17 +66,11 @@
                         <tbody>
                         @foreach($users as $user)
                             <tr>
+                                <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->lastName }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->controlNumber }}</td>
-                                <td>
-                                    @foreach($roles as $role)
-                                        <p> {{ $role->name }} </p>
-                                    @endforeach
-
-                                </td>
-
 
                                 <td width="10px">
                                     @can('users.edit')
@@ -106,11 +100,11 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                             <th>Correo Institucional</th>
                             <th>N° Control</th>
-                            <th>Roles asignados</th>
                             <th colspan="2">Acciones</th>
                         </tr>
                         </thead>
@@ -118,27 +112,21 @@
                         <tbody>
                         @foreach($teachers as $teacher)
                             <tr>
+                                <td>{{ $teacher->id }}</td>
                                 <td>{{ $teacher->name }}</td>
                                 <td>{{ $teacher->lastName }}</td>
                                 <td>{{ $teacher->email }}</td>
                                 <td>{{ $teacher->controlNumber }}</td>
-                                <td>
-                                    @foreach($roles as $role)
-                                        <p> {{ $role->name }} </p>
-                                    @endforeach
-
-                                </td>
-
 
                                 <td width="10px">
                                     @can('users.edit')
                                         <a class="btn btn-secondary btn-sm"
-                                           href="{{ route('users.edit', $user->id) }}">Editar</a>
+                                           href="{{ route('users.edit', $teacher->id) }}">Editar</a>
                                     @endcan
                                 </td>
                                 <td>
                                     @can('users.destroy')
-                                        <form action="{{ route('users.destroy', $user->id ) }}" method="post"
+                                        <form action="{{ route('users.destroy', $teacher->id ) }}" method="post"
                                               onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
                                             @csrf
                                             @method('delete')
@@ -158,11 +146,11 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                             <th>Correo Institucional</th>
                             <th>N° Control</th>
-                            <th>Roles asignados</th>
                             <th colspan="2">Acciones</th>
                         </tr>
                         </thead>
@@ -170,27 +158,21 @@
                         <tbody>
                         @foreach($students as $student)
                             <tr>
+                                <td>{{ $student->id }}</td>
                                 <td>{{ $student->name }}</td>
                                 <td>{{ $student->lastName }}</td>
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->controlNumber }}</td>
-                                <td>
-                                    @foreach($roles as $role)
-                                        <p> {{ $role->name }} </p>
-                                    @endforeach
-
-                                </td>
-
 
                                 <td width="10px">
                                     @can('users.edit')
                                         <a class="btn btn-secondary btn-sm"
-                                           href="{{ route('users.edit', $user->id) }}">Editar</a>
+                                           href="{{ route('users.edit', $student->id) }}">Editar</a>
                                     @endcan
                                 </td>
                                 <td>
                                     @can('users.destroy')
-                                        <form action="{{ route('users.destroy', $user->id ) }}" method="post"
+                                        <form action="{{ route('users.destroy', $student->id ) }}" method="post"
                                               onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
                                             @csrf
                                             @method('delete')
@@ -210,11 +192,11 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                             <th>Correo Institucional</th>
                             <th>N° Control</th>
-                            <th>Roles asignados</th>
                             <th colspan="2">Acciones</th>
                         </tr>
                         </thead>
@@ -222,27 +204,21 @@
                         <tbody>
                         @foreach($sinroles as $sinrol)
                             <tr>
+                                <td>{{ $sinrol->id }}</td>
                                 <td>{{ $sinrol->name }}</td>
                                 <td>{{ $sinrol->lastName }}</td>
                                 <td>{{ $sinrol->email }}</td>
                                 <td>{{ $sinrol->controlNumber }}</td>
-                                <td>
-                                    @foreach($roles as $role)
-                                        <p> {{ $role->name }} </p>
-                                    @endforeach
-
-                                </td>
-
 
                                 <td width="10px">
                                     @can('users.edit')
                                         <a class="btn btn-secondary btn-sm"
-                                           href="{{ route('users.edit', $user->id) }}">Editar</a>
+                                           href="{{ route('users.edit', $sinrol->id) }}">Editar</a>
                                     @endcan
                                 </td>
                                 <td>
                                     @can('users.destroy')
-                                        <form action="{{ route('users.destroy', $user->id ) }}" method="post"
+                                        <form action="{{ route('users.destroy', $sinrol->id ) }}" method="post"
                                               onclick="return confirm('¿Está seguro de que desea elimiar este usuario?')">
                                             @csrf
                                             @method('delete')

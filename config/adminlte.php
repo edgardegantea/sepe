@@ -243,6 +243,15 @@ return [
         ],
 
         [
+            'text'        => 'Asignaturas',
+            'url'         => 'subjects',
+            'icon'        => 'fas fa-book',
+            'can'         => 'subjects.index'
+        ],
+
+        ['header' => 'EQUIPOS'],
+
+        [
             'text'        => 'Equipos',
             'url'         => 'teams',
             'icon'        => 'fas fa-user-friends',
@@ -250,19 +259,12 @@ return [
         ],
 
         [
-            'text'        => 'Asignaturas',
-            'url'         => 'subjects',
-            'icon'        => 'fas fa-book',
-            'can'         => 'subjects.index'
-        ],
-
-        ['header' => 'PROYECTOS'],
-        [
             'text'        => 'Lista de Proyectos',
             'url'         => 'projects',
             'icon'        => 'fas fa-clipboard-list',
             'can'         => 'projects.index'
         ],
+
         [
             'text'        => 'Crear nuevo Proyecto',
             'route'       => 'projects.create',
