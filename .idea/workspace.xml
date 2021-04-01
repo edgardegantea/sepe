@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Corrigiendo bd">
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Trabajando en el modulo Teams con usuarios.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UsersModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/TeamFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TeamFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_18_014933_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_18_014933_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_14_234831_create_subjects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_14_234831_create_subjects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_01_052936_create_engineers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_01_052936_create_engineers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_18_014108_create_teams_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_18_014108_create_teams_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/teams/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/teams/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +220,7 @@
       <workItem from="1616706483295" duration="20802000" />
       <workItem from="1616740280456" duration="5206000" />
       <workItem from="1616794040326" duration="3828000" />
-      <workItem from="1617148916993" duration="31385000" />
+      <workItem from="1617148916993" duration="38115000" />
     </task>
     <task id="LOCAL-00001" summary="Trabajando con la relacion de las tablas">
       <created>1614622611595</created>
@@ -310,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616641883614</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Trabajando en el modulo Teams con usuarios.">
+      <created>1617305345566</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617305345566</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +336,7 @@
     <MESSAGE value="Mejorando BD" />
     <MESSAGE value="Filtro de usuarios" />
     <MESSAGE value="Corrigiendo bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigiendo bd" />
+    <MESSAGE value="Trabajando en el modulo Teams con usuarios." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trabajando en el modulo Teams con usuarios." />
   </component>
 </project>

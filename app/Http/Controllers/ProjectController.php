@@ -39,21 +39,11 @@ class ProjectController extends Controller
     {
         //
         //$projects = Project::with('team')->get();
-
-
-
-
         //$team = Team::find(1)->id;
 
-        $team = Team::first()->id;
-
-        return $team;
-
-
+        $team = Team::find(11)->id;
 
         $materias = Subject::all(['id', 'name']);
-
-
 
         return view('projects.create', compact('materias', 'team'));
     }
@@ -106,7 +96,10 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+
+        //Obtenemos el id del team al que pertenece este proyecto.
+        $project->team->id;
+
         return view('projects.show', compact('project'));
     }
 
@@ -156,7 +149,7 @@ class ProjectController extends Controller
             $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(400, 400);
             $img->save();
 
-            $project->logo =$ruta_imagen;
+            $project->logo = $ruta_imagen;
         }
 
 

@@ -38,12 +38,12 @@
                                 {{ $team->name }}
                             </td>
                             <td>
-                                @if( $team->project_count )
-
-                                    {{ $team->project_count }}
+                                @if( $team->projects )
+                                    {{ $team->projects->count() }}
                                 @else
                                     <p>Ninguno</p>
                                 @endif
+
                             </td>
                             <td>
                                 <a href="{{ route('teams.show', $team->id) }}" class="btn btn-primary">Ver</a>

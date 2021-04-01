@@ -15,7 +15,7 @@ class CreateEngineersTable extends Migration
     {
         Schema::create('engineers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }

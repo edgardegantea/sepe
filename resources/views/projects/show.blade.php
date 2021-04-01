@@ -4,7 +4,8 @@
 
 @section('content_header')
     <div class="container">
-        <a class="btn btn-primary float-right" href="{{route('projects.edit', $project->id) }}">
+        <a class="btn btn-primary float-right" href="{{ route('teams.show', $project->team_id) }}">Regresar</a>
+        <a class="btn btn-primary float-right mr-2" href="{{route('projects.edit', $project->id) }}">
             <i class="fa fa-edit"></i>
             Editar
         </a>

@@ -35,11 +35,9 @@ class TeamController extends Controller
         $teams = Team::all();
 
         //contar el numero de proyectos que existen
-        $projects = Team::withCount('projects')->get();
+        //SSTeam::withCount('projects')->get();
 
-
-
-        return view('teams.index', compact('user','teams', 'projects'));
+        return view('teams.index', compact('user', 'teams'));
     }
 
     /**
