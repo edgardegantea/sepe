@@ -3,29 +3,44 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Detalle de equipo</h1>
+    <a class="float-right mr-2 btn btn-primary" href="{{ route('teams.index') }}">Volver</a>
+    <a class="float-right mr-2 btn btn-primary" href="{{ route('projects.create') }}">Crear Proyecto</a>
+    <h1>Equipo: {{ $team->name }}</h1>
+
 @stop
 
 @section('content')
-    <div class="container">
-        <div class="card mt-3">
-            <div class="card-header d-inline-flex">
-                <a href="{{ route('teams.index')}}" class="btn btn-primary ml-auto">
-                    <i class="fa fa-arrow-left">volver</i></a>
-            </div>
-            <div class="card-body">
-                <p><b>ID:</b> {{ $team->id}}</p>
-                <p><b>Ingeniería:</b> {{ $team->engineering}} </p>
-                <p><b>Semestre:</b> {{ $team->semester}} </p>
-            </div>
-            <div class="card-footer">
-                <a class="btn btn-primary" href="{{route('teams.edit', $team->id) }}">
-                    <i class="fa fa-edit"></i>
-                    Editar
-                </a>
-            </div>
+    <div class="card">
+        <div class="card-header">
+            <h4 style="text-align: center">Proyectos Creados</h4>
+        </div>
+        <div class="card-body">
+
+            @foreach($team->projects as $project)
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+
+                        @if($project->logo)
+                            <img src="{{ Storage::url(   $project->logo ) }}" class="card-img-top" alt="...">
+                        @else
+                            <img src="https://cdn.pixabay.com/photo/2017/02/04/15/25/desk-2037545_960_720.png" alt="">
+                        @endif
+
+
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold text-center">{{ $project->name }}</h5>
+                            <p class="card-text text-center">{{ $project->description }}</p>
+                            <a href="{{ route('projects.show', $project->id) }}"
+                               class="btn btn-outline-primary btn-block">Ver
+                                más</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
         </div>
     </div>
+
 @stop
 
 @section('css')

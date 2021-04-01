@@ -16,6 +16,14 @@ class Team extends Model
 
     //relacion muchos a muchos
     public function users(){
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)->withTimestamps();
     }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+
+
 }

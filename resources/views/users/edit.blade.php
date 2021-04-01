@@ -31,7 +31,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('name', 'Correo Institucional') !!}
+                {!! Form::label('name', 'Número de Control') !!}
                 {!! Form::text('controlNumber', null, ['class' => 'form-control']) !!}
             </div>
 

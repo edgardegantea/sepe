@@ -14,7 +14,11 @@ class Project extends Model
         'description',
         'semester',
         'logo',
-        'subject_id'
+        'status',
+        'percentage',
+        'usability',
+        'subject_id',
+        'team_id'
     ];
 
     //Relacion 1 a muchos inversa
@@ -23,9 +27,9 @@ class Project extends Model
         return $this->belongsTo(Subject::class);
     }
 
-    public function user()
+    public function team()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Team::class);
     }
 
     //Relacion 1:n de Project a modulos de evaluación

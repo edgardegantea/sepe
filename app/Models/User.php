@@ -41,16 +41,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //Relacion de 1:n de usuario a projects-
-    public function projects()
-    {
-        return $this->hasMany(Project::class);
-    }
+    //Relacion de 1:n de usuario a projects
 
     //Relacion muchos a muchos
     public function teams()
     {
-        return $this->belongsToMany(Team::class);
+        return $this->belongsToMany(Team::class)->withTimestamps();
+    }
+
+    //un usuario tiene muchos proyectos a traves de Team
+    public function projects(){
+        return $this->hasManyThrough(Project::class, Team::class);
     }
 
 

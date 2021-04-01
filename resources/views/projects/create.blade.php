@@ -48,6 +48,10 @@
                         @enderror
                     </div>
 
+                    <div class="form-group mt-3">
+                        <input type="hidden" name="status" value="Pendiente">
+                    </div>
+
                     <div class="form-group">
                         <label for="subject">Asignatura</label>
 
@@ -65,6 +69,11 @@
                             @endforeach
                         </select>
                     </div>
+
+                    <div class="form-group mt-3">
+                        <input type="hidden" name="team_id" value="{{ $team }}">
+                    </div>
+
 
                     <a href="{{ route('projects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
                     <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>

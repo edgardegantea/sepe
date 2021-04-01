@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use function Symfony\Component\String\s;
+use function Symfony\Component\Translation\t;
 
 class TeamController extends Controller
 {
@@ -21,8 +26,20 @@ class TeamController extends Controller
     public function index()
     {
         //
+        $user = auth()->user();
+
+        //$teams = DB::select( 'SELECT * FROM `team_user` WHERE user_id = ?', [$user]);
+
+        //$teams = DB::table('team_user')->pluck('team_id');
+
         $teams = Team::all();
-        return view('teams.index', compact('teams'));
+
+        //contar el numero de proyectos que existen
+        $projects = Team::withCount('projects')->get();
+
+
+
+        return view('teams.index', compact('user','teams', 'projects'));
     }
 
     /**
@@ -45,15 +62,19 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         //
+
         $request->validate([
-            'name' => 'required',
-            'member_1' => 'required',
-            'member_2' => 'required',
-            'member_3' => 'nullable',
-            'member_4' => 'nullable'
+            'name' => 'required'
         ]);
 
-        Team::create($request->all());
+        $team = Team::create($request->all());
+
+        //obteniendo el usuario autenticado
+        $user = auth()->user();
+
+        //agrego el usuario al equipo recien creado
+        $user->teams()->attach($team);
+
         return redirect()->route('teams.index');
 
     }
@@ -67,6 +88,7 @@ class TeamController extends Controller
     public function show(Team $team)
     {
         //
+        $projects = Project::all();
         return view('teams.show', compact('team'));
     }
 
@@ -79,7 +101,10 @@ class TeamController extends Controller
     public function edit(Team $team)
     {
         //
-        return view('teams.edit', compact('team'));
+        $users = User::all();
+
+
+        return view('teams.edit', compact('team', 'users'));
     }
 
     /**
@@ -93,8 +118,7 @@ class TeamController extends Controller
     {
         //
         $request->validate([
-            'engineering' => 'required',
-            'semester' => 'required'
+            'name' => 'required'
         ]);
 
         $team->update($request->all());

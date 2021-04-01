@@ -23,6 +23,7 @@ class TeamFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->unique()->company,
         ];
     }
 }

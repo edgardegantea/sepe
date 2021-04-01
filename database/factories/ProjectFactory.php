@@ -4,9 +4,11 @@ namespace Database\Factories;
 
 use App\Models\Project;
 use App\Models\Subject;
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+
 
 class ProjectFactory extends Factory
 {
@@ -24,11 +26,13 @@ class ProjectFactory extends Factory
      */
     public function definition()
     {
+
         return [
             'name' => $this->faker->unique()->sentence(),
             'description' => $this->faker->text(250),
             'semester' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
-            'user_id' => User::all()->random()->id,
+            'logo' => $this->faker->image('public/storage/upload-projects', 400, 400, null, false),
+            'team_id' => Team::all()->random()->id,
             'subject_id' => Subject::all()->random()->id
         ];
     }

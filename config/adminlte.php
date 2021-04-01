@@ -258,7 +258,7 @@ return [
             'can'         => 'teams.index'
         ],
 
-        [
+        /*[
             'text'        => 'Lista de Proyectos',
             'url'         => 'projects',
             'icon'        => 'fas fa-clipboard-list',
@@ -270,7 +270,8 @@ return [
             'route'       => 'projects.create',
             'icon'        => 'fas fa-project-diagram',
             'can'         => 'projects.create'
-        ],
+        ],*/
+
         [
             'text'        => 'Evaluaciones',
             'url'         => 'evaluations',

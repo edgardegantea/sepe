@@ -6,8 +6,7 @@
 
     @can('teams.create')
         <a href="{{ route('teams.create')}}" class="btn btn-primary float-right">
-            <i class="fa fa-plus"></i>
-            Agregar
+            Crear nuevo Equipo
         </a>
     @endcan
 
@@ -15,8 +14,9 @@
 @stop
 
 @section('content')
+
     <div class="container">
-        <div class="card mt-3">
+        <div class="card">
 
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -29,7 +29,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($teams as $team)
+                    @foreach($user->teams as $team)
                         <tr>
                             <td>
                                 {{ $team->id }}
@@ -38,6 +38,16 @@
                                 {{ $team->name }}
                             </td>
                             <td>
+                                @if( $team->project_count )
+
+                                    {{ $team->project_count }}
+                                @else
+                                    <p>Ninguno</p>
+                                @endif
+                            </td>
+                            <td>
+                                <a href="{{ route('teams.show', $team->id) }}" class="btn btn-primary">Ver</a>
+                                <a href="{{ route('teams.edit', $team->id) }}" class="btn btn-primary">Editar</a>
                             </td>
                         </tr>
                     @endforeach

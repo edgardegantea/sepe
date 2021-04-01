@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\Subject;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -24,7 +25,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = auth()->user()->projects;
+        //$projects = auth()->user()->projects;
+        $projects = Project::all();
         return view('projects.index', compact('projects'));
     }
 
@@ -36,10 +38,24 @@ class ProjectController extends Controller
     public function create()
     {
         //
+        //$projects = Project::with('team')->get();
+
+
+
+
+        //$team = Team::find(1)->id;
+
+        $team = Team::first()->id;
+
+        return $team;
+
+
+
         $materias = Subject::all(['id', 'name']);
 
 
-        return view('projects.create', compact('materias'));
+
+        return view('projects.create', compact('materias', 'team'));
     }
 
     /**
@@ -56,7 +72,9 @@ class ProjectController extends Controller
             'description' => 'required',
             'semester' => 'required',
             'logo' => 'required|image',
+            'status' => 'required',
             'subject_id' => 'required',
+            'team_id' => 'required'
         ]);
 
         //Obteniendo ruta de la imagen del logo
@@ -67,12 +85,14 @@ class ProjectController extends Controller
         $img->save();
 
 
-        auth()->user()->projects()->create([
+        Project::create([
             'name' => $data['name'],
             'description' => $data['description'],
             'semester' => $data['semester'],
             'logo' => $ruta_imagen,
+            'status' => $data['status'],
             'subject_id' => $data['subject_id'],
+            'team_id' => $data['team_id']
         ]);
 
         return redirect()->route('projects.index');
