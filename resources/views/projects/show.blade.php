@@ -24,22 +24,48 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold">{{ $project->name }}</h5>
-                        <p class="card-text">{{ $project->description }}</p>
-                        <p class="card-text">Semestre del proyecto: {{ $project->semester }}</p>
-                        <p class="card-text">Asignatura: {{ $project->subject->name }}</p>
-                        <p class="card-text"><small class="text-muted">Modulos calificados: 8/10</small></p>
-                        <a class="btn btn-primary float-right" href="{{ route('aspectos.create') }}">Calificar</a>
+                        <h5 class="card-title font-weight-bold">{{ $project->name }}.</h5>
+                        <p class="card-text">{{ $project->description }}.</p>
 
-                        <form action="{{ route('projects.destroy', $project->id ) }}" method="post"
-                              onclick="return confirm('¿Está seguro de que desea elimiar el proyecto.?')">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-danger float-right mr-2">Eliminar</button>
-                        </form>
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        Semestre: {{ $project->semester }}.
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        Asignatura: {{ $project->subject->name }}.
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        Status: {{ $project->status }}.
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="row mt-3">
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        Porcentaje Obtenido: {{ $project->percentage }}
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        Nivel de Usabilidad: {{ $project->usabillity }}
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="p-3 border bg-light">
+                                        <small class="text-muted">Modulos calificados: 8/10</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-
+                        <a class="btn btn-primary float-right mt-3" href="{{ route('aspectos.create') }}">Calificar</a>
                     </div>
                 </div>
             </div>
@@ -49,6 +75,8 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
 @stop
 
 @section('js')

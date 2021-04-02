@@ -21,6 +21,12 @@ class Project extends Model
         'team_id'
     ];
 
+    //Relacion muchos a muchos con usuarios
+    //relacion muchos a muchos
+    public function users(){
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
     //Relacion 1 a muchos inversa
     public function subject()
     {
@@ -31,6 +37,9 @@ class Project extends Model
     {
         return $this->belongsTo(Team::class);
     }
+
+    //Ver usuarios a traves de teams
+
 
     //Relacion 1:n de Project a modulos de evaluación
 
