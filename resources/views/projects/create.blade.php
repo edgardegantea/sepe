@@ -74,7 +74,6 @@
                         <input type="hidden" name="team_id" value="{{ $team }}">
                     </div>
 
-
                     <a href="{{ route('projects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
                     <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 
