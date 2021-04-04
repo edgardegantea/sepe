@@ -39,7 +39,6 @@ class ProjectController extends Controller
     {
         //
         //$projects = Project::with('team')->get();
-        //$team = Team::find(1)->id;
 
         $team = Team::find(11)->id;
 
@@ -85,7 +84,7 @@ class ProjectController extends Controller
             'team_id' => $data['team_id']
         ]);
 
-        return redirect()->route('projects.index');
+        return redirect()->route('teams.index');
     }
 
     /**
@@ -151,7 +150,6 @@ class ProjectController extends Controller
 
             $project->logo = $ruta_imagen;
         }
-
 
         $project->save();
 

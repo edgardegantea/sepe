@@ -24,9 +24,8 @@ class UserController extends Controller
      */
     public function index()
     {
-
+//obteniendo todos los usuarios
         $users = User::all();
-        $roles = Role::all();
 
         //$user = auth()->user();
         //$userRoles = $user->roles()->get();
@@ -41,7 +40,7 @@ class UserController extends Controller
         //ver usuarios que no tengan rol
         $sinroles = User::doesntHave('roles')->get();
 
-        return view('users.index', compact('users', 'roles', 'teachers', 'students', 'sinroles'));
+        return view('users.index', compact('users', 'teachers', 'students', 'sinroles'));
     }
 
     /**
@@ -110,7 +109,7 @@ class UserController extends Controller
 
         $user->update($request->all());
 
-        $user->roles()->sync($request->roles);
+        $user->roles()->sync($request->role);
 
         return redirect()->route('users.index')->with('info', 'La información se guardó correctamente.');
 

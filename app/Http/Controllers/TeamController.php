@@ -98,11 +98,11 @@ class TeamController extends Controller
      */
     public function edit(Team $team)
     {
-        //
-        $users = User::all();
+        //ver usuarios con rol de Student
+        $students = User::role('Student')->get();
 
 
-        return view('teams.edit', compact('team', 'users'));
+        return view('teams.edit', compact('team', 'students'));
     }
 
     /**
@@ -120,6 +120,9 @@ class TeamController extends Controller
         ]);
 
         $team->update($request->all());
+
+        $team->users()->sync($request->users);
+
 
         return redirect()->route('teams.index');
 

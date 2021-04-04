@@ -16,6 +16,7 @@
 
             {!! Form::model($user, ['route' => ['users.update', $user], 'method' => 'PUT']) !!}
 
+
             <div class="form-group">
                 {!! Form::label('name', 'Nombre') !!}
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
@@ -37,6 +38,7 @@
 
 
             <h2 class="h5">Listado de roles</h2>
+
             @foreach($roles as $role)
                 <div>
                     <label>

@@ -12,49 +12,27 @@
         <div class="card">
             <div class="card-body">
 
-                <form method="POST" name="" action="{{ route('teams.update', $team->id) }}">
-                    @csrf
-                    @method('PUT')
+                <div>
+                    {!! Form::model($team, ['route' => ['teams.update', $team], 'method' => 'PUT']) !!}
 
-
-                    <div id="survey_options">
-
-                        <label for="subject">Integrante</label>
-
-                        <select
-                            name="users[]"
-                            class="form-control @error('users[]') is-invalid @enderror"
-                            id="users[]" required>
-
-                            <option value="">--Seleccione--</option>
-                            @foreach( $users as $user )
-                                <option
-                                    value="{{ $user->id }}"
-                                    {{ old('user') == $user->id ? 'selected' : '' }}
-                                >{{ $user->name }}</option>
-                            @endforeach
-                        </select>
-
-                    </div>
-                    <div class="controls">
-                        <a href="#" id="add_more_fields" class="btn btn-primary">Agregar campo</a>
-                        <a href="#" id="remove_fields" class="btn btn-danger">Remover campo</a>
+                    <div class="form-group">
+                        {!! Form::label('name', 'Nombre') !!}
+                        {!! Form::text('name', null, ['class' => 'form-control']) !!}
                     </div>
 
-
-                    <input type="button" id="add_field" value="Agregar Integrante">
-                    <br>
-                    <div id="listas">
-
+                    <h2 class="h5">Listado de Alumnos</h2>
+                    @foreach($students as $student)
                         <div>
-                            <input type="text" name="users[]">
+                            <label>
+                                {!! Form::checkbox('users[]',$student->id, null, ['class' => 'mr-1']) !!}
+                                {{ $student->name }} {{ $student->lastName }}
+                            </label>
                         </div>
-                    </div>
+                    @endforeach
 
-
-                    <a href="{{ route('teams.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
-                    <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
-                </form>
+                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary mt-2']) !!}
+                    {!! Form::close() !!}
+                </div>
             </div>
         </div>
     </div>
@@ -62,58 +40,15 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
 @stop
 
 @section('js')
-    <script>
-        var survey_options = document.getElementById('survey_options');
-        var add_more_fields = document.getElementById('add_more_fields');
-        var remove_fields = document.getElementById('remove_fields');
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-        add_more_fields.onclick = function (){
-            var newField = document.createElement('select');
-            newField.setAttribute('name', 'users[]');
-            newField.setAttribute('class', 'form-control');
-
-
-            survey_options.appendChild(newField);
-        }
-
-        remove_fields.onclick = function (){
-            var input_tags = survey_options.getElementsByTagName('select');
-            if (input_tags.length > 1){
-                survey_options.removeChild(input_tags[(input_tags.length) - 1]);
-            }
-        }
-
-    </script>
-
-
-
-
-    <script>
-
-        var campos_max = 10;   //max de 10 campos
-
-        var x = 0;
-        $('#add_field').click(function (e) {
-            e.preventDefault();     //prevenir novos clicks
-            if (x < campos_max) {
-                $('#listas').append('<div>\
-                                <input type="text" name="campo[]">\
-                                <a href="#" class="remover_campo">Remover</a>\
-                                </div>');
-                x++;
-            }
-        });
-        // Remover o div anterior
-        $('#listas').on("click", ".remover_campo", function (e) {
-            e.preventDefault();
-            $(this).parent('div').remove();
-            x--;
-        });
-
-    </script>
 @stop
 
 
