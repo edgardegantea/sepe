@@ -110,8 +110,11 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('projects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
-                    <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
+                    <div class="form-group mt-3">
+                        <a href="{{ route('projects.show', $project->id) }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
+                        <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
+                    </div>
+
 
                 </form>
 
