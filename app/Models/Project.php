@@ -33,6 +33,7 @@ class Project extends Model
         return $this->belongsTo(Subject::class);
     }
 
+    //Relacion con projectos
     public function team()
     {
         return $this->belongsTo(Team::class);

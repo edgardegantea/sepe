@@ -62,6 +62,9 @@ Route::resource('help', HelpController::class);
 Route::resource('teams', TeamController::class);
 Route::resource('projects', ProjectController::class);
 
+Route::resource('projects.teams', ProjectController::class);
+
+
 Route::resource('teachers', TeacherController::class);
 Route::resource('students', StudentController::class);
 Route::resource('subjects', SubjectController::class);

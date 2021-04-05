@@ -44,7 +44,9 @@
                                                  aria-labelledby="flush-headingOne"
                                                  data-bs-parent="#accordionFlushExample">
                                                 <div class="accordion-body">
-                                                    Cheo
+                                                    @foreach( $project->users as $user )
+                                                        <p>{{ $user->name }} {{ $user->lastName }}</p>
+                                                    @endforeach
                                                 </div>
                                             </div>
                                         </div>
@@ -114,8 +116,7 @@
                                 </table>
                             </div>
                         </div>
-
-                        <a class="btn btn-primary float-right mt-3" href="{{ route('aspectos.create') }}">Calificar</a>
+                        <a class="btn btn-primary float-right mt-3" href="{{ route('aspectos.create') }}">Evaluar</a>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 
 @section('content_header')
     <a class="float-right mr-2 btn btn-primary" href="{{ route('teams.index') }}">Volver</a>
-    <a class="float-right mr-2 btn btn-primary" href="{{ route('projects.create') }}">Crear Proyecto</a>
+    <a class="float-right mr-2 btn btn-primary" href="{{ route('projects.teams.create', $team->id) }}">Crear Proyecto</a>
     <h1>Equipo: {{ $team->name }}</h1>
 
 @stop
@@ -30,7 +30,6 @@
                                 <div class="accordion-body">
                                     @foreach($team->users as $user )
                                         <p>{{ $user->name }} {{ $user->lastName }}</p>
-
                                     @endforeach
                                 </div>
                             </div>

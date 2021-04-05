@@ -24,7 +24,7 @@
                     <tr>
                         <th>ID equipo</th>
                         <th>Nombre de equipo u Organización</th>
-                        <th>Proyectos</th>
+                        <th>N° Proyectos</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>

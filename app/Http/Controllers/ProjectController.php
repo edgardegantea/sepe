@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Models\Subject;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -35,16 +36,16 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
         //$projects = Project::with('team')->get();
 
-        $team = Team::find(11)->id;
+        $team = Team::find($id)->id;
 
         $materias = Subject::all(['id', 'name']);
 
-        return view('projects.create', compact('materias', 'team'));
+        return view('projects.create', compact( 'materias','team'));
     }
 
     /**
@@ -97,9 +98,9 @@ class ProjectController extends Controller
     {
 
         //Obtenemos el id del team al que pertenece este proyecto.
-        $project->team->id;
+        $team = $project->team->id;
 
-        return view('projects.show', compact('project'));
+        return view('projects.show', compact('project', 'team'));
     }
 
     /**
@@ -113,7 +114,9 @@ class ProjectController extends Controller
         //
         $subjects = Subject::all(['id', 'name']);
 
-        return view('projects.edit', compact('project', 'subjects'));
+        $evaluators = User::role('Teacher')->get();
+
+        return view('projects.edit', compact('project', 'subjects', 'evaluators'));
     }
 
     /**
@@ -153,7 +156,11 @@ class ProjectController extends Controller
 
         $project->save();
 
-        return redirect()->route('projects.index');
+        $project->users()->sync($request->users);
+
+        $team = $project->team->id;
+
+        return redirect()->route('teams.show', $team);
 
     }
 

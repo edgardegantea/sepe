@@ -104,14 +104,22 @@
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                  aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-
+                                    @foreach($evaluators as $evaluator)
+                                        <div>
+                                            <input type="checkbox" name="users[]" value="{{$evaluator->id}}">
+                                            <label>{{$evaluator->name}}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <a href="{{ route('projects.index') }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
-                    <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
+                    <div class="form-group mt-3">
+                        <a href="{{ route('projects.show', $project->id) }}" class="btn btn-secondary" tabindex="5">Cancelar</a>
+                        <button type="submit" class="btn btn-primary" tabindex="4">Actualizar</button>
+                    </div>
+
 
                 </form>
 
