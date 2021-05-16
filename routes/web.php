@@ -58,6 +58,19 @@ Route::resource('identitys', IdentityController::class);
 Route::resource('interactions', InteractionController::class);
 Route::resource('rotulados', RotuladoController::class);
 
+//Formularios
+Route::resource('aspectos.projects', AspectoController::class);
+Route::resource('identitys.projects', IdentityController::class);
+Route::resource('interactions.projects', InteractionController::class);
+Route::resource('controls.projects', ControlController::class);
+Route::resource('elements.projects', ElementController::class);
+Route::resource('searchs.projects', SearchController::class);
+Route::resource('ayudas.projects', AyudaController::class);
+Route::resource('evaluations.projects', EvaluationController::class);
+Route::resource('structures.projects', StructureController::class);
+Route::resource('rotulados.projects', RotuladoController::class);
+Route::resource('layoutpages.projects', LayoutpageController::class);
+
 Route::resource('help', HelpController::class);
 Route::resource('teams', TeamController::class);
 Route::resource('projects', ProjectController::class);

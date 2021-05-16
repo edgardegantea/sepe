@@ -15,6 +15,7 @@ class Interaction extends Model
         'valor',
         'relevancia',
         'comentario',
+        'project_id'
     ];
 
     //relacion inversa 1 a muchos
@@ -23,5 +24,4 @@ class Interaction extends Model
     {
         return $this->belongsTo(Project::class);
     }
-
 }

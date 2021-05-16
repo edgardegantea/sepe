@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\Search;
 use Illuminate\Http\Request;
 
@@ -27,10 +28,10 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
-        return view('searchs.create');
+        $projects = Project::find($id)->id;
+        return view('searchs.create', compact('projects'));
     }
 
     /**
@@ -39,15 +40,17 @@ class SearchController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //Validamos que los campos tengan algun dato
+        //validación
         $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => ''
+            'comentario' => '',
+            'project_id' => 'required'
         ]);
 
         //Se insertan los valores a nuestra base de datos.
@@ -58,11 +61,11 @@ class SearchController extends Controller
             $registro->valor = $data['valor'][$i];
             $registro->relevancia = $data['relevancia'][$i];
             $registro->comentario = $data['comentario'][$i];
-
+            $registro->project_id = $data['project_id'];
             $registro->save();
         }
 
-        return redirect()->route('ayudas.create');
+        return redirect()->route('projects.show', $request->project_id);
     }
 
     /**
@@ -84,7 +87,8 @@ class SearchController extends Controller
      */
     public function edit(Search $search)
     {
-        //
+        $evaluacion = Search::where('project_id', $search->project_id)->get();
+        return view('searchs.edit', compact('search', 'evaluacion'));
     }
 
     /**
@@ -94,9 +98,27 @@ class SearchController extends Controller
      * @param  \App\Models\Search  $search
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Search $search)
+    public function update(Request $request, $project_id)
     {
-        //
+        $id = $request->get('id');
+        $codigo = $request->get('codigo');
+        $criterio = $request->get('criterio');
+        $valor = $request->get('valor');
+        $relevancia = $request->get('relevancia');
+        $comentario = $request->get('comentario');
+
+        $objetos = count($id);
+        for ($i=0; $i < $objetos; $i++) {
+            $evaluacion = Search::find($id[$i]);
+            $evaluacion->update([
+                'codigo' => $codigo[$i],
+                'criterio' => $criterio[$i],
+                'valor' => $valor[$i],
+                'relevancia' => $relevancia[$i],
+                'comentario' => $comentario[$i],
+            ]);
+        }
+        return redirect()->route('projects.show', $project_id);
     }
 
     /**

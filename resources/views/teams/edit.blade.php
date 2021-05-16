@@ -11,7 +11,6 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-
                 <div>
                     {!! Form::model($team, ['route' => ['teams.update', $team], 'method' => 'PUT']) !!}
 
@@ -22,35 +21,21 @@
 
                     <div class="form-group">
                         <h2 class="h5">Listado de Alumnos</h2>
-
-                        <div>
-                            <table class="table table-striped" id="alumnos">
-                                <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>
-                                        Nombre
-                                    </th>
-                                    <th>
-                                        Apellido
-                                    </th>
-                                    <th>Número de control</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($students as $student)
-                                    <tr>
-                                        <td>
-                                            {!! Form::checkbox('users[]',$student->id, null, ['class' => 'mr-1']) !!}
-                                        </td>
-
-                                        <td>{{ $student->name }}</td>
-                                        <td>{{ $student->lastName }}</td>
-                                        <td>{{ $student->controlNumber }}</td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="">Seleccionar evaluadores:</label>
+                                    <select class="form-control js-example-basic-multiple " name="users[]"
+                                            multiple="multiple">
+                                        @foreach( $students as $student )
+                                            <option
+                                                value="{{ $student->id }}"
+                                                {{ old('student') == $student->id ? 'selected' : '' }}
+                                            >{{ $student->name }} {{ $student->lastName }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -73,6 +58,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="path/to/select2.min.css" rel="stylesheet"/>
 @stop
 
 @section('js')
@@ -86,6 +73,14 @@
     <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="path/to/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
 
     <script>
         $('#alumnos').DataTable();

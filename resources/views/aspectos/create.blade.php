@@ -26,87 +26,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-
-    <div class="card">
-
-        <div class="card-body">
-
-            {!! Form::open(['route' => 'aspectos.store']) !!}
-
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Criterio</th>
-                    <th>Valor</th>
-                    <th>Relevancia</th>
-                    <th>Comentario</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::label('name', 'AG.1') !!}
-                            {!! Form::hidden('codigo[]', 'AG.1', ['class' => 'form-control']) !!}
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::label('name', 'Objetivos del sitio web concretos y bien definidos.') !!}
-                            {!! Form::hidden('criterio[]', 'Objetivos del sitio web concretos y bien definidos.', ['class' => 'form-control']) !!}
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::select('valor[]', ['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '0' => 'NA',], null, ['placeholder' => '--Seleccione un valor--']) !!}
-
-                            @error('valor[]')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::text('relevancia[]', null, ['class' => 'form-control', 'placeholder' => 'Escribir']) !!}
-
-                            @error('relevancia[]')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::text('comentario[]', null, ['class' => 'form-control', 'placeholder' => 'Opcional']) !!}
-
-                            @error('comentario[]')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
-
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            {!! Form::hidden('project_id[]', $projects, ['class' => 'form-control']) !!}
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            {!! Form::submit('Calificar', ['class' => 'btn btn-primary']) !!}
-
-            {!! Form::close() !!}
-        </div>
-    </div>
-
-
-
-
 
     <!-- Tabla -->
     <div class="container">

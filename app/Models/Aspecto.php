@@ -24,6 +24,4 @@ class Aspecto extends Model
     {
         return $this->belongsTo(Project::class);
     }
-
-
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Identity;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class IdentityController extends Controller
@@ -12,6 +13,7 @@ class IdentityController extends Controller
         $this->middleware('auth');
         $this->middleware('can:identitys.index');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,10 +29,10 @@ class IdentityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
-        return view('identitys.create');
+        $projects = Project::find($id)->id;
+        return view('identitys.create', compact('projects'));
     }
 
     /**
@@ -41,13 +43,14 @@ class IdentityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validación
         $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => ''
+            'comentario' => '',
+            'project_id' => 'required'
         ]);
 
         //Se insertan los valores a nuestra base de datos.
@@ -58,11 +61,11 @@ class IdentityController extends Controller
             $registro->valor = $data['valor'][$i];
             $registro->relevancia = $data['relevancia'][$i];
             $registro->comentario = $data['comentario'][$i];
-
+            $registro->project_id = $data['project_id'];
             $registro->save();
         }
 
-        return redirect()->route('structures.create');
+        return redirect()->route('projects.show', $request->project_id);
 
     }
 
@@ -85,7 +88,8 @@ class IdentityController extends Controller
      */
     public function edit(Identity $identity)
     {
-        //
+        $evaluacion = Identity::where('project_id', $identity->project_id)->get();
+        return view('identitys.edit', compact('identity', 'evaluacion'));
     }
 
     /**
@@ -95,9 +99,27 @@ class IdentityController extends Controller
      * @param \App\Models\Identity $identity
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Identity $identity)
+    public function update(Request $request, $project_id)
     {
-        //
+        $id = $request->get('id');
+        $codigo = $request->get('codigo');
+        $criterio = $request->get('criterio');
+        $valor = $request->get('valor');
+        $relevancia = $request->get('relevancia');
+        $comentario = $request->get('comentario');
+
+        $objetos = count($id);
+        for ($i=0; $i < $objetos; $i++) {
+            $evaluacion = Identity::find($id[$i]);
+            $evaluacion->update([
+                'codigo' => $codigo[$i],
+                'criterio' => $criterio[$i],
+                'valor' => $valor[$i],
+                'relevancia' => $relevancia[$i],
+                'comentario' => $comentario[$i],
+            ]);
+        }
+        return redirect()->route('projects.show', $project_id);
     }
 
     /**

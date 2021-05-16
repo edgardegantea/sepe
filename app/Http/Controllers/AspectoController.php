@@ -32,10 +32,9 @@ class AspectoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        $projects = Project::find(1)->id;
-
+        $projects = Project::find($id)->id;
         return view('aspectos.create', compact('projects'));
     }
 
@@ -48,8 +47,6 @@ class AspectoController extends Controller
     public function store(Request $request)
     {
         //validación
-
-
         $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
@@ -71,9 +68,7 @@ class AspectoController extends Controller
             $registro->save();
         }
 
-        return redirect()->route('identitys.create');
-
-
+        return redirect()->route('projects.show', $request->project_id);
     }
 
     /**
@@ -84,7 +79,6 @@ class AspectoController extends Controller
      */
     public function show(Aspecto $aspecto)
     {
-        //
         return view('aspectos.show', compact('aspecto'));
     }
 
@@ -96,7 +90,8 @@ class AspectoController extends Controller
      */
     public function edit(Aspecto $aspecto)
     {
-        return view('aspectos.edit', compact('aspecto'));
+        $evaluacion = Aspecto::where('project_id', $aspecto->project_id)->get();
+        return view('aspectos.edit', compact('aspecto', 'evaluacion'));
     }
 
     /**
@@ -106,28 +101,28 @@ class AspectoController extends Controller
      * @param \App\Models\Aspecto $aspecto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aspecto $aspecto)
+    public function update(Request $request, $project_id)
     {
         //
-        $data = $request->validate([
-            'codigo' => 'required',
-            'criterio' => 'required',
-            'valor' => 'required',
-            'relevancia' => 'required',
-            'comentario' => ''
-        ]);
+        $id = $request->get('id');
+        $codigo = $request->get('codigo');
+        $criterio = $request->get('criterio');
+        $valor = $request->get('valor');
+        $relevancia = $request->get('relevancia');
+        $comentario = $request->get('comentario');
 
-
-        for ($i = 0; $i < count($data['codigo']); $i++) {
-            $registro = new Aspecto();
-            $registro->codigo = $data['codigo'][$i];
-            $registro->criterio = $data['criterio'][$i];
-            $registro->valor = $data['valor'][$i];
-            $registro->relevancia = $data['relevancia'][$i];
-            $registro->comentario = $data['comentario'][$i];
-
-            $registro->save();
+        $objetos = count($id);
+        for ($i=0; $i < $objetos; $i++) {
+            $evaluacion = Aspecto::find($id[$i]);
+            $evaluacion->update([
+                'codigo' => $codigo[$i],
+                'criterio' => $criterio[$i],
+                'valor' => $valor[$i],
+                'relevancia' => $relevancia[$i],
+                'comentario' => $comentario[$i],
+            ]);
         }
+        return redirect()->route('projects.show', $project_id);
 
     }
 

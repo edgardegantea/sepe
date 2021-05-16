@@ -15,6 +15,7 @@ class Search extends Model
         'valor',
         'relevancia',
         'comentario',
+        'project_id'
     ];
 
     //relacion inversa 1 a muchos

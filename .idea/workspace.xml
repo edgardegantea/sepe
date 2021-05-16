@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Agregando menú de filtro y busqueda.">
+    <list default="true" id="afe5deb0-198e-45a0-980d-94e5e0560119" name="Default Changelist" comment="Graficas añadidas.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AspectoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AyudaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ControlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdentityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InteractionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LayoutpageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RotuladoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StructureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aspecto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aspecto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Ayuda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ayuda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Control.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Control.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Element.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Element.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Identity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Identity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Interaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Interaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Layoutpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Layoutpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Rotulado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Rotulado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Structure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aspectos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aspectos/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ayudas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/controls/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/controls/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/elements/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elements/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/identitys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interactions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layoutpages/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/camposForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/camposForm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rotulados/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/searchs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/structures/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/structures/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teams/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +59,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Eliseo4" />
+        <entry key="$PROJECT_DIR$" value="Eliseo5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +71,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -163,6 +197,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hiFOX9piWmT8bwI52GrwjPeCE8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -180,7 +217,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -240,7 +277,19 @@
       <workItem from="1618972658176" duration="2703000" />
       <workItem from="1619031873335" duration="1199000" />
       <workItem from="1619046564964" duration="4981000" />
-      <workItem from="1619063758682" duration="1275000" />
+      <workItem from="1619063758682" duration="2342000" />
+      <workItem from="1619136891043" duration="6824000" />
+      <workItem from="1619232946324" duration="9237000" />
+      <workItem from="1619283786692" duration="599000" />
+      <workItem from="1619316998481" duration="10552000" />
+      <workItem from="1619365125550" duration="6812000" />
+      <workItem from="1619481898166" duration="1143000" />
+      <workItem from="1619532626369" duration="12561000" />
+      <workItem from="1619831682772" duration="616000" />
+      <workItem from="1619834201385" duration="2014000" />
+      <workItem from="1619897718344" duration="2232000" />
+      <workItem from="1621191294628" duration="64000" />
+      <workItem from="1621191372920" duration="428000" />
     </task>
     <task id="LOCAL-00001" summary="Trabajando con la relacion de las tablas">
       <created>1614622611595</created>
@@ -361,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617666389287</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Se logro pasar la variable del equipo para crear el proyecto.">
+      <created>1619065112039</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1619065112039</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +452,8 @@
     <MESSAGE value="Agregando evaluadores" />
     <MESSAGE value="Trabajando en vistas de teams y projects" />
     <MESSAGE value="Agregando menú de filtro y busqueda." />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando menú de filtro y busqueda." />
+    <MESSAGE value="Se logro pasar la variable del equipo para crear el proyecto." />
+    <MESSAGE value="Graficas añadidas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Graficas añadidas." />
   </component>
 </project>

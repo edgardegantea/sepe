@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Control;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use function GuzzleHttp\Promise\all;
@@ -14,6 +15,7 @@ class ControlController extends Controller
         $this->middleware('auth');
         $this->middleware('can:controls.index');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,10 +31,10 @@ class ControlController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
-        return view('controls.create');
+        $projects = Project::find($id)->id;
+        return view('controls.create', compact('projects'));
     }
 
     /**
@@ -43,13 +45,14 @@ class ControlController extends Controller
      */
     public function store(Request $request)
     {
-
+        //validación
         $data = $request->validate([
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
             'relevancia' => 'required',
-            'comentario' => ''
+            'comentario' => '',
+            'project_id' => 'required'
         ]);
 
         //Se insertan los valores a nuestra base de datos.
@@ -60,11 +63,11 @@ class ControlController extends Controller
             $registro->valor = $data['valor'][$i];
             $registro->relevancia = $data['relevancia'][$i];
             $registro->comentario = $data['comentario'][$i];
-
+            $registro->project_id = $data['project_id'];
             $registro->save();
         }
 
-        return redirect()->route('elements.create');
+        return redirect()->route('projects.show', $request->project_id);
     }
 
     /**
@@ -86,7 +89,8 @@ class ControlController extends Controller
      */
     public function edit(Control $control)
     {
-        //
+        $evaluacion = Control::where('project_id', $control->project_id)->get();
+        return view('controls.edit', compact('control', 'evaluacion'));
     }
 
     /**
@@ -96,9 +100,27 @@ class ControlController extends Controller
      * @param \App\Models\Control $control
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Control $control)
+    public function update(Request $request, $project_id)
     {
-        //
+        $id = $request->get('id');
+        $codigo = $request->get('codigo');
+        $criterio = $request->get('criterio');
+        $valor = $request->get('valor');
+        $relevancia = $request->get('relevancia');
+        $comentario = $request->get('comentario');
+
+        $objetos = count($id);
+        for ($i = 0; $i < $objetos; $i++) {
+            $evaluacion = Control::find($id[$i]);
+            $evaluacion->update([
+                'codigo' => $codigo[$i],
+                'criterio' => $criterio[$i],
+                'valor' => $valor[$i],
+                'relevancia' => $relevancia[$i],
+                'comentario' => $comentario[$i],
+            ]);
+        }
+        return redirect()->route('projects.show', $project_id);
     }
 
     /**

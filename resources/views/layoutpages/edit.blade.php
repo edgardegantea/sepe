@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Criterios del Heurístico "Aspectos Generales"</h1>
+    <h1>Criterios del "Layout de la Página"</h1>
 @stop
 
 @section('content')
@@ -11,10 +11,12 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-9">
-                    <p>Elementos relacionados con los objetos del sitio, el look & feel, coherencia y nivel de actualización de contenidos.</p>
+                    <p>Elementos relacionados con la distribución y el aspecto de los elementos de navegación e
+                        información en la interfaz.</p>
                 </div>
                 <div class="col-3">
-                    <a href="{{route('projects.show', $aspecto->project_id)}}" class="btn btn-danger float-right"> Regresar</a>
+                    <a href="{{route('projects.show', $layoutpage->project_id)}}" class="btn btn-danger float-right">
+                        Regresar</a>
                 </div>
             </div>
         </div>
@@ -26,10 +28,9 @@
             </div>
         </div>
     </div>
-
     <div class="card">
         <div class="card-body">
-            <form method="POST" name="" action="{{route('aspectos.update', $aspecto->project_id)}}">
+            <form method="POST" name="" action="{{route('layoutpages.update', $layoutpage->project_id)}}">
                 @csrf
                 @method('PUT')
                 <table class="table table-striped">
@@ -60,20 +61,21 @@
                                 <input type="number" name="valor[]" id="" value="{{$item->valor}}">
                             </td>
                             <td>
-                                <input class="form-group" type="text" name="relevancia[]" id="" value="{{$item->relevancia}}" required maxlength="200" placeholder="Escribir">
+                                <input class="form-group" type="text" name="relevancia[]" id=""
+                                       value="{{$item->relevancia}}" required maxlength="200" placeholder="Escribir">
                             </td>
                             <td>
-                                    <textarea class="form-group" name="comentario[]" id="" cols="30" rows="1" placeholder="Opcional">{{$item->comentario}}
+                                    <textarea class="form-group" name="comentario[]" id="" cols="30" rows="1"
+                                              placeholder="Opcional">{{$item->comentario}}
                                     </textarea>
                             </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
-                <input type="hidden" name="id_project" value="{{$aspecto->project_id}}">
+                <input type="hidden" name="id_project" value="{{$layoutpage->project_id}}">
                 <input type="submit" class="btn btn-success float-right">
             </form>
         </div>
     </div>
-
 @endsection
