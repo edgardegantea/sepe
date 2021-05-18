@@ -131,13 +131,19 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">Analisis de Resultados
+                                    aria-selected="true">Calificaciones por módulos
                             </button>
 
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">Calificar
+                                    aria-selected="false">Calificación general
                             </button>
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">Calificar Proyecto
+                            </button>
+
+
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -616,13 +622,25 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
-
                                 </div>
                             @else
-                                <h3 class="p-4">La evaluacuón esta en proceso...</h3>
+                                <h3 class="p-4">La evaluación está en proceso...</h3>
                             @endif
                         </div>
+
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            @if($evaluacion == 10)
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="myChartGeneral" width="1000" height="400"></canvas>
+                                    </div>
+                                </div>
+                            @else
+                                <h3 class="p-4">La evaluación está en proceso...</h3>
+                            @endif
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <div class="container">
                                 <div class="container">
                                     <div class="row g-2">
@@ -706,12 +724,12 @@
                                                 @if ($ev_septimo == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('interactions.edit', $project->id)}}">
-                                                        6. Editar Entendibilidad y Interacción
+                                                        6. Editar Entendibilidad e Interacción
                                                     </a>
                                                 @else
                                                     <a class="btn btn-outline-primary btn-block"
                                                        href="{{ route('interactions.projects.create', $project->id)}}">
-                                                        6. Calificar Entendibilidad y Interacción
+                                                        6. Calificar Entendibilidad e Interacción
                                                     </a>
                                                 @endif
                                             </div>
@@ -836,27 +854,285 @@
         var codigoAyuda = [];
         var valoresAyuda = [];
 
-        <!-- *******Grafica para Aspectos ***********-->
+        /*
+        Variables para grafica general
+         */
+        var suma = 0;
+        var resultadoGeneral = [];
+        var resultadoAspecto, resultadoIdentidad, resultadoEstructura, resultadoRotulado, resultadoLayout,
+            resultadoInteraction,
+            resultadoControl, resultadoElementos, resultadoBusqueda, resultadoAyuda = 0;
+
+
+        <!-- Grafica de todos los modulos -->
+
 
         $(document).ready(function () {
-            var arreglo = @json($aspectos);
 
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
+            <!-- *******Grafica para Aspectos ***********-->
+
+            var arregloAs = @json($aspectos);
+            for (let x = 0; x < arregloAs.length; x++) {
+                var todo = '<tr><td>' + arregloAs[x].codigo + '</td>';
+                todo += '<td>' + arregloAs[x].criterio + '</td>';
                 todo += '</tr>';
                 $("#tbodyAspectos").append(todo);
 
-                codigoAspectos.push(arreglo[x].codigo);
-                valoresAspectos.push(arreglo[x].valor);
+                codigoAspectos.push(arregloAs[x].codigo);
+                valoresAspectos.push(arregloAs[x].valor);
             }
 
-            var suma = 0;
+            <!-- *******Grafica para Identidad ***********-->
+
+            var arregloIden = @json($identidad);
+            for (let x = 0; x < arregloIden.length; x++) {
+                var todo = '<tr><td>' + arregloIden[x].codigo + '</td>';
+                todo += '<td>' + arregloIden[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyIdentidad").append(todo);
+
+                codigoIdentidad.push(arregloIden[x].codigo);
+                valoresIdentidad.push(arregloIden[x].valor);
+            }
+
+            <!-- *******Grafica para Estructura ***********-->
+
+            var arregloEstru = @json($estructura);
+            for (let x = 0; x < arregloEstru.length; x++) {
+                var todo = '<tr><td>' + arregloEstru[x].codigo + '</td>';
+                todo += '<td>' + arregloEstru[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyEstructura").append(todo);
+
+                codigoEstructura.push(arregloEstru[x].codigo);
+                valoresEstructura.push(arregloEstru[x].valor);
+            }
+
+            <!-- *******Grafica para Rotulado ***********-->
+
+            var arregloRot = @json($rotulado);
+            for (let x = 0; x < arregloRot.length; x++) {
+                var todo = '<tr><td>' + arregloRot[x].codigo + '</td>';
+                todo += '<td>' + arregloRot[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyRotulado").append(todo);
+
+                codigoRotulado.push(arregloRot[x].codigo);
+                valoresRotulado.push(arregloRot[x].valor);
+            }
+
+            <!-- *******Grafica para LayoutPage ***********-->
+
+            var arregloLayout = @json($layoutPage);
+            for (let x = 0; x < arregloLayout.length; x++) {
+                var todo = '<tr><td>' + arregloLayout[x].codigo + '</td>';
+                todo += '<td>' + arregloLayout[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyLayoutPage").append(todo);
+
+                codigoLayout.push(arregloLayout[x].codigo);
+                valoresLayout.push(arregloLayout[x].valor);
+            }
+
+            <!-- *******Grafica para Interaccion ***********-->
+
+            var arregloInteraction = @json($interacion);
+            for (let x = 0; x < arregloInteraction.length; x++) {
+                var todo = '<tr><td>' + arregloInteraction[x].codigo + '</td>';
+                todo += '<td>' + arregloInteraction[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyInteracion").append(todo);
+
+                codigoInteraccion.push(arregloInteraction[x].codigo);
+                valoresInteraccion.push(arregloInteraction[x].valor);
+            }
+
+            <!-- *******Grafica para Control ***********-->
+
+            var arregloControl = @json($control);
+            for (let x = 0; x < arregloControl.length; x++) {
+                var todo = '<tr><td>' + arregloControl[x].codigo + '</td>';
+                todo += '<td>' + arregloControl[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyControl").append(todo);
+
+                codigoControl.push(arregloControl[x].codigo);
+                valoresControl.push(arregloControl[x].valor);
+            }
+
+            <!-- *******Grafica para Elementos ***********-->
+
+            var arregloElementos = @json($elementos);
+            for (let x = 0; x < arregloElementos.length; x++) {
+                var todo = '<tr><td>' + arregloElementos[x].codigo + '</td>';
+                todo += '<td>' + arregloElementos[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyElementos").append(todo);
+
+                codigoElementos.push(arregloElementos[x].codigo);
+                valoresElementos.push(arregloElementos[x].valor);
+            }
+
+            <!-- *******Grafica para Busqueda ***********-->
+
+            var arregloBusqueda = @json($busqueda);
+            for (let x = 0; x < arregloBusqueda.length; x++) {
+                var todo = '<tr><td>' + arregloBusqueda[x].codigo + '</td>';
+                todo += '<td>' + arregloBusqueda[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyBusqueda").append(todo);
+
+                codigoBusqueda.push(arregloBusqueda[x].codigo);
+                valoresBusqueda.push(arregloBusqueda[x].valor);
+            }
+
+            <!-- *******Grafica para Ayuda ***********-->
+
+            var arregloAyuda = @json($ayuda);
+            for (let x = 0; x < arregloAyuda.length; x++) {
+                var todo = '<tr><td>' + arregloAyuda[x].codigo + '</td>';
+                todo += '<td>' + arregloAyuda[x].criterio + '</td>';
+                todo += '</tr>';
+                $("#tbodyAyuda").append(todo);
+
+                codigoAyuda.push(arregloAyuda[x].codigo);
+                valoresAyuda.push(arregloAyuda[x].valor);
+            }
+
+            /**
+             * For para suma de calificaciones
+             */
+            suma = 0;
             valoresAspectos.forEach(function (numero) {
                 suma += numero;
             });
-            console.log(suma);
+            resultadoAspecto = suma / valoresAspectos.length;
+            console.log(resultadoAspecto);
+
+            /*
+            Indentidad
+             */
+
+            suma = 0;
+            valoresIdentidad.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoIdentidad = suma / valoresIdentidad.length;
+            console.log(resultadoIdentidad);
+
+            /*
+            Estructura
+             */
+
+            suma = 0;
+            valoresEstructura.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoEstructura = suma / valoresEstructura.length;
+            console.log(resultadoEstructura);
+
+            /*
+            Rotulado
+             */
+
+            suma = 0;
+            valoresRotulado.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoRotulado = suma / valoresRotulado.length;
+            console.log(resultadoRotulado);
+
+            /*
+            Layout Page
+             */
+
+            suma = 0;
+            valoresLayout.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoLayout = suma / valoresLayout.length;
+            console.log(resultadoLayout);
+
+            /*
+            Interaction
+             */
+
+            suma = 0;
+            valoresInteraccion.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoInteraction = suma / valoresInteraccion.length;
+            console.log(resultadoInteraction);
+
+            /*
+            Control
+             */
+
+            suma = 0;
+            valoresControl.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoControl = suma / valoresControl.length;
+            console.log(resultadoControl);
+
+            /*
+            Elementos Multimedia
+             */
+
+            suma = 0;
+            valoresElementos.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoElementos = suma / valoresElementos.length;
+            console.log(resultadoElementos);
+
+            /*
+            Busqueda
+             */
+
+            suma = 0;
+            valoresBusqueda.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoBusqueda = suma / valoresBusqueda.length;
+            console.log(resultadoBusqueda);
+
+            /*
+            Ayuda
+             */
+
+            suma = 0;
+            valoresAyuda.forEach(function (numero) {
+                suma += numero;
+            });
+            resultadoAyuda = suma / valoresAyuda.length;
+            console.log(resultadoAyuda);
+
+            resultadoGeneral = [
+                resultadoAspecto,
+                resultadoIdentidad,
+                resultadoEstructura,
+                resultadoRotulado,
+                resultadoLayout,
+                resultadoInteraction,
+                resultadoControl,
+                resultadoElementos,
+                resultadoBusqueda,
+                resultadoAyuda
+            ];
+
             gAspectos();
+            gIdentidad();
+            gEstructura();
+            gRotulado();
+            gLayoutPage();
+            gInteraccion();
+            gControl();
+            gElementos();
+            gBusqueda();
+            gAyuda();
+            gGeneral();
+
         });
 
         function gAspectos() {
@@ -897,22 +1173,6 @@
             });
         }
 
-        <!-- *******Grafica para Identidad ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($identidad);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyIdentidad").append(todo);
-
-                codigoIdentidad.push(arreglo[x].codigo);
-                valoresIdentidad.push(arreglo[x].valor);
-            }
-            gIdentidad();
-        });
-
         function gIdentidad() {
             var ctx = document.getElementById('myChartIdentidad').getContext('2d');
             var myChart = new Chart(ctx, {
@@ -950,22 +1210,6 @@
                 }
             });
         }
-
-        <!-- *******Grafica para Estructura ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($estructura);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyEstructura").append(todo);
-
-                codigoEstructura.push(arreglo[x].codigo);
-                valoresEstructura.push(arreglo[x].valor);
-            }
-            gEstructura();
-        });
 
         function gEstructura() {
             var ctx = document.getElementById('myChartEstructura').getContext('2d');
@@ -1005,22 +1249,6 @@
             });
         }
 
-        <!-- *******Grafica para Rotulado ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($rotulado);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyRotulado").append(todo);
-
-                codigoRotulado.push(arreglo[x].codigo);
-                valoresRotulado.push(arreglo[x].valor);
-            }
-            gRotulado();
-        });
-
         function gRotulado() {
             var ctx = document.getElementById('myChartRotulado').getContext('2d');
             var myChart = new Chart(ctx, {
@@ -1058,22 +1286,6 @@
                 }
             });
         }
-
-        <!-- *******Grafica para LayoutPage ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($layoutPage);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyLayoutPage").append(todo);
-
-                codigoLayout.push(arreglo[x].codigo);
-                valoresLayout.push(arreglo[x].valor);
-            }
-            gLayoutPage();
-        });
 
         function gLayoutPage() {
             var ctx = document.getElementById('myChartLayoutPage').getContext('2d');
@@ -1113,22 +1325,6 @@
             });
         }
 
-        <!-- *******Grafica para Interaccion ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($interacion);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyInteracion").append(todo);
-
-                codigoInteraccion.push(arreglo[x].codigo);
-                valoresInteraccion.push(arreglo[x].valor);
-            }
-            gInteraccion();
-        });
-
         function gInteraccion() {
             var ctx = document.getElementById('myChartInteracion').getContext('2d');
             var myChart = new Chart(ctx, {
@@ -1166,22 +1362,6 @@
                 }
             });
         }
-
-        <!-- *******Grafica para Control ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($control);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyControl").append(todo);
-
-                codigoControl.push(arreglo[x].codigo);
-                valoresControl.push(arreglo[x].valor);
-            }
-            gControl();
-        });
 
         function gControl() {
             var ctx = document.getElementById('myChartControl').getContext('2d');
@@ -1221,22 +1401,6 @@
             });
         }
 
-        <!-- *******Grafica para Elementos ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($elementos);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyElementos").append(todo);
-
-                codigoElementos.push(arreglo[x].codigo);
-                valoresElementos.push(arreglo[x].valor);
-            }
-            gElementos();
-        });
-
         function gElementos() {
             var ctx = document.getElementById('myChartElementos').getContext('2d');
             var myChart = new Chart(ctx, {
@@ -1274,22 +1438,6 @@
                 }
             });
         }
-
-        <!-- *******Grafica para Busqueda ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($busqueda);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyBusqueda").append(todo);
-
-                codigoBusqueda.push(arreglo[x].codigo);
-                valoresBusqueda.push(arreglo[x].valor);
-            }
-            gBusqueda();
-        });
 
         function gBusqueda() {
             var ctx = document.getElementById('myChartBusqueda').getContext('2d');
@@ -1329,22 +1477,6 @@
             });
         }
 
-        <!-- *******Grafica para Ayuda ***********-->
-
-        $(document).ready(function () {
-            var arreglo = @json($ayuda);
-            for (let x = 0; x < arreglo.length; x++) {
-                var todo = '<tr><td>' + arreglo[x].codigo + '</td>';
-                todo += '<td>' + arreglo[x].criterio + '</td>';
-                todo += '</tr>';
-                $("#tbodyAyuda").append(todo);
-
-                codigoAyuda.push(arreglo[x].codigo);
-                valoresAyuda.push(arreglo[x].valor);
-            }
-            gAyuda();
-        });
-
         function gAyuda() {
             var ctx = document.getElementById('myChartAyuda').getContext('2d');
             var myChart = new Chart(ctx, {
@@ -1382,5 +1514,46 @@
                 }
             });
         }
+
+        function gGeneral() {
+
+            var ctx = document.getElementById('myChartGeneral').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Aspectos', 'Identidad e Información', 'Estructura y Navegaciín', 'Rotulado', 'Layout de la Página', 'Entendibilidad e Interacción', 'Control y Retroalimentación', 'Elementos Multimedia', 'Búsqueda', 'Ayuda'],
+                    datasets: [{
+                        label: 'Resultados Generales',
+                        data: resultadoGeneral,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+        }
+
     </script>
 @stop
