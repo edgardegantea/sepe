@@ -47,6 +47,36 @@
 
     <div class="card">
 
+        <div class="card-body">
+            <button class="btn btn-info" id="todos">Todos los usuarios</button>
+            <button class="btn btn-info" id="teachers">Docentes</button>
+            <button class="btn btn-info" id="students">Estudiantes</button>
+            <button class="btn btn-info" id="sinRol">Usuarios sin rol</button>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Correo Institucional</th>
+                    <th>N° Control</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td id="ID"></td>
+                    <td id="nombre"></td>
+                    <td id="apellidos"></td>
+                    <td id="correo"></td>
+                    <td id="nControl"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="card-body">
@@ -96,7 +126,7 @@
 
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="card-body">
-                    <table class="table table-striped" id="users">
+                    <table class="table table-striped" id="teachers">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -142,7 +172,7 @@
 
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <div class="card-body">
-                    <table class="table table-striped" id="users">
+                    <table class="table table-striped" id="students">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -159,7 +189,7 @@
                             <tr>
                                 <td>{{ $student->id }}</td>
                                 <td>{{ $student->name }}</td>
-                                <td>{{ $student->lastName }}</td>
+                                <td id="pruebita">{{ $student->lastName }}</td>
                                 <td>{{ $student->email }}</td>
                                 <td>{{ $student->controlNumber }}</td>
 
@@ -188,7 +218,7 @@
 
             <div class="tab-pane fade" id="pills-sinRol" role="tabpanel" aria-labelledby="pills-sinRol-tab">
                 <div class="card-body">
-                    <table class="table table-striped" id="users">
+                    <table class="table table-striped" id="sinrol">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -215,6 +245,7 @@
                                            href="{{ route('users.edit', $sinrol->id) }}">Editar</a>
                                     @endcan
                                 </td>
+
                                 <td>
                                     @can('users.destroy')
                                         <form action="{{ route('users.destroy', $sinrol->id ) }}" method="post"
@@ -258,11 +289,27 @@
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
 
     <script>
-            $('#users').DataTable();
+        $('#users').DataTable();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
+
+    <script>
+        const btnTodos = document.querySelector("#todos");
+        const btnTeachers = document.querySelector("#teachers");
+        const btnStudents = document.querySelector("#students");
+        const btnSinRol = document.querySelector("#sinRol");
+
+        btnTodos.addEventListener('click', () => {
+            console.log("escuchando todos");
+            for () {
+                console.log({{$user->id}}[i]);
+            }
+
+        });
+
+    </script>
 
 @stop

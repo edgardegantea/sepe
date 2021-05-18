@@ -17,6 +17,7 @@ use App\Models\Subject;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -180,9 +181,30 @@ class ProjectController extends Controller
             $ev_ultimo = true;
         }
 
+        //GRAFICANDO LOS DATOS
+        $cod = $project->id;
+
+
+
+
+        $aspectos = DB::select('select * from aspectos where project_id = :project_id', ['project_id' => $cod]);
+        $contadorAs = count($aspectos);
+
+        $identidad = DB::select('select * from identities where project_id = :project_id', ['project_id' => $cod]);
+        $estructura = DB::select('select * from structures where project_id = :project_id', ['project_id' => $cod]);
+        $rotulado = DB::select('select * from rotulados where project_id = :project_id', ['project_id' => $cod]);
+        $layoutPage = DB::select('select * from layoutpages where project_id = :project_id', ['project_id' => $cod]);
+        $interacion = DB::select('select * from interactions where project_id = :project_id', ['project_id' => $cod]);
+        $control = DB::select('select * from controls where project_id = :project_id', ['project_id' => $cod]);
+        $elementos = DB::select('select * from elements where project_id = :project_id', ['project_id' => $cod]);
+        $busqueda = DB::select('select * from searches where project_id = :project_id', ['project_id' => $cod]);
+        $ayuda = DB::select('select * from ayudas where project_id = :project_id', ['project_id' => $cod]);
+
+
         // return $evaluacion;
-        return view('projects.show', compact('project', 'evaluacion',
-            'ev_segunda', 'ev_tercera', 'ev_cuarta', 'ev_quinto', 'ev_sexto', 'ev_septimo', 'ev_octavo', 'ev_noveno', 'ev_decimo', 'ev_ultimo', 'team'
+        return view('projects.show', compact('project',
+            'aspectos', 'identidad', 'estructura', 'rotulado', 'layoutPage', 'interacion', 'control', 'elementos', 'busqueda', 'ayuda',
+            'evaluacion', 'ev_segunda', 'ev_tercera', 'ev_cuarta', 'ev_quinto', 'ev_sexto', 'ev_septimo', 'ev_octavo', 'ev_noveno', 'ev_decimo', 'ev_ultimo', 'team'
         ));
     }
 

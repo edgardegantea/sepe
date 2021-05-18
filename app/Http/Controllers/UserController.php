@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\ViewErrorBag;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
