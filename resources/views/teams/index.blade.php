@@ -6,7 +6,8 @@
 
     @can('teams.create')
         <a href="{{ route('teams.create')}}" class="btn btn-primary float-right">
-            Crear nuevo Equipo
+            <i class="fa fa-plus"></i>
+            Nuevo Equipo
         </a>
     @endcan
 
@@ -14,46 +15,43 @@
 @stop
 
 @section('content')
+    <div class="card">
 
-    <div class="container">
-        <div class="card">
-
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID equipo</th>
+                    <th>Nombre de equipo u Organización</th>
+                    <th>N° Proyectos</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($user->teams as $team)
                     <tr>
-                        <th>ID equipo</th>
-                        <th>Nombre de equipo u Organización</th>
-                        <th>N° Proyectos</th>
-                        <th>Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($user->teams as $team)
-                        <tr>
-                            <td>
-                                {{ $team->id }}
-                            </td>
-                            <td>
-                                {{ $team->name }}
-                            </td>
-                            <td>
-                                @if( $team->projects )
-                                    {{ $team->projects->count() }}
-                                @else
-                                    <p>Ninguno</p>
-                                @endif
+                        <td>
+                            {{ $team->id }}
+                        </td>
+                        <td>
+                            {{ $team->name }}
+                        </td>
+                        <td>
+                            @if( $team->projects )
+                                {{ $team->projects->count() }}
+                            @else
+                                <p>Ninguno</p>
+                            @endif
 
-                            </td>
-                            <td>
-                                <a href="{{ route('teams.show', $team->id) }}" class="btn btn-primary">Ver</a>
-                                <a href="{{ route('teams.edit', $team->id) }}" class="btn btn-primary">Editar</a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
+                        </td>
+                        <td>
+                            <a href="{{ route('teams.show', $team->id) }}" class="btn btn-success">Ver</a>
+                            <a href="{{ route('teams.edit', $team->id) }}" class="btn btn-info">Editar</a>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @stop

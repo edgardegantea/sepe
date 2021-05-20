@@ -4,8 +4,8 @@
 
 @section('content_header')
     <div class="container">
-        <a class="btn btn-primary float-right" href="{{ route('teams.show', $project->team_id) }}">Regresar</a>
-        <a class="btn btn-primary float-right mr-2" href="{{ route('projects.edit', $project->id) }}">
+        <a class="btn btn-warning float-right" href="{{ route('teams.show', $project->team_id) }}">Regresar</a>
+        <a class="btn btn-info float-right mr-2" href="{{ route('projects.edit', $project->id) }}">
             <i class="fa fa-edit"></i>
             Editar
         </a>
@@ -60,7 +60,7 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <strong>Asignatura:</strong>
+                                            <strong>Asignatura eje:</strong>
                                         </td>
                                         <td>
                                             {{ $project->subject->name }}.
@@ -641,24 +641,46 @@
                         </div>
 
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
                             <div class="container">
                                 <div class="container">
                                     <div class="row g-2">
+
+                                        {{--
+                                            <div class="col-6">
+                                                <div class="p-3 border bg-light">
+                                                    @if ($ev_segunda == true)
+                                            <a class="btn btn-success btn-block"
+                                               href="{{ route('aspectos.edit', $project->id)}}">
+                                                            1. Editar Aspecto
+                                                        </a>
+                                                    @else
+                                            <a class="btn btn-outline-primary btn-block"
+                                               href="{{ route('aspectos.projects.create', $project->id)}}">
+                                                            1. Calificar Aspecto
+                                                        </a>
+                                                    @endif
+                                            </div>
+                                        </div>
+    --}}
+
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border bg-light card-body">
                                                 @if ($ev_segunda == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('aspectos.edit', $project->id)}}">
                                                         1. Editar Aspecto
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-light btn-block card-body"
                                                        href="{{ route('aspectos.projects.create', $project->id)}}">
                                                         1. Calificar Aspecto
                                                     </a>
                                                 @endif
                                             </div>
                                         </div>
+
+
                                         <div class="col-6">
                                             <div class="p-3 border bg-light">
                                                 @if ($ev_tercera == true)
@@ -1142,7 +1164,7 @@
                 data: {
                     labels: codigoAspectos,
                     datasets: [{
-                        label: 'Modulo "Aspectos."',
+                        label: 'Modulo "Aspectos Generales."',
                         data: valoresAspectos,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -1521,7 +1543,7 @@
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Aspectos', 'Identidad e Información', 'Estructura y Navegaciín', 'Rotulado', 'Layout de la Página', 'Entendibilidad e Interacción', 'Control y Retroalimentación', 'Elementos Multimedia', 'Búsqueda', 'Ayuda'],
+                    labels: ['Aspectos Generales', 'Identidad e Información', 'Estructura y Navegaciín', 'Rotulado', 'Layout de la Página', 'Entendibilidad e Interacción', 'Control y Retroalimentación', 'Elementos Multimedia', 'Búsqueda', 'Ayuda'],
                     datasets: [{
                         label: 'Resultados Generales',
                         data: resultadoGeneral,

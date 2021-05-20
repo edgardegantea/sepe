@@ -52,6 +52,7 @@
             <button class="btn btn-info" id="teachers">Docentes</button>
             <button class="btn btn-info" id="students">Estudiantes</button>
             <button class="btn btn-info" id="sinRol">Usuarios sin rol</button>
+
             <table class="table">
                 <thead>
                 <tr>
@@ -63,16 +64,8 @@
                     <th colspan="2">Acciones</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td id="ID"></td>
-                    <td id="nombre"></td>
-                    <td id="apellidos"></td>
-                    <td id="correo"></td>
-                    <td id="nControl"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <tbody id="tbody">
+
                 </tbody>
             </table>
         </div>
@@ -297,19 +290,74 @@
             crossorigin="anonymous"></script>
 
     <script>
-        const btnTodos = document.querySelector("#todos");
-        const btnTeachers = document.querySelector("#teachers");
-        const btnStudents = document.querySelector("#students");
-        const btnSinRol = document.querySelector("#sinRol");
 
-        btnTodos.addEventListener('click', () => {
-            console.log("escuchando todos");
-            for () {
-                console.log({{$user->id}}[i]);
+        $(document).ready(function () {
+
+            var btnTodos = document.getElementById("todos");
+            var btnTeachers = document.getElementById("teachers");
+            var btnStudents = document.getElementById("students");
+            var btnSinRol = document.getElementById("sinRol");
+
+
+            //Boton para usuarios sin rol
+            btnTodos.onclick = agregarTodos();
+            btnTeachers.onclick = agregarTeachers();
+            btnStudents.onclick = agregarEstudiantes();
+            btnSinRol.onclick = agregarSinRol;
+
+            function agregarTodos() {
+                var arreglo = @json($users);
+                for (let x = 0; x < arreglo.length; x++) {
+                    var todo = '<tr><td>' + arreglo[x].id + '</td>';
+                    todo += '<td>' + arreglo[x].name + '</td>';
+                    todo += '<td>' + arreglo[x].lastName + '</td>';
+                    todo += '<td>' + arreglo[x].email + '</td>';
+                    todo += '<td>' + arreglo[x].controlNumber + '</td>';
+                    todo += '</tr>';
+                    $("#tbody").append(todo);
+                }
+            }
+
+            function agregarTeachers() {
+                var arreglo = @json($teachers);
+                for (let x = 0; x < arreglo.length; x++) {
+                    var todo = '<tr><td>' + arreglo[x].id + '</td>';
+                    todo += '<td>' + arreglo[x].name + '</td>';
+                    todo += '<td>' + arreglo[x].lastName + '</td>';
+                    todo += '<td>' + arreglo[x].email + '</td>';
+                    todo += '<td>' + arreglo[x].controlNumber + '</td>';
+                    todo += '</tr>';
+                    $("#tbody").append(todo);
+                }
+            }
+
+            function agregarEstudiantes() {
+                var arreglo = @json($students);
+                for (let x = 0; x < arreglo.length; x++) {
+                    var todo = '<tr><td>' + arreglo[x].id + '</td>';
+                    todo += '<td>' + arreglo[x].name + '</td>';
+                    todo += '<td>' + arreglo[x].lastName + '</td>';
+                    todo += '<td>' + arreglo[x].email + '</td>';
+                    todo += '<td>' + arreglo[x].controlNumber + '</td>';
+                    todo += '</tr>';
+                    $("#tbody").append(todo);
+                }
+            }
+
+            function agregarSinRol() {
+                var arreglo = @json($sinroles);
+                for (let x = 0; x < arreglo.length; x++) {
+                    var todo = '<tr><td>' + arreglo[x].id + '</td>';
+                    todo += '<td>' + arreglo[x].name + '</td>';
+                    todo += '<td>' + arreglo[x].lastName + '</td>';
+                    todo += '<td>' + arreglo[x].email + '</td>';
+                    todo += '<td>' + arreglo[x].controlNumber + '</td>';
+                    todo += '</tr>';
+                    $("#tbody").append(todo);
+                }
             }
 
         });
-
     </script>
 
 @stop

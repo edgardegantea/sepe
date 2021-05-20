@@ -259,13 +259,16 @@ class ProjectController extends Controller
             $project->logo = $ruta_imagen;
         }
 
+        //guarda los datos
         $project->save();
 
+        //hace una sincronizacion de lo que habia y lo que trajo del request
         $project->users()->sync($request->users);
 
         $team = $project->team->id;
+        $nuevo = $project->id;
 
-        return redirect()->route('teams.show', $team);
+        return redirect()->route('projects.show', $nuevo);
 
     }
 

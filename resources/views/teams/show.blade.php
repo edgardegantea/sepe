@@ -3,9 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <a class="float-right mr-2 btn btn-primary" href="{{ route('teams.index') }}">Volver</a>
-    <a class="float-right mr-2 btn btn-primary" href="{{ route('projects.teams.create', $team->id) }}">Crear Proyecto</a>
-    <h1>Equipo: {{ $team->name }}</h1>
+    <a class="float-right mr-2 btn btn-warning" href="{{ route('teams.index') }}">Volver</a>
+    <a class="float-right mr-2 btn btn-primary" href="{{ route('projects.teams.create', $team->id) }}">
+        <i class="fa fa-plus"></i>
+        Crear Proyecto</a>
+    <h3>Equipo: "{{ $team->name }}"</h3>
 
 @stop
 
@@ -14,11 +16,11 @@
         <div class="card-header">
 
             <div class="row">
-                <div class="col-4 text-center mt-2"><h4><strong>Proyectos Creados</strong></h4></div>
+                <div class="col-4 text-center mt-2"><h4>Proyectos Creados</h4></div>
                 <div class="col-8">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
+                        <div class="accordion-item border-dark">
+                            <h2 class="accordion-header border" id="flush-headingOne">
                                 <button class="accordion-button collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                                         aria-expanded="false" aria-controls="flush-collapseOne">
@@ -56,7 +58,7 @@
                                 <h5 class="card-title font-weight-bold text-center">{{ $project->name }}</h5>
                                 <p class="card-text text-center">{{ $project->description }}</p>
                                 <a href="{{ route('projects.show', $project->id) }}"
-                                   class="btn btn-outline-primary btn-block">Ver
+                                   class="btn btn-outline-success btn-block">Ver
                                     más</a>
                             </div>
                         </div>

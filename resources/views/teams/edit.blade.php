@@ -8,41 +8,39 @@
 @stop
 
 @section('content')
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <div>
-                    {!! Form::model($team, ['route' => ['teams.update', $team], 'method' => 'PUT']) !!}
+    <div class="card">
+        <div class="card-body">
+            <div>
+                {!! Form::model($team, ['route' => ['teams.update', $team], 'method' => 'PUT']) !!}
 
-                    <div class="form-group">
-                        {!! Form::label('name', 'Nombre') !!}
-                        {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                    </div>
+                <div class="form-group">
+                    {!! Form::label('name', 'Nombre') !!}
+                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                </div>
 
-                    <div class="form-group">
-                        <h2 class="h5">Listado de Alumnos</h2>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="">Seleccionar evaluadores:</label>
-                                    <select class="form-control js-example-basic-multiple " name="users[]"
-                                            multiple="multiple">
-                                        @foreach( $students as $student )
-                                            <option
-                                                value="{{ $student->id }}"
-                                                {{ old('student') == $student->id ? 'selected' : '' }}
-                                            >{{ $student->name }} {{ $student->lastName }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                <div class="form-group">
+                    <h2 class="h5">Listado de Alumnos</h2>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="">Seleccionar integrantes de equipo:</label>
+                                <select class="form-control js-example-basic-multiple " name="users[]"
+                                        multiple="multiple" required>
+                                    @foreach( $students as $student )
+                                        <option
+                                            value="{{ $student->id }}"
+                                            {{ old('student') == $student->id ? 'selected' : '' }}
+                                        >{{ $student->name }} {{ $student->lastName }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
-
                     </div>
 
-                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary mt-2']) !!}
-                    {!! Form::close() !!}
                 </div>
+
+                {!! Form::submit('Guardar', ['class' => 'btn btn-primary mt-2']) !!}
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

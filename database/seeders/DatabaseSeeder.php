@@ -24,23 +24,17 @@ class DatabaseSeeder extends Seeder
         //Storage::makeDirectory('upload-projects');
 
         $this->call(SubjectSeeder::class);
-        Subject::factory(30)->create();
 
         Team::factory(10)->create();
 
         $this->call(RoleSeeder::class);
 
-
         $this->call(UserSeeder::class);
 
         User::factory(30)->create()->each(function ($user) {
-
             $user->teams()->attach($this->array(rand(1, 10)));
-
         });
 
-
-        //Project::factory(5)->create();
     }
 
     public function array($max)

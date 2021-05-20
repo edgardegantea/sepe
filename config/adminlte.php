@@ -225,123 +225,39 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
             'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'url' => 'admin/blog',
+            'can' => 'manage-blog',
         ],
 
         [
-            'text'        => 'Lista de usuarios',
-            'url'         => 'users',
-            'icon'        => 'fas fa-users fa-fw',
-            'can'         => 'users.index'
+            'text' => 'Lista de usuarios',
+            'url' => 'users',
+            'icon' => 'fas fa-users fa-fw',
+            'can' => 'users.index'
         ],
 
         [
-            'text'        => 'Asignaturas',
-            'url'         => 'subjects',
-            'icon'        => 'fas fa-book',
-            'can'         => 'subjects.index'
+            'text' => 'Asignaturas',
+            'url' => 'subjects',
+            'icon' => 'fas fa-book',
+            'can' => 'subjects.index'
         ],
 
         ['header' => 'EQUIPOS'],
 
         [
-            'text'        => 'Equipos',
-            'url'         => 'teams',
-            'icon'        => 'fas fa-user-friends',
-            'can'         => 'teams.index'
+            'text' => 'Equipos',
+            'url' => 'teams',
+            'icon' => 'fas fa-user-friends',
+            'can' => 'teams.index'
         ],
 
         [
-            'text'        => 'Lista de Proyectos',
-            'url'         => 'projects',
-            'icon'        => 'fas fa-clipboard-list',
-            'can'         => 'projects.index'
-        ],
-
-        /*[
-            'text'        => 'Crear nuevo Proyecto',
-            'route'       => 'projects.create',
-            'icon'        => 'fas fa-project-diagram',
-            'can'         => 'projects.create'
-        ],*/
-
-        [
-            'text'        => 'Evaluaciones',
-            'url'         => 'evaluations',
-            'icon'        => 'fas fa-tasks',
-        ],
-
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Lista de Proyectos',
+            'url' => 'projects',
+            'icon' => 'fas fa-clipboard-list',
+            'can' => 'projects.index'
         ],
     ],
 
