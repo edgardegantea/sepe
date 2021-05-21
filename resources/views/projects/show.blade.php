@@ -138,11 +138,12 @@
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
                                     aria-selected="false">Calificación general
                             </button>
+                            @can("aspectos.create")
                             <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
                                     aria-selected="false">Calificar Proyecto
                             </button>
-
+                            @endcan
 
                         </div>
                     </nav>
@@ -641,9 +642,8 @@
                         </div>
 
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-
                             <div class="container">
-                                <div class="container">
+                                @can('aspectos.create')
                                     <div class="row g-2">
                                         <div class="col-6">
                                             <div class="p-3 border">
@@ -797,7 +797,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endcan
                             </div>
                         </div>
                     </div>

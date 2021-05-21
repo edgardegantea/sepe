@@ -100,10 +100,7 @@ class TeamController extends Controller
     public function edit(Team $team)
     {
         //ver usuarios con rol de Student
-        //$students = User::role('Student')->get();
-
-        $students = User::all();
-
+        $students = User::role('Student')->get();
 
         return view('teams.edit', compact('team', 'students'));
     }

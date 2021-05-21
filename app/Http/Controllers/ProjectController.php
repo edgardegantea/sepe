@@ -184,9 +184,6 @@ class ProjectController extends Controller
         //GRAFICANDO LOS DATOS
         $cod = $project->id;
 
-
-
-
         $aspectos = DB::select('select * from aspectos where project_id = :project_id', ['project_id' => $cod]);
         $contadorAs = count($aspectos);
 
@@ -216,9 +213,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
         $subjects = Subject::all(['id', 'name']);
-
         $evaluators = User::role('Teacher')->get();
 
         return view('projects.edit', compact('project', 'subjects', 'evaluators'));
