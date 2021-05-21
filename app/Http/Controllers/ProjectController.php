@@ -66,7 +66,7 @@ class ProjectController extends Controller
     {
         //
         $data = $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:projects',
             'description' => 'required',
             'semester' => 'required',
             'logo' => 'required|image',

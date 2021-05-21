@@ -17,7 +17,8 @@
                             contenidos.</p>
                     </div>
                     <div class="col-4">
-                        <a href="{{ route('projects.show', $projects) }}" class="btn btn-primary float-right">Regresar</a>
+                        <a href="{{ route('projects.show', $projects) }}"
+                           class="btn btn-primary float-right">Regresar</a>
                     </div>
                 </div>
                 <div class="row">
@@ -31,7 +32,6 @@
 
     <!-- Tabla -->
     <div class="container">
-
         <div class="card">
             <div class="card-body">
                 <!--CABECERA DE LA TABLA-->

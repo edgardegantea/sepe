@@ -93,9 +93,9 @@
                                         <td>
                                             <strong>Porcentaje obtenido:</strong>
                                         </td>
-                                        <td>
-                                            @if($project->percentage)
-                                                {{ $project->percentage }}.
+                                        <td id="porcentaje">
+                                            @if($evaluacion == 10)
+
                                             @endif
                                             Pendiente.
                                         </td>
@@ -104,9 +104,9 @@
                                         <td>
                                             <strong>Nivel de Usabilidad:</strong>
                                         </td>
-                                        <td>
-                                            @if( $project->usability )
-                                                {{ $project->usability }}
+                                        <td id="usabilidad">
+                                            @if( $evaluacion == 10 )
+
                                             @endif
                                             Pendiente.
                                         </td>
@@ -645,51 +645,31 @@
                             <div class="container">
                                 <div class="container">
                                     <div class="row g-2">
-
-                                        {{--
-                                            <div class="col-6">
-                                                <div class="p-3 border bg-light">
-                                                    @if ($ev_segunda == true)
-                                            <a class="btn btn-success btn-block"
-                                               href="{{ route('aspectos.edit', $project->id)}}">
-                                                            1. Editar Aspecto
-                                                        </a>
-                                                    @else
-                                            <a class="btn btn-outline-primary btn-block"
-                                               href="{{ route('aspectos.projects.create', $project->id)}}">
-                                                            1. Calificar Aspecto
-                                                        </a>
-                                                    @endif
-                                            </div>
-                                        </div>
-    --}}
-
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light card-body">
+                                            <div class="p-3 border">
                                                 @if ($ev_segunda == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('aspectos.edit', $project->id)}}">
-                                                        1. Editar Aspecto
+                                                        1. Editar Aspectos G.
                                                     </a>
+
                                                 @else
-                                                    <a class="btn btn-light btn-block card-body"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('aspectos.projects.create', $project->id)}}">
-                                                        1. Calificar Aspecto
+                                                        1. Calificar Aspecto G.
                                                     </a>
                                                 @endif
                                             </div>
                                         </div>
-
-
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_tercera == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('identitys.edit', $project->id)}}">
                                                         2. Editar Identidad e Información
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('identitys.projects.create', $project->id)}}">
                                                         2. Calificar Identidad e Información
                                                     </a>
@@ -697,14 +677,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_cuarta == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('structures.edit', $project->id)}}">
                                                         3. Editar Estructura y Navegación
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('structures.projects.create', $project->id)}}">
                                                         3. Calificar Estructura y Navegación
                                                     </a>
@@ -712,14 +692,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_quinto == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('rotulados.edit', $project->id)}}">
                                                         4. Editar Rotulado
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('rotulados.projects.create', $project->id)}}">
                                                         4. Calificar Rotulado
                                                     </a>
@@ -727,14 +707,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_sexto == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('layoutpages.edit', $project->id)}}">
                                                         5. Editar Layout de la Página
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('layoutpages.projects.create', $project->id)}}">
                                                         5. Calificar Layout de la Página
                                                     </a>
@@ -742,14 +722,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_septimo == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('interactions.edit', $project->id)}}">
                                                         6. Editar Entendibilidad e Interacción
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('interactions.projects.create', $project->id)}}">
                                                         6. Calificar Entendibilidad e Interacción
                                                     </a>
@@ -757,14 +737,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_octavo == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('controls.edit', $project->id)}}">
                                                         7. Editar Control y Retroalimentación
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('controls.projects.create', $project->id)}}">
                                                         7. Calificar Control y Retroalimentación
                                                     </a>
@@ -772,14 +752,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_noveno == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('elements.edit', $project->id)}}">
                                                         8. Editar Elementos Multimedia
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('elements.projects.create', $project->id)}}">
                                                         8. Calificar Elementos Multimedia
                                                     </a>
@@ -787,14 +767,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_decimo == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('searchs.edit', $project->id)}}">
                                                         9. Editar Búsqueda
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('searchs.projects.create', $project->id)}}">
                                                         9. Calificar Búsqueda
                                                     </a>
@@ -802,14 +782,14 @@
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="p-3 border bg-light">
+                                            <div class="p-3 border">
                                                 @if ($ev_ultimo == true)
                                                     <a class="btn btn-success btn-block"
                                                        href="{{ route('ayudas.edit', $project->id)}}">
                                                         10. Editar Ayuda
                                                     </a>
                                                 @else
-                                                    <a class="btn btn-outline-primary btn-block"
+                                                    <a class="btn btn-primary btn-block"
                                                        href="{{ route('ayudas.projects.create', $project->id)}}">
                                                         10. Calificar Ayuda
                                                     </a>
@@ -845,7 +825,6 @@
 
     <script>
 
-
         var codigoAspectos = [];
         var valoresAspectos = [];
 
@@ -875,6 +854,8 @@
 
         var codigoAyuda = [];
         var valoresAyuda = [];
+
+        var resFinal;
 
         /*
         Variables para grafica general
@@ -1143,6 +1124,7 @@
                 resultadoAyuda
             ];
 
+
             gAspectos();
             gIdentidad();
             gEstructura();
@@ -1154,8 +1136,36 @@
             gBusqueda();
             gAyuda();
             gGeneral();
+            usabilidad();
+            estilosModulos();
 
         });
+
+        //Cambiar color de letra
+        function estilosModulos() {
+            let botones = document.getElementById(".btn btn-success btn-block");
+
+        }
+
+        //usabilidad y porcentaje
+        function usabilidad() {
+            let tdPorcentaje = document.getElementById("porcentaje");
+            let tdUsabilidad = document.getElementById("usabilidad");
+            resFinal = resultadoAspecto + resultadoIdentidad + resultadoEstructura + resultadoRotulado + resultadoLayout + resultadoInteraction + resultadoControl + resultadoElementos + resultadoBusqueda + resultadoAyuda;
+            tdPorcentaje.innerHTML = resFinal.toFixed(1) + "%";
+
+            if (resFinal >= 0 && resFinal <= 30) {
+                tdUsabilidad.innerHTML = "Muy malo.";
+            } else if (resFinal >= 31 && resFinal <= 60) {
+                tdUsabilidad.innerHTML = "Malo.";
+            } else if (resFinal >= 61 && resFinal <= 75) {
+                tdUsabilidad.innerHTML = "Regular.";
+            } else if (resFinal >= 76 && resFinal <= 90) {
+                tdUsabilidad.innerHTML = "Bueno.";
+            } else if (resFinal >= 91 && resFinal <= 100) {
+                tdUsabilidad.innerHTML = "Muy bueno.";
+            }
+        }
 
         function gAspectos() {
             var ctx = document.getElementById('myChartAspectos').getContext('2d');
@@ -1576,6 +1586,5 @@
             });
 
         }
-
     </script>
 @stop

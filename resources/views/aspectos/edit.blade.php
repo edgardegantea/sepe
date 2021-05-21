@@ -11,10 +11,12 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-9">
-                    <p>Elementos relacionados con los objetos del sitio, el look & feel, coherencia y nivel de actualización de contenidos.</p>
+                    <p>Elementos relacionados con los objetos del sitio, el look & feel, coherencia y nivel de
+                        actualización de contenidos.</p>
                 </div>
                 <div class="col-3">
-                    <a href="{{route('projects.show', $aspecto->project_id)}}" class="btn btn-danger float-right"> Regresar</a>
+                    <a href="{{route('projects.show', $aspecto->project_id)}}" class="btn btn-danger float-right">
+                        Regresar</a>
                 </div>
             </div>
         </div>
@@ -26,6 +28,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="card">
         <div class="card-body">
@@ -60,11 +63,14 @@
                                 <input type="number" name="valor[]" id="" value="{{$item->valor}}">
                             </td>
                             <td>
-                                <input class="form-group" type="text" name="relevancia[]" id="" value="{{$item->relevancia}}" required maxlength="200" placeholder="Escribir">
+                                <input class="form-group" type="text" name="relevancia[]" id=""
+                                       value="{{$item->relevancia}}" required maxlength="200"
+                                       placeholder="Escribir">
                             </td>
                             <td>
-                                    <textarea class="form-group" name="comentario[]" id="" cols="30" rows="1" placeholder="Opcional">{{$item->comentario}}
-                                    </textarea>
+                            <textarea class="form-group" name="comentario[]" id="" cols="30" rows="1"
+                                      placeholder="Opcional">{{$item->comentario}}
+                            </textarea>
                             </td>
                         </tr>
                     @endforeach
@@ -75,5 +81,22 @@
             </form>
         </div>
     </div>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+
+@stop
