@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Ver Usuario')
 
 @section('content_header')
     <a href="{{ route('users.index')}}" class="btn btn-primary float-right">Volver</a>

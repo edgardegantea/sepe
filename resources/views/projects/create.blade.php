@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Crear Proyecto')
 
 @section('content_header')
     <a href="{{ route('teams.show', $team ) }}" class="btn btn-warning float-right" tabindex="5">Cancelar</a>

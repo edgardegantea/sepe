@@ -19,7 +19,7 @@ class CreateIdentitiesTable extends Migration
             $table->string('codigo', 10);
             $table->text('criterio');
             $table->float('valor', 3, 1);
-            $table->string('relevancia', 200);
+            $table->string('relevancia', 200)->nullable();
             $table->text('comentario')->nullable();
 
             $table->unsignedBigInteger('project_id');

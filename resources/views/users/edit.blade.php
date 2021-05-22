@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Editar Usuario')
 
 @section('content_header')
-    <a href="{{ route('users.index')}}" class="btn btn-primary float-right">
+    <a href="{{ route('users.index')}}" class="btn btn-warning float-right">
         Regresar
     </a>
     <h1>Editar Usuario</h1>
@@ -36,7 +36,6 @@
                 {!! Form::text('controlNumber', null, ['class' => 'form-control']) !!}
             </div>
 
-
             <h2 class="h5">Listado de roles</h2>
 
             @foreach($roles as $role)
@@ -50,7 +49,6 @@
 
             {!! Form::submit('Guardar', ['class' => 'btn btn-primary mt-2']) !!}
             {!! Form::close() !!}
-
 
         </div>
     </div>

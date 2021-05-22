@@ -20,9 +20,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Storage::deleteDirectory('upload-projects');
-        //Storage::makeDirectory('upload-projects');
-
         $this->call(SubjectSeeder::class);
 
         Team::factory(10)->create();

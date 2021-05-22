@@ -48,7 +48,7 @@ class SearchController extends Controller
             'codigo' => 'required',
             'criterio' => 'required',
             'valor' => 'required',
-            'relevancia' => 'required',
+            'relevancia' => '',
             'comentario' => '',
             'project_id' => 'required'
         ]);

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Editar asignatura')
 
 @section('content_header')
     <h1>Editar asignatura</h1>

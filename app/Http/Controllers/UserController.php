@@ -41,6 +41,8 @@ class UserController extends Controller
         //ver usuarios que no tengan rol
         $sinroles = User::doesntHave('roles')->get();
 
+
+
         return view('users.index', compact('users', 'teachers', 'students', 'sinroles'));
     }
 

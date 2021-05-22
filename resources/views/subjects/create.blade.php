@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Crear asignatura')
 
 @section('content_header')
     <a class="btn btn-warning float-right" href="{{ route('subjects.index') }}">Regresar</a>

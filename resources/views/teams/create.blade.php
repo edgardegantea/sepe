@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Crear Equipo')
 
 @section('content_header')
     <a href="{{ route('teams.index')}}" class="btn btn-warning float-right">Regresar</a>

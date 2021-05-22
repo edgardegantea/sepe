@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Aspectos Generales')
 
 @section('content_header')
     <h1>Criterios del Heurístico "Aspectos Generales"</h1>
