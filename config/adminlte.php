@@ -252,6 +252,12 @@ return [
             'icon' => 'fas fa-user-friends',
             'can' => 'teams.index'
         ],
+        [
+            'text' => 'Lista de proyectos',
+            'url' => 'projects',
+            'icon' => 'fas fa-user-friends',
+            'can' => 'projects.index'
+        ],
     ],
 
     /*

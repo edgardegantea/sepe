@@ -41,8 +41,8 @@ class RoleSeeder extends Seeder
 
         //permisos para equipos
         Permission::create(['name' => 'teams.index'])->syncRoles([$role1, $role2, $role3, $role4]);
-        Permission::create(['name' => 'teams.create'])->syncRoles([$role1, $role2, $role4]);
-        Permission::create(['name' => 'teams.edit'])->syncRoles([$role1, $role2, $role4]);
+        Permission::create(['name' => 'teams.create'])->syncRoles([$role1, $role2, $role3, $role4]);
+        Permission::create(['name' => 'teams.edit'])->syncRoles([$role1, $role2, $role3, $role4]);
         Permission::create(['name' => 'teams.show'])->syncRoles([$role1, $role2, $role3, $role4]);
         Permission::create(['name' => 'teams.destroy'])->syncRoles([$role1]);
 
@@ -53,7 +53,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'students.destroy'])->syncRoles([$role1]);
 
         //permisos para proyectos
-        Permission::create(['name' => 'projects.index'])->syncRoles([$role1, $role2, $role3, $role4]);
+        Permission::create(['name' => 'projects.index'])->syncRoles([$role1, $role2, $role4]);
         Permission::create(['name' => 'projects.create'])->syncRoles([$role1, $role2, $role3, $role4]);
         Permission::create(['name' => 'projects.edit'])->syncRoles([$role1, $role2, $role3, $role4]);
         Permission::create(['name' => 'projects.show'])->syncRoles([$role1, $role2, $role3, $role4]);
